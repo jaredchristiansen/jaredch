@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jared Christiansen – Designer and doer</title>
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link href="jaredch.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <script src="main.js"></script>
+
+</head>
+
+<header>
+    <div class="scroll-line"></div>
+</header>
+
+<body ng-app="">
+
+    <div class="navBar">
+        <div class="navBarContent">
+            <div class="navImage">
+                <a href="https://jaredch.com">
+                    <img src="images/jaredchCrown.svg">
+                </a></div>
+            <nav class="navigation">
+                <ul class="menu">
+                    <li class="li">
+                        <a href="https://jaredch.com">Home</a>
+                    </li>
+                    <div class="dropdown">
+                        <li class="li drop">
+                            <div class="dropbtn">
+                                <a href="#projects">Projects</a></div>
+                            <div class="dropdownContent">
+                                <a href="./wavy-tech">Wavy Tech</a><br>
+                                <a href="./og-crewniverse">OG Crewniverse</a><br>
+                                <a href="./say-yes">Say Yes</a><br>
+                                <a href="./new-economy">The New Economy</a><br>
+                                <a href="./home-book">Home Book</a><br>
+                                <a href="./fruit-realms">Fruit Realms</a><br>
+                                <a href="./lands-of-arcadia">Lands of Arcadia</a><br>
+                                <a href="./shubits">Shubits</a><br>
+                            </div>
+                        </li>
+                    </div>
+                    <li class="li">
+                        <a href="./about">About</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="main all">
+        <div class="description">
+            <div class="marg">
+                <h1>SayYes App</h1>
+                <h3>2017 &#8729; School Project</h3>
+                <p>This project revolves around the overwhelming stress that comes from getting in over your head. I’ve
+                    recently found myself agreeing to too many commitments, because I don't want to miss out on
+                    opportunities. I always say “yes” to everything, but doing so too much becomes overwhelming. This
+                    project is a way of expressing those feelings. I have created an app, coded in swift, that launches
+                    messages down the screen. Your character is the yellow emoji, and you have to "say yes" to the
+                    questions. Let one by, and you lose a life! That is, until your stress bar fills up. Then you have
+                    to avoid the messages until it returns to normal. The game gets faster and faster until you lose!</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="main all workDiv">
+        <div class="work" data-aos="fade-up">
+            <img src="images/portfolio/sayYes/screenPresent2.jpg">
+        </div>
+        <div class="work" data-aos="fade-up">
+            <img src="images/portfolio/sayYes/screenPresent1.jpg">
+        </div>
+        <div class="work" data-aos="fade-up">
+            <img src="images/portfolio/sayYes/screenPresent3.jpg">
+        </div>
+
+    </div>
+
+    <div class="main all moreWork">
+        <h1>More Work</h1>
+    </div>
+
+
+    <div class="main all" id="projects">
+
+        <!--link to projects-->
+        <div ng-include="'includes/artwork.htm'"></div>
+
+    </div>
+
+
+    <div id="footer" data-aos="slide-up">
+        <div class="footerText">
+
+            <br><br><br>
+            <p>Website designed and coded by Jared Christiansen.</p>
+            <p><a href="./about">© Jared Christiansen 2018 | Contact
+                </a></p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        })
+    </script>
+</body>
+
+</html>

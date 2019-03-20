@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Jared Christiansen – Designer and doer</title>
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link href="jaredch.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script src="main.js"></script>
+
+</head>
+
+<header>
+    <div class="header-proper"></div>
+    <div class="scroll-line"></div>
+
+</header>
+
+<body onload="checkIfLoad()" ng-app="">
+    <div class="entry-top" id="loader">
+        <div class="entry-background"></div>
+        <div class="entry">
+
+            <div class="entry-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 423.6">
+                    <defs>
+                        <style>
+                            .a {
+                                fill: white;
+                            }
+                        </style>
+                    </defs>
+                    <title>jaredchCrown</title>
+                    <path class="a" d="M654.05,481.5a2.92,2.92,0,0,1-5.19-1C607.3,331.27,510,258.4,510,258.4s-97.31,72.87-138.87,222.12a2.93,2.93,0,0,1-5.2,1C283.79,369.32,137.49,352.75,137.49,352.75L247.43,675.12A10.27,10.27,0,0,0,257,682H763a10.28,10.28,0,0,0,9.55-6.88L882.49,352.75S736.19,369.32,654.05,481.5Z"
+                        transform="translate(-137.49 -258.4)" />
+                </svg>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="elevator-wrapper"></div>
+    <div class="siteBorder"></div>
+    <div id="colorModal"></div>
+
+
+
+
+    <!--link to navbar-->
+    <div ng-include="'includes/navBar.htm'"></div>
+
+
+
+    <div class="main all">
+
+        <div class="cover">
+            <div class="text">
+                <h1>Jared Christiansen,<br>Designer, Achiever, &amp; Doer.</h1>
+            </div>
+
+            <a href="#projects">
+                <div class="downArrow"></div>
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="main all" id="pageContent">
+
+        
+        <!--link to projects-->
+        <div id="projects" ng-include="'includes/artwork.htm'"></div>
+
+    </div>
+
+
+    <div id="footer">
+        <div class="footerText">
+
+            <br><br><br>
+            <p>Website designed and coded by Jared Christiansen.</p>
+            <p><a href="./about">© Jared Christiansen 2018 | Contact
+                </a></p>
+        </div>
+    </div>
+    
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        
+    </script>
+</body>
+
+</html>
