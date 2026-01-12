@@ -1,137 +1,102 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 
-    <head> 
-        <title>Jared Christiansen – Designer and doer</title> 
-        
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
-        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-        <meta name="application-name" content="&nbsp;"/>
-        <meta name="msapplication-TileColor" content="#FFFFFF" />
-        <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<head>
+    <title>Jared Christiansen – Designer and doer</title>
 
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"> 
-        <link href="jaredch.css" rel="stylesheet" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="main.js"></script>
-    </head> 
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
 
-    <body>
-        <div class="header">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link href="jaredch.css" rel="stylesheet" type="text/css">
 
-        </div>
-        <div class="navBar">
-            <div class="navBarContent">
-                <div class="navImage">
-                    <a href="https://jaredch.com">
-                        <img src="images/jaredchCrown.svg">
-                    </a></div>
-                <nav class="navigation">
-                    <ul class="menu">
-                        <li class="li">
-                            <a href="https://jaredch.com">Home</a>
-                        </li>
-                        <div class="dropdown">
-                            <li class="li drop">
-                                <div class="dropbtn">
-                                    <a href="#projects">Projects</a></div>
-                                <div class="dropdownContent">
-                                    <a href="./wavy-tech">Wavy Tech</a><br>
-                                    <a href="./og-crewniverse">OG Crewniverse</a><br>
-                                    <a href="./say-yes">Say Yes</a><br>
-                                    <a href="./new-economy">The New Economy</a><br>
-                                    <a href="./home-book">Home Book</a><br>
-                                    <a href="./fruit-realms">Fruit Realms</a><br>
-                                    <a href="./lands-of-arcadia">Lands of Arcadia</a><br>
-                                    <a href="./shubits">Shubits</a><br>
-                                </div>
-                            </li></div>
-                        <li class="li">
-                            <a href="./about">About</a>  
-                        </li>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="/includes/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="/includes/waypoints/lib/waypoints.debug.js"></script>
 
-                    </ul>
-                </nav>
-            </div>
-        </div>
+    <script src="js/main.js"></script>
 
-        
-        <div class="main all">
-        <div class="description">
+</head>
+
+<header>
+    <div class="scroll-line"></div>
+</header>
+
+<body onload="pageRedirectEnd()" ng-app="" class="homeBook">
+
+        <div class="colorTransition"></div>
+        <div class="colorTransitionEnd"></div>
+
+    <!-- link to navbar -->
+    <div ng-include="'includes/navBar.htm'"></div>
+
+
+    <div class="main all">
+        <div class="description" id="color-start">
             <div class="marg">
-            <h1>Nine Houses, One Home</h1>
-            <h3>2016 &#8729; School Project</h3>
-            <p>This school project is a typographic book that is about home. I've moved houses many times throughout my life, and this book highlights some feelings that come from the constant moves. It's intended to be playful, and uses only an arrangement of type to create figures and images.</p>
-            </div></div>
-        </div>
-        
-        
-        
-        
-        
-        
-        
-        <div class="main all">
-            <div class="work">
-                <img src="images/portfolio/homeBook/screenPresent1.jpg">
-            </div>
-            <div class="work">
-                <img src="images/portfolio/homeBook/screenPresent2.jpg">
-            </div>
-            <div class="work">
-                <img src="images/portfolio/homeBook/screenPresent3.jpg">
-            </div>
-            <div class="work">
-                <img src="images/portfolio/homeBook/screenPresent4.jpg">
-            </div>
-            
-        </div>
-
-        <div class="main all moreWork">
-        <h1>More Work</h1></div>
-
-
-        <div class="main all" id="projects">
-
-
-            <div class="showWork">
-                <a href="./wavy-tech.html"><img src="images/portfolio/wavyTech/wavyTechThumbnail.jpg"></a>
-            </div>
-            <div class="showWork">
-                <a href="./og-crewniverse.html"><img src="images/portfolio/ogCrewniverse/ogCrewniverseThumbnail.jpg"></a>
-            </div>
-            <div class="showWork">
-                <a href="./say-yes.html"><img src="images/portfolio/sayYes/SayYesThumbnail.jpg"></a>
-            </div>
-            <div class="showWork">
-                <a href="./new-economy.html"><img src="images/portfolio/theNewEconomy/theNewEconomyThumbnail.jpg"></a>
-            </div>
-            <div class="showWork">
-                <a href="./home-book.html"><img src="images/portfolio/homeBook/homeBookThumbnail.jpg"></a>
-            </div>
-            <div class="showWork">
-                <a href="./fruit-realms.html"><img src="images/portfolio/fruitRealms/fruitRealmsThumbnail.jpg"></a>
-            </div>
-            <div class="showWork">
-                <a href="./lands-of-arcadia.html"><img src="images/portfolio/landsOfArcadia/landsOfArcadiaThumbnail.jpg"></a>
-            </div>
-            <div class="showWork">
-                <a href="./shubits.html"><img src="images/portfolio/shubits/shubitsThumbnail.jpg"></a>
-            </div>
-
-        </div>
-
-
-        <div id="footer">
-            <div class="footerText">
-
-                <br><br><br>
-                <p>Website designed and coded by Jared Christiansen.</p>
-                <p><a href="./about">© Jared Christiansen 2018 | Contact
-                    </a></p>
+                <h1>Nine Houses, One Home</h1>
+                <h3>2016 &#8729; Typographic Book Design</h3>
+                <p>This school project is a typographic book that is about home. I've moved houses many times throughout
+                    my life, and this book highlights some feelings that come from the constant moves. It's intended to
+                    be playful, and uses only an arrangement of type to create figures and images.</p>
             </div>
         </div>
-    </body>
+    </div>
+
+
+
+    <div class="main all workDiv">
+        
+        <div class="work space-small" data-aos="fade-up">
+            <img src="images/portfolio/homeBook/homeBookP1.jpg">
+        </div>
+        <div class="work space-small" data-aos="fade-up">
+            <img src="images/portfolio/homeBook/homeBookP2.jpg">
+        </div>
+        <div class="work space-small" data-aos="fade-up">
+            <img src="images/portfolio/homeBook/homeBookP3.jpg">
+        </div>
+        <div class="work" data-aos="fade-up">
+            <img src="images/portfolio/homeBook/homeBookP4.jpg">
+        </div>
+
+    </div>
+
+
+
+
+    <div class="main all moreWork"  id="color-end">
+        <h1>More Work</h1>
+    </div>
+
+
+    <div class="main all" id="projects">
+
+        <!--link to projects-->
+        <div ng-include="'includes/artwork.htm'"></div>
+
+    </div>
+
+
+    <!--link to footer-->
+    <div ng-include="'includes/footer.htm'"></div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        })
+    </script>
+    <script src="js/waypoints.js"></script>
+
+
+</body>
+
 </html>

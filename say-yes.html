@@ -18,9 +18,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="/includes/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="/includes/waypoints/lib/waypoints.debug.js"></script>
 
-
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 
 </head>
 
@@ -28,57 +29,28 @@
     <div class="scroll-line"></div>
 </header>
 
-<body ng-app="">
+<body onload="pageRedirectEnd()" ng-app="" class="sayYes">
 
-    <div class="navBar">
-        <div class="navBarContent">
-            <div class="navImage">
-                <a href="https://jaredch.com">
-                    <img src="images/jaredchCrown.svg">
-                </a></div>
-            <nav class="navigation">
-                <ul class="menu">
-                    <li class="li">
-                        <a href="https://jaredch.com">Home</a>
-                    </li>
-                    <div class="dropdown">
-                        <li class="li drop">
-                            <div class="dropbtn">
-                                <a href="#projects">Projects</a></div>
-                            <div class="dropdownContent">
-                                <a href="./wavy-tech">Wavy Tech</a><br>
-                                <a href="./og-crewniverse">OG Crewniverse</a><br>
-                                <a href="./say-yes">Say Yes</a><br>
-                                <a href="./new-economy">The New Economy</a><br>
-                                <a href="./home-book">Home Book</a><br>
-                                <a href="./fruit-realms">Fruit Realms</a><br>
-                                <a href="./lands-of-arcadia">Lands of Arcadia</a><br>
-                                <a href="./shubits">Shubits</a><br>
-                            </div>
-                        </li>
-                    </div>
-                    <li class="li">
-                        <a href="./about">About</a>
-                    </li>
+    <div class="colorTransition"></div>
+    <div class="colorTransitionEnd"></div>
 
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <!-- link to navbar -->
+    <div ng-include="'includes/navBar.htm'"></div>
 
 
     <div class="main all">
-        <div class="description">
+        <div class="description" id="color-start">
             <div class="marg">
                 <h1>SayYes App</h1>
-                <h3>2017 &#8729; School Project</h3>
+                <h3>2017 &#8729; App Development Project</h3>
                 <p>This project revolves around the overwhelming stress that comes from getting in over your head. I’ve
                     recently found myself agreeing to too many commitments, because I don't want to miss out on
                     opportunities. I always say “yes” to everything, but doing so too much becomes overwhelming. This
                     project is a way of expressing those feelings. I have created an app, coded in swift, that launches
                     messages down the screen. Your character is the yellow emoji, and you have to "say yes" to the
                     questions. Let one by, and you lose a life! That is, until your stress bar fills up. Then you have
-                    to avoid the messages until it returns to normal. The game gets faster and faster until you lose!</p>
+                    to avoid the messages until it returns to normal. The game gets faster and faster until you lose!
+                </p>
             </div>
         </div>
     </div>
@@ -90,19 +62,23 @@
 
 
     <div class="main all workDiv">
-        <div class="work" data-aos="fade-up">
+        <div class="work space-small" data-aos="fade-up">
             <img src="images/portfolio/sayYes/screenPresent2.jpg">
         </div>
-        <div class="work" data-aos="fade-up">
+        <div class="work space-small" data-aos="fade-up">
             <img src="images/portfolio/sayYes/screenPresent1.jpg">
         </div>
+        <div class="work space-small" data-aos="fade-up">
+                <img src="images/portfolio/sayYes/sayYesP1.png">
+            </div>
         <div class="work" data-aos="fade-up">
             <img src="images/portfolio/sayYes/screenPresent3.jpg">
         </div>
+        
 
     </div>
 
-    <div class="main all moreWork">
+    <div class="main all moreWork" id="color-end">
         <h1>More Work</h1>
     </div>
 
@@ -115,15 +91,8 @@
     </div>
 
 
-    <div id="footer" data-aos="slide-up">
-        <div class="footerText">
-
-            <br><br><br>
-            <p>Website designed and coded by Jared Christiansen.</p>
-            <p><a href="./about">© Jared Christiansen 2018 | Contact
-                </a></p>
-        </div>
-    </div>
+    <!--link to footer-->
+    <div ng-include="'includes/footer.htm'"></div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -131,6 +100,7 @@
             duration: 1200,
         })
     </script>
+    <script src="js/waypoints.js"></script>
 </body>
 
 </html>

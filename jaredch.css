@@ -45,25 +45,10 @@ html {
 }
 
 .pageContent {
-    display: none;
+    display: block;
 }
 
-.siteBorder {
-    border-left: 40px;
-    border-right: 40px;
-    border-top: 0px;
-    border-bottom: 0px;
-    border-color: #1aa6bc;
-    border-style: solid;
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    width: calc(100% - 80px);
-    height: calc(100vh - 0px);
-    transition: ease-in 2s;
 
-    display: none;
-}
 
 .main {
     padding: 3%;
@@ -75,6 +60,18 @@ br {
     clear: both;
 }
 
+.clear {
+    clear: both;
+}
+
+.float-left {
+    float: left;
+    display:block
+}
+
+.float-right {
+    float: right;
+}
 
 h1 {
     font-size: 60px;
@@ -141,6 +138,7 @@ p2 {
 b {
     font-family: avenir;
     font-weight: bold;
+    color: inherit;
 }
 
 ::selection {
@@ -169,7 +167,6 @@ body {
     overscroll-behavior-y: none;
 
     transition: ease 0.5s;
-    
 
 }
 
@@ -265,6 +262,7 @@ a {
 
 a:hover {
     color: #1aa6bc;
+    cursor: pointer;
 }
 
 @media (max-width: 1060px) {
@@ -298,7 +296,7 @@ a:hover {
     height: 100vh;
     position: absolute;
     z-index: 1000;
-    background-color: #1aa6bc;
+    /* background-color: #1aa6bc; */
     animation: backgroundAnimate 0s ease-in 2.5s forwards;
     animation-iteration-count: 1;
 }
@@ -320,33 +318,22 @@ a:hover {
         transform: scale(0.0);
     }
 
-    5% {
+    40% {
         transform: scale(0.1);
     }
 
-    25% {
+    50% {
         transform: scale(0.1);
     }
 
-    32% {
-        transform: scale(0.08);
-    }
-
-    40% {
-        transform: scale(5);
-    }
-
-    40% {
-        opacity: 1;
+    80% {
+        transform: scale(0);
     }
 
     100% {
-        transform: scale(5);
+        transform: scale(0);
     }
 
-    100% {
-        opacity: 0.0;
-    }
 }
 
 @keyframes hideTimer {
@@ -367,13 +354,13 @@ a:hover {
 
 .entry {
 
-    -moz-animation: hideTimer 0s ease-in 6s forwards;
+    -moz-animation: hideTimer 0s ease-in 1.4s forwards;
     /* Firefox */
-    -webkit-animation: hideTimer 0s ease-in 6s forwards;
+    -webkit-animation: hideTimer 0s ease-in 1.4s forwards;
     /* Safari and Chrome */
-    -o-animation: hideTimer 0s ease-in 6s forwards;
+    -o-animation: hideTimer 0s ease-in 1.4s forwards;
     /* Opera */
-    animation: hideTimer 0s ease-in 6s forwards;
+    animation: hideTimer 0s ease-in 1.4s forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 
@@ -381,7 +368,7 @@ a:hover {
 }
 
 .entry svg {
-    animation: homeAnimate 6s ease-in-out;
+    animation: homeAnimate 1.4s ease-in-out;
     animation-iteration-count: 1
 }
 
@@ -389,6 +376,45 @@ a:hover {
 
 
 /*  ---  End Home Page Animation  ---  */
+
+.colorTransition {
+    width: 100%;
+    position: fixed;
+    height: 0vh;
+    left: 0;
+    bottom: 0;
+    background-color: #1aa6bc;
+    z-index: 200;
+    display: none;
+
+    transition: ease 0.6s;
+
+}
+
+.colorTransitionEnd {
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #1aa6bc;
+    z-index: 200;
+    display: block;
+
+    transition: ease 0.6s;
+
+
+}
+
+
+/*  ---  Change Page Animation  ---  */
+
+
+
+
+
+
+
 
 
 
@@ -437,21 +463,6 @@ a:hover {
 
 
 
-#colorModal {
-    /* When hovering, the background becomes darkened */
-    display: none;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0);
-    transition: ease-in 2s;
-    z-index: 20;
-    visibility: visible;
-    pointer-events: none;
-
-}
-
 
 
 
@@ -470,12 +481,11 @@ a:hover {
     width: 45%;
     margin: 2.5%;
     padding-bottom: 0px;
-
-    
-
+    opacity: 1;
     overflow: hidden;
     background-color: #1aa6bc;
     height: 100%;
+
 
     transition: .5s ease;
     -webkit-transition: .5s ease;
@@ -496,61 +506,78 @@ a:hover {
 }
 
 .showWork:hover {
-    /* width: 47%;
-    margin: 1.5%;  */
-
-    /* transform: scale(1.03); */
     cursor: pointer;
-
-    /* transition: .4s ease;
-    -webkit-transition: 0.4s ease; */
 
 }
 
 .showWork img:hover {
     transform: scale(0.90);
+    cursor: pointer !important;
+
 }
 
 
 
+.inside {
+    transform: scale(1.13);
 
+}
+
+.showWork.hourwork {
+    background-color: #147FCE;
+
+}
+
+.showWork.hourwork:hover {
+    background-color: #5AB2F3;
+
+}
+
+.showWork.inspecticare {
+    background-color: #573e51;
+
+}
+
+.showWork.inspecticare:hover {
+    background-color: #8a6080;
+
+}
+
+.showWork.syrg {
+    background-color: #262d35;
+
+}
+
+.showWork.syrg:hover {
+    background-color: #465362;
+
+}
 
 .showWork.sayYes {
     background-color: #199dda;
-    
+
 }
 
 .showWork.sayYes:hover {
     background-color: #78ccf3;
-    
+
 }
 
-.inside.sayYes {
-    transform: scale(1.13);
+.simplyMusic {
+    transition: ease 0.5s;
 }
 
-.showWork.new-economy {
-    background-color: #199dda;
+.showWork.simplyMusic {
+    background-color: rgb(214, 96, 88);
+
 }
 
-.showWork.new-economy:hover {
-    background-color: #199dda;
+.showWork.simplyMusic:hover {
+    background-color: rgb(243, 137, 129);
+
+
 }
 
-.showWork.og-crewniverse {
-    background-color: #1b1b27;
-}
-
-.showWork.og-crewniverse:hover {
-    background-color: #4a4e6c;
-}
-.showWork.wavy-tech {
-    background-color: #8b8d90;
-}
-
-.showWork.wavy-tech:hover {
-    background-color: #c8c8c8;
-}
 .showWork.home-book {
     background-color: #5e6f8f;
 }
@@ -559,11 +586,40 @@ a:hover {
     background-color: #aebfde;
 }
 
+.showWork.mosquitoHawks {
+    background-color: rgb(231, 170, 0);
+}
+
+.showWork.mosquitoHawks:hover {
+    background-color: rgb(206, 44, 36);
+}
 
 
 
+.showWork.freelanceLogos {
+    background-color: rgb(233, 108, 80);
+}
 
+.showWork.freelanceLogos:hover {
+    background-color: rgb(64, 216, 233);
+}
 
+.showWork.packageDesign {
+    background-color: #191119;
+}
+
+.showWork.packageDesign:hover {
+    background-color: #533854;
+}
+
+.showWork.stoneShowcase {
+    background-color: rgb(78, 85, 102);
+}
+
+.showWork.stoneShowcase:hover {
+    background-color: rgb(122, 132, 158);
+
+}
 
 
 
@@ -580,7 +636,32 @@ a:hover {
 
 
 
+.getInTouch {
+    text-align: center;
+    margin: auto;
+    width: 60%;
+}
 
+.getInTouch h2 {
+    text-align: center;
+}
+
+.contactIcon {
+    width: 50%;
+    float: left;
+
+    text-align: center;
+}
+
+.contactIcon img {
+    width: 100%;
+}
+
+.contactIcon .image {
+    width: 40px;
+    margin: auto;
+    margin-bottom: 10px;
+}
 
 .moreWork {
     margin-top: 30%;
@@ -602,11 +683,115 @@ a:hover {
     float: left;
     width: 95%;
     margin: 1% 2.5%;
+    position: relative;
 }
 
 .work img {
     width: 100%;
-    /* border: 1px solid #eee; */
+    /* border-bottom: 1px solid inherit; */
+    padding-bottom: -10px;
+}
+
+.workDiv .title {
+    color: #fff;
+    font-size: 36px;
+    font-family: avenir;
+    line-height: 170%;
+    letter-spacing: 1px;
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.overImage {
+    position: absolute;
+    top: 400px;
+    right: 10%;
+    text-align: left !important;
+
+}
+
+.title.tiny {
+    font-size: 16px;
+}
+
+.title.small {
+    font-size: 20px;
+}
+
+.title.med {
+    font-size: 40px;
+    font-family: avenir-black;
+
+}
+
+.title.big {
+    font-size: 72px;
+    font-family: avenir-black;
+
+}
+
+.title.left {
+    text-align: left;
+
+}
+
+.title.narrow {
+    max-width: 60%;
+}
+
+.title.indent {
+    margin-left: 10%;
+
+}
+
+.title.beside {
+    float: left;
+    width: 65%;
+    text-align: left;
+    clear: right;
+
+}
+
+.title.wrap {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    clear: left;
+
+}
+
+.title.half {
+    width: 45%;
+    margin-right: 5%;
+
+}
+
+.title.height-small {
+    height: 180px;
+
+}
+
+.title h2 {
+    color: white;
+    font-size: 24px;
+    font-family: Avenir-heavy;
+}
+
+li {
+    color: white;
+}
+
+@media (max-width: 1400px) {
+    .overImage {
+        right: 0px;
+
+    }
+
+    .title.small {
+        font-size: 16px;
+    }
 }
 
 .description {
@@ -616,12 +801,44 @@ a:hover {
     max-width: 800px;
 }
 
+.description.wide {
+    max-width: 1000px;
+}
+
 .description h3 {
     margin-bottom: 20px;
 }
 
 .description h1 {
     margin-bottom: 10px;
+}
+
+.description .left {
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+    clear: left;
+
+}
+
+.description .right {
+    width: 48%;
+    float: left;
+    margin-left: 2%;
+    clear: right;
+
+}
+
+.description .left.narrow {
+    width: 36%;
+}
+
+.description .right.wide {
+    width: 60%;
+}
+
+.description img {
+    width: 100%;
 }
 
 h1.space {
@@ -633,6 +850,30 @@ h2.space {
     margin-top: 10vh;
     margin-bottom: 2vh;
 }
+
+.space-large {
+    margin-bottom: 800px;
+
+}
+
+.space-med {
+    margin-bottom: 500px;
+
+}
+
+.space-small {
+    margin-bottom: 200px;
+    
+}
+
+.space-tiny {
+    margin-bottom: 100px;
+}
+
+.hw-text-color {
+    color: #3E5384 !important;
+}
+
 
 
 .cover {
@@ -691,6 +932,36 @@ h2.space {
     h2 {
         font-size: 28px;
     }
+
+    .description .right {
+        margin-left: 0%;
+    }
+
+    .description .left {
+        margin-right: 0%;
+    }
+
+    .description .right.wide {
+        width: 100%;
+    }
+
+    .description .left.narrow {
+        width: 100%;
+    }
+
+    .getInTouch {
+        width: 100%;
+    }
+
+    .title.half {
+        width: 100%;
+    
+    }
+    .title.height-small {
+        height: 100px;
+    
+    }
+
 }
 
 
