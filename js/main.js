@@ -28,12 +28,12 @@ $(document).ready(function () {
 
 
 
-    // Shrinks Navbar if page is lower than 100 pixels
+    // Shrinks nav-bar if page is lower than 100 pixels
     if ($(this).scrollTop() > 100) {
-      document.getElementsByClassName('navBar')[0].style.paddingTop = "20px";
+      document.getElementsByClassName('nav-bar')[0].style.paddingTop = "20px";
       //AOS.refresh();
     } else if ($(this).scrollTop() < 100) {
-      document.getElementsByClassName('navBar')[0].style.paddingTop = "40px";
+      document.getElementsByClassName('nav-bar')[0].style.paddingTop = "40px";
 
     }
 
@@ -41,7 +41,7 @@ $(document).ready(function () {
       if ($(this).scrollTop() < 100) {
         document.body.style.background = "white";
         document.getElementsByClassName('scroll-line')[0].style.background = "#1aa6bc";
-        document.getElementsByClassName('navBar')[0].style.top = "0px";
+        document.getElementsByClassName('nav-bar')[0].style.top = "0px";
       }
     }
 
@@ -192,60 +192,42 @@ function bgChange(workPiece) {
     case 0:
       bg = "white";
       break;
-    case "hourwork":
-      bg = "#C7E5FB";
+    case "ollieboard":
+      bg = "#444";
       num = 0;
       break;
-    case "simplyMusic":
-      bg = "#FFD5D4";
-      num = 2;
-      break;
-    case "freelanceLogos":
-      bg = "#b8f8ff";
-      num = 9;
-      break;
-    case "sayYes":
-      bg = "#d2f2ff";
-      num = 2;
-      break;
-    case "homeBook":
-      bg = "#e1ecff"
-      num = 6;
-      break;
-    case "mosquitoHawks":
-      bg = "#FFF1C5";
-      num = 4;
-      break;
-    case "packageDesign":
-      bg = "#e4c1e5";
-      num = 5;
-      break;
-    case "stoneShowcase":
-      bg = "#AFBFE0";
-      num = 4;
+    case "hourwork":
+      bg = "#C7E5FB";
+      num = 1;
       break;
     case "syrg":
       bg = "#CED8EF";
-      num = 1;
+      num = 2;
+      break;
+    case "simplyMusic":
+      bg = "#FFD5D4";
+      num = 3;
       break;
     case "inspecticare":
       bg = "#DACCD5";
-      num = 3;
+      num = 4;
+      break;
+    case "stoneShowcase":
+      bg = "#AFBFE0";
+      num = 5;
       break;
     default:
       bg = "white";
       break;
-
-
   }
 
 
 
 
-  //Set the background color and navbar color to value passed through function
+  // Set the background color and nav-bar color to value passed through function
   document.body.style.background = bg;
   if (bg == "white") {
-    document.getElementsByClassName('navBar')[0].style.top = "0px";
+    document.getElementsByClassName('nav-bar')[0].style.top = "0px";
 
     // For loop to shrink all other thumbnails
     var c = document.getElementsByClassName('showWork');
@@ -254,7 +236,7 @@ function bgChange(workPiece) {
       c[i].style.transform = "none";
     }
   } else {
-    document.getElementsByClassName('navBar')[0].style.top = "-100px";
+    document.getElementsByClassName('nav-bar')[0].style.top = "-100px";
     if ($('body').is('.homePage')) {
 
       var c = document.getElementsByClassName('showWork');
@@ -266,9 +248,6 @@ function bgChange(workPiece) {
       }
     }
   }
-
-
-
 }
 
 
@@ -323,10 +302,6 @@ function pageRedirectEnd() {
   setTimeout(function () {
     document.getElementsByClassName('colorTransitionEnd')[0].style.display = "none";
     document.getElementById("loader").style.display = "none";
-
-
-
-
   }, delay);
 
 
@@ -336,3 +311,37 @@ function pageRedirectEnd() {
   })
 
 }
+
+
+//  ———  Replaces 'Includes' to inject reusable HTML on pages  ———
+
+async function loadIncludes() {
+  const nodes = document.querySelectorAll("[data-include]");
+
+  await Promise.all([...nodes].map(async (el) => {
+    const url = el.getAttribute("data-include");
+    try {
+      const res = await fetch(url, { cache: "no-cache" });
+      if (!res.ok) throw new Error(`Failed to load ${url} (${res.status})`);
+      el.innerHTML = await res.text();
+    } catch (err) {
+      console.error(err);
+      // Optional: show nothing or a fallback
+      el.innerHTML = "";
+    }
+  }));
+}
+
+// Run after DOM is ready
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", loadIncludes);
+} else {
+  loadIncludes();
+}
+
+
+
+//  ———  When the page loads, stop the blue animation  ———
+window.addEventListener("load", () => {
+  if (typeof pageRedirectEnd === "function") pageRedirectEnd();
+});

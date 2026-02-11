@@ -1,0 +1,85 @@
+:root {
+  --bg: #ffffff;
+  --main-primary: #1aa6bc;
+
+  --text-body: #111;
+  --text-title: #555;
+  --text-muted: #777;
+
+  /* frosted card */
+  --surface: rgba(255, 255, 255, 0.3);
+
+
+  /* Body text */
+  --fs-body: clamp(16px, 1.2vw, 18px);
+  --fs-small: 14px;
+
+  /* UI / meta */
+  --fs-eyebrow: 12px;
+
+  /* Headings */
+  --fs-h1: clamp(36px, 6vw, 56px);
+  --fs-h2: clamp(28px, 4.5vw, 40px);
+  --fs-h3: clamp(20px, 3vw, 28px);
+  --fs-h4: clamp(16px, 3vw, 18px);
+}
+
+body.ollieboard {
+  --bg: #000;
+
+  --text-body: #111;
+  --text-title: #555;
+  --text-muted: #777;
+
+  --surface: rgba(255, 255, 255, 0.4);
+}
+
+body.hourwork {
+  --bg: #B2C3EA;
+
+  --text-body: #000;
+  --text-title: #0D2357;
+  --text-muted: #777;
+
+  --surface: rgba(255, 255, 255, 0.3);
+}
+
+body.syrg {
+  --bg: #333C47;
+
+  --text-body: #111;
+  --text-title: #555;
+  --text-muted: #777;
+
+  --surface: rgba(255, 255, 255, 0.4);
+}
+
+body.simplyMusic {
+  --bg: #ee7269;
+
+  --text-body: #111;
+  --text-title: #555;
+  --text-muted: #777;
+
+  --surface: rgba(255, 255, 255, 0.4);
+}
+
+body.inspecticare {
+  --bg: #6D4C65;
+
+  --text-body: #111;
+  --text-title: #555;
+  --text-muted: #777;
+
+  --surface: rgba(255, 255, 255, 0.4);
+}
+
+body.stoneShowcase {
+  --bg: #596174;
+
+  --text-body: #111;
+  --text-title: #555;
+  --text-muted: #777;
+
+  --surface: rgba(255, 255, 255, 0.4);
+}

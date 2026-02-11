@@ -1,0 +1,35 @@
+#footer {
+    padding-top: 30px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    width: 100%;
+    float: left;
+    clear: both;
+    text-decoration: none;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 200px;
+}
+
+.footerText {
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.footerText p {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 1060px) {
+    .footerText {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}

@@ -1,0 +1,438 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: 600;
+}
+
+b {
+    font-weight: 600;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    position: relative;
+    padding-bottom: 200px;
+    overscroll-behavior-y: none;
+    transition: ease 0.5s;
+
+    font-family: 'avenir', system-ui, -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+br {
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: inherit;
+    line-height: normal;
+    transition: .5s ease;
+}
+
+h1 {
+    font-size: clamp(36px, 6vw, 54px);
+    font-weight: 100;
+}
+
+h2 {
+    font-size: clamp(28px, 4.5vw, 40px);
+    font-weight: 600;
+}
+
+h3 {
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 600;
+}
+
+h4 {
+    font-size: clamp(18px, 3vw, 18px);
+    font-weight: 600;
+}
+
+p {
+    font-size: clamp(16px, 1.7vw, 18px);
+    line-height: 24px;
+}
+
+small {
+    font-size: 0.875em;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.25s;
+}
+
+a:hover {
+    color: var(--main-primary);
+    cursor: pointer;
+}
+
+::selection {
+    background: rgba(26, 166, 188, 0.7);
+    /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: rgba(26, 166, 188, 0.7);
+    /* Gecko Browsers */
+}
+
+::-webkit-scrollbar {
+    width: 0 !important
+}
+
+@keyframes pound {
+    to {
+        transform: scale(0.9);
+    }
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+    supported by Chrome and Opera */
+}
+
+
+
+
+
+
+
+.all {
+    max-width: 1200px;
+
+    margin: auto;
+    clear: both;
+    overflow: hidden;
+}
+
+.pageContent {
+    display: flex;
+}
+
+.main {
+    padding: 3%;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+.float-left {
+    float: left;
+    display: block
+}
+
+.float-right {
+    float: right;
+}
+
+.marg {
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+}
+
+
+
+
+
+
+
+
+/*  ———  Show work section  ———  */
+
+.showWork {
+    float: left;
+    width: 45%;
+    margin: 2.5%;
+    padding-bottom: 0px;
+    opacity: 1;
+    overflow: hidden;
+    background-color: var(--main-primary);
+    height: 100%;
+
+    transition: .5s ease;
+}
+
+.showWork img {
+    width: 100%;
+    border: none;
+    margin: auto;
+
+    transition: .5s ease;
+    display: flex;
+}
+
+.showWork:hover {
+    cursor: pointer;
+
+}
+
+.showWork img:hover {
+    transform: scale(0.90);
+    cursor: pointer !important;
+}
+
+
+
+.inside {
+    transform: scale(1.13);
+}
+
+.showWork.ollieboard {
+    background-color: #000;
+}
+
+.showWork.ollieboard:hover {
+    background-color: #333;
+}
+
+.showWork.hourwork {
+    background-color: #147FCE;
+}
+
+.showWork.hourwork:hover {
+    background-color: #5AB2F3;
+}
+
+.showWork.inspecticare {
+    background-color: #573e51;
+}
+
+.showWork.inspecticare:hover {
+    background-color: #8a6080;
+}
+
+.showWork.syrg {
+    background-color: #262d35;
+}
+
+.showWork.syrg:hover {
+    background-color: #465362;
+}
+
+.showWork.sayYes {
+    background-color: #199dda;
+}
+
+.showWork.sayYes:hover {
+    background-color: #78ccf3;
+}
+
+.showWork.simplyMusic {
+    background-color: rgb(214, 96, 88);
+}
+
+.showWork.simplyMusic:hover {
+    background-color: rgb(243, 137, 129);
+}
+
+.showWork.stoneShowcase {
+    background-color: rgb(78, 85, 102);
+}
+
+.showWork.stoneShowcase:hover {
+    background-color: rgb(122, 132, 158);
+}
+
+
+.moreWork {
+    margin-top: 30%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .showWork {
+        width: 95%;
+        margin: 2.5%;
+    }
+
+    .showWork:hover {
+        width: 95%;
+        margin: 2.5%;
+    }
+}
+
+/*  ———  End Hover Effects  ———  */
+
+
+
+
+
+
+
+
+
+/*  ---  Home Page Animation  ---  */
+
+.entry {
+    float: left;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1000;
+}
+
+.entry-background {
+    float: left;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1000;
+    /* background-color: #1aa6bc; */
+    animation: backgroundAnimate 0s ease-in 2.5s forwards;
+    animation-iteration-count: 1;
+}
+
+.entry-logo {
+    margin-left: auto;
+    width: 100%;
+}
+
+.entry-top {
+    position: sticky;
+    top: 0;
+    display: block;
+    z-index: 1000;
+}
+
+@keyframes homeAnimate {
+    0% {
+        transform: scale(0.0);
+    }
+
+    40% {
+        transform: scale(0.1);
+    }
+
+    50% {
+        transform: scale(0.1);
+    }
+
+    80% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes hideTimer {
+    to {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+@keyframes backgroundAnimate {
+    to {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+.entry {
+    -moz-animation: hideTimer 0s ease-in 1.4s forwards;
+    /* Firefox */
+    -webkit-animation: hideTimer 0s ease-in 1.4s forwards;
+    /* Safari and Chrome */
+    -o-animation: hideTimer 0s ease-in 1.4s forwards;
+    /* Opera */
+    animation: hideTimer 0s ease-in 1.4s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    animation-iteration-count: 1
+}
+
+.entry svg {
+    animation: homeAnimate 1.4s ease-in-out;
+    animation-iteration-count: 1
+}
+
+/*  ---  End Home Page Animation  ---  */
+
+
+
+
+
+/*  ---  Change Page Animation  ---  */
+
+.colorTransition {
+    width: 100%;
+    position: fixed;
+    height: 0vh;
+    left: 0;
+    bottom: 0;
+    background-color: var(--main-primary);
+    z-index: 200;
+    display: none;
+
+    transition: ease 0.6s;
+}
+
+.colorTransitionEnd {
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: var(--main-primary);
+    z-index: 200;
+    display: block;
+
+    transition: ease 0.6s;
+}

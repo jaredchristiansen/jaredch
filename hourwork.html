@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Jared Christiansen – Designer and doer</title>
+    <title>Jared Christiansen – Designer and builder</title>
 
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
@@ -12,40 +12,38 @@
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="mstile-144x144.png" />
 
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <link href="jaredch.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="/includes/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="/includes/waypoints/lib/waypoints.debug.js"></script>
 
-    <script src="js/main.js"></script>
-
+    <script src="js/main.js" defer></script>
 </head>
 
-<header>
-    <div class="scroll-line"></div>
-</header>
-
-<body onload="pageRedirectEnd()" ng-app="" class="hourwork">
+<body class="hourwork">
+    <header>
+        <div class="scroll-line"></div>
+    </header>
 
     <div class="colorTransition"></div>
     <div class="colorTransitionEnd"></div>
 
     <!-- link to navbar -->
-    <div ng-include="'includes/navBar.htm'"></div>
+    <div data-include="/includes/navBar.htm"></div>
 
 
     <div class="main all">
         <div class="description" id="color-start">
             <div class="marg">
-                <h1>HourWork</h1>
-                <h3>2021 – 2023 &#8729; UX design & bubble.io development</h3>
-                <p>HourWork is a startup that helps hourly employers engage with and retain their workers. Throughout my
-                    time at HourWork, I've made dozens of designs just like the ones seen below. Here are just a few
-                    examples of the more recent projects, along with some insight on how I like to work.
+                <h1>HourWork Dashboard</h1>
+                <p class="description__subheader">2021 – 2023 &#8729; UX design & bubble.io development</p>
+                <p>HourWork helps restaurant owners and operators (e.g., McDonald’s, Domino’s) engage their hourly
+                    workforce through automated messaging and surveys. Managers can trigger milestone messages, collect
+                    employee feedback, and re-engage past applicants to support hiring. The platform is designed for
+                    franchise owners managing multiple stores and teams at scale.
                 </p>
             </div>
         </div>
@@ -58,43 +56,177 @@
 
 
     <div class="main all workDiv">
-        <div class="work space-med" data-aos="fade-up">
-            <img src="images/portfolio/hourwork/overview.png">
+        <div class="work space-small" data-aos="fade-up">
+            <img src="images/portfolio/hourwork/dashboard/hero-image.png">
         </div>
 
+        <section class="two-col work" data-aos="fade-up">
+            <div class="work">
+                <h2 class="title"><b>Context</b></h2>
+            </div>
+            <div class="two-col__card">
+                <div class="two-col__grid">
+                    <div class="two-col__col">
+                        <h2 class="two-col__title">Problem</h2>
+                        <p>
+                            As HourWork’s automated messaging and surveys scaled across more locations and use cases,
+                            managers lacked visibility into what was happening across their teams.
+                        </p>
+                        <p>
+                            Store owners needed a way to quickly understand employee engagement across locations.
+                        </p>
+                    </div>
+
+                    <div class="two-col__col">
+                        <h2 class="two-col__title">Solution &amp; impact</h2>
+                        <p>
+                            A single dashboard that helps managers understand what messages are being sent, what’s
+                            coming up, and how employees are responding across locations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-        <div class="work space-med" data-aos="fade-up">
-            <div class="title hw-text-color"><b>Dashboard</b></div>
-            <img src="images/portfolio/hourwork/dashboard/intro.png">
+
+        <section class="main all workDiv space-small" data-aos="fade-up">
+            <div class="work">
+                <h2 class="title"><b>Process</b></h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step__circle">1</div>
+                    <p class="process-step__title">Understand</p>
+                    <ul class="process-step__list">
+                        <li>Stakeholder alignment</li>
+                        <li>Scope definition</li>
+                        <li>Constraints identified</li>
+                    </ul>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step__circle">2</div>
+                    <p class="process-step__title">Research</p>
+                    <ul class="process-step__list">
+                        <li>User context</li>
+                        <li>Usage environment</li>
+                        <li>Existing solutions</li>
+                        <li>Patterns worth borrowing</li>
+                    </ul>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step__circle">3</div>
+                    <p class="process-step__title">Explore</p>
+                    <ul class="process-step__list">
+                        <li>Low-fidelity wireframes</li>
+                        <li>Layout directions</li>
+                        <li>Rejected ideas</li>
+                        <li>Tradeoffs</li>
+                    </ul>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step__circle">4</div>
+                    <p class="process-step__title">Prototype</p>
+                    <ul class="process-step__list">
+                        <li>Higher-fidelity prototypes</li>
+                        <li>Interaction models</li>
+                        <li>Structural decisions</li>
+                    </ul>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step__circle">5</div>
+                    <p class="process-step__title">Validate</p>
+                    <ul class="process-step__list">
+                        <li>Feedback</li>
+                        <li>Usability insights</li>
+                        <li>Early signals of success</li>
+                        <li>What needs changing?</li>
+                        <li>What didn’t change?</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="work space-small" data-aos="fade-up">
+            <span class="section-eyebrow">Understand</span>
+            <h3 class="section-title">Initial problem discovery</h3>
+            <p>
+                Before designing anything, I needed to understand how the system was actually being used, and where it
+                was falling short for managers.
+                <br><br>
+                I started by talking with the team and reviewing the questions coming in from customers. A
+                clear pattern showed up quickly: managers weren’t confused about how to send messages, they were
+                confused about what the platform was doing on their behalf.
+                <br><br>
+            </p>
+            <img src="images/portfolio/hourwork/dashboard/manager-notes.png">
+            <h4>The challenge was made clearer</h4>
+            <p class="space-sm">
+                This wasn’t just a missing dashboard — it was a visibility gap
+                that limited trust and made the product hard to use. My focus at this stage was defining
+                what managers needed to understand at a glance in order to feel confident using the platform on their
+                own, and what information mattered most to support that change.
+            </p>
         </div>
-        <!-- <div class="work space-med" data-aos="fade-up">
-            <div class="title med left wrap hw-text-color">Ideation / wireframing</div>
-            <div class="title small beside hw-text-color" style="padding-top: 20px">After getting the project
-                description from the product team, and helping with any pre-design user research, we can start the first
-                step!</div>
+        <div class="work space-small" data-aos="fade-up">
+            <span class="section-eyebrow">Research</span>
+            <h3 class="section-title">What we found about our users</h3>
+            <p>
+                Once the problem space was clearer, the next step was pressure-testing our assumptions—specifically, who
+                this dashboard was actually for and how it would be used in real life.
+                <br><br>
+                Most managers were accessing HourWork on a shared computer in the back of the store, usually between
+                tasks or during short breaks. They weren’t especially tech-savvy, and they weren’t interested in
+                learning a complex system. That context made the priority obvious: the dashboard needed to be fast to
+                read, predictable, and hard to mess up. Visual flair mattered far less than clarity.
+                <br><br>
+                Alongside this, I looked at how other products approached similar problems. Rather than reinventing the
+                wheel, I reviewed dashboards and management tools that successfully surfaced activity, status, and
+                history at a glance. This helped identify familiar patterns managers would already recognize, as well as
+                common pitfalls to avoid, such as overly dense layouts or excessive configuration.
+                <br><br>
+                That work reinforced a key constraint: this dashboard wasn’t a place to show off. It needed to stay out
+                of the way and let managers get what they needed quickly. Those insights directly shaped both the
+                structure and tone of the designs that followed.
+            </p>
+        </div>
+        <div class="work space-small" data-aos="fade-up">
+            <span class="section-eyebrow">Explore</span>
+            <h3 class="section-title">Wireframing</h3>
+            <p>
+                Wireframes are where ideas get pressure-tested. I use them to explore multiple directions quickly,
+                challenge assumptions, and understand the tradeoffs between clarity, flexibility, and complexity before
+                committing to a solution.
+            </p>
             <img src="images/portfolio/hourwork/dashboard/wireframe.png">
-        </div> -->
-        <div class="work space-med" data-aos="fade-up">
-            <div class="title med left wrap hw-text-color">First Designs</div>
-            <div class="title small beside hw-text-color" style="padding-top: 20px">Pick the best wireframes, make a
-                first pass at
-                designing them. Collaborate with the team to figure out what parts we want to keep or change. </div>
+        </div>
+        <div class="work space-small" data-aos="fade-up">
+            <span class="section-eyebrow">Prototype</span>
+            <h3 class="section-title">First designs</h3>
+            <p>
+                Pick the best wireframes, make a first pass at designing them. Collaborate with the team to figure out
+                what parts we want to keep or change.
+            </p>
             <img src="images/portfolio/hourwork/dashboard/First-designs.png">
         </div>
         <div class="work space-med" data-aos="fade-up">
-            <div class="title hw-text-color"><b>Use design kit for elements</b></div>
+            <h3 class="title">Use design kit for elements</h3>
             <img src="images/portfolio/hourwork/dashboard/Design-kit.png">
         </div>
         <div class="work space-med" data-aos="fade-up">
             <img src="images/portfolio/hourwork/dashboard/iteration.png">
         </div>
         <div class="work space-med" data-aos="fade-up">
-            <div class="title hw-text-color"><b>Final design, ready for testing</b></div>
+            <div class="title"><b>Final design, ready for testing</b></div>
             <img src="images/portfolio/hourwork/dashboard/Final-ready-to-test.png">
         </div>
         <div class="work space-med" data-aos="fade-up">
-            <div class="title hw-text-color"><b>Test with users</b></div>
+            <div class="title"><b>Test with users</b></div>
             <img src="images/portfolio/hourwork/dashboard/User-testing.png">
         </div>
         <div class="work space-small" data-aos="fade-up">
@@ -106,14 +238,16 @@
 
 
         <div class="work space-small" data-aos="fade-up">
-            <div class="title hw-text-color"><b>Settings</b></div>
+            <div class="title"><b>Settings</b></div>
             <img src="images/portfolio/hourwork/settings/Settings-overview.png">
         </div>
         <div class="work space-tiny" data-aos="fade-up">
-            <div class="title med left wrap hw-text-color">Wireframes</div>
-            <div class="title small beside hw-text-color" style="padding-top: 20px">Craft wireframes to find early
-                designs to share
-                with the team.</div>
+            <div class="row">
+                <h3 class="title med">Wireframes</h3>
+                <div class="title small" style="padding-top: 20px">Craft wireframes to find early
+                    designs to share
+                    with the team.</div>
+            </div>
             <img src="images/portfolio/hourwork/settings/Settings-wireframe.png">
         </div>
         <div class="work space-large" data-aos="fade-up">
@@ -122,12 +256,12 @@
 
 
         <div class="work space-tiny" data-aos="fade-up">
-            <div class="title med left wrap hw-text-color">Delivering designs</div>
+            <div class="title med">Delivering designs</div>
             <img src="images/portfolio/hourwork/reporting.png">
         </div>
         <div class="work space-small" data-aos="fade-up">
 
-            <div class="title small hw-text-color">When handing designs off to developers, make sure
+            <div class="title small">When handing designs off to developers, make sure
                 all instruction is clear to ensure a great final product</div>
             <img src="images/portfolio/hourwork/Design-delivery.png">
         </div>
@@ -146,13 +280,13 @@
     <div class="main all" id="projects">
 
         <!--link to projects-->
-        <div ng-include="'includes/artwork.htm'"></div>
+        <div data-include="/includes/artwork.htm"></div>
 
     </div>
 
 
     <!--link to footer-->
-    <div ng-include="'includes/footer.htm'"></div>
+    <div data-include="/includes/footer.htm"></div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
