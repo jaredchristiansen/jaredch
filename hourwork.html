@@ -62,7 +62,7 @@
 
         <section class="two-col work" data-aos="fade-up">
             <div class="work">
-                <h2 class="title"><b>Context</b></h2>
+                <h2 class="title">Context</h2>
             </div>
             <div class="two-col__card">
                 <div class="two-col__grid">
@@ -92,7 +92,7 @@
 
         <section class="main all workDiv space-small" data-aos="fade-up">
             <div class="work">
-                <h2 class="title"><b>Process</b></h2>
+                <h2 class="title">Process</h2>
             </div>
             <div class="process-steps">
                 <div class="process-step">
@@ -152,7 +152,11 @@
         </section>
 
 
-        <div class="work space-small" data-aos="fade-up">
+        <div class="work space-med" data-aos="fade-up">
+            <div class="work">
+                <h2 class="title">Understand</h2>
+            </div>
+
             <span class="section-eyebrow">Understand</span>
             <h3 class="section-title">Initial problem discovery</h3>
             <p>
@@ -173,7 +177,12 @@
                 own, and what information mattered most to support that change.
             </p>
         </div>
-        <div class="work space-small" data-aos="fade-up">
+
+
+        <div class="work space-med" data-aos="fade-up">
+            <div class="work">
+                <h2 class="title">Research</h2>
+            </div>
             <span class="section-eyebrow">Research</span>
             <h3 class="section-title">What we found about our users</h3>
             <p>
@@ -195,7 +204,14 @@
                 structure and tone of the designs that followed.
             </p>
         </div>
-        <div class="work space-small" data-aos="fade-up">
+
+
+
+
+        <div class="work space-med" data-aos="fade-up">
+            <div class="work">
+                <h2 class="title">Explore</h2>
+            </div>
             <span class="section-eyebrow">Explore</span>
             <h3 class="section-title">Wireframing</h3>
             <p>
@@ -203,72 +219,172 @@
                 challenge assumptions, and understand the tradeoffs between clarity, flexibility, and complexity before
                 committing to a solution.
             </p>
-            <img src="images/portfolio/hourwork/dashboard/wireframe.png">
+
+            <section class="concept-grid">
+                <article class="concept">
+                    <img src="images/portfolio/hourwork/dashboard/wireframe-fail-2.png" alt="Concept 1">
+                    <h4>The Complex / Power-User Dashboard</h4>
+                    <div class="concept-block">
+                        <h5>Why we thought it might work</h5>
+                        <p>
+                            This direction prioritized flexibility and completeness. With filters, detailed charts, and
+                            full
+                            activity logs, it aimed to give managers maximum visibility and control across stores. On
+                            the
+                            surface, it felt robust and future-proof — a dashboard that could grow with the product.
+                        </p>
+                    </div>
+
+                    <div class="concept-block">
+                        <h5>Why it failed</h5>
+                        <p>
+                            While powerful, this approach assumed time, technical comfort, and a desire for analysis
+                            that
+                            didn’t reflect how managers actually used the platform. It required configuration before
+                            delivering clarity and introduced unnecessary cognitive load. Research showed that managers
+                            needed quick reassurance — not a reporting tool.
+                        </p>
+                    </div>
+
+                    <div class="concept-block">
+                        <strong>Takeaway:</strong> Optimized for depth over speed.
+                    </div>
+                </article>
+
+
+                <article class="concept">
+                    <img src="images/portfolio/hourwork/dashboard/wireframe-fail-1.png" alt="Concept 2">
+
+                    <h4>The Notification-Heavy / Activity Feed</h4>
+
+                    <div class="concept-block">
+                        <h5>Why we thought it might work</h5>
+                        <p>
+                            This direction centered on a real-time activity feed, surfacing every message, survey, and
+                            response in chronological order. It felt dynamic and transparent — giving managers a sense
+                            of
+                            constant visibility into what the system was doing.
+                        </p>
+                    </div>
+
+                    <div class="concept-block">
+                        <h5>Why it failed</h5>
+                        <p>
+                            While transparent, this approach over-indexed on recency. The volume of activity quickly
+                            became
+                            noisy, making it difficult to identify meaningful patterns or upcoming milestones. Instead
+                            of
+                            reducing uncertainty, it created distraction. Managers needed structured clarity, not a live
+                            stream of events.
+                        </p>
+                    </div>
+
+                    <div class="concept-block">
+                        <strong>Takeaway:</strong> Too noisy for fast decision-making.
+                    </div>
+                </article>
+            </section>
+
+            <h4 class="space-xl">The final structure</h4>
+            <p class="space-sm">
+                This layout separated short-term and longer-term information, reduced cognitive load, and created a
+                clear scanning hierarchy. With this structure in place, the remaining work shifted from deciding where
+                things belonged to refining how they should be presented.
+            </p>
+            <img src="images/portfolio/hourwork/dashboard/wireframe-success.png">
+
         </div>
+
+
+
+
+        <div class="work space-med" data-aos="fade-up">
+            <span class="section-eyebrow">Explore</span>
+            <h3 class="section-title">What we found about our users</h3>
+            <p>
+                Once the problem space was clearer, the next step was pressure-testing our assumptions—specifically, who
+                this dashboard was actually for and how it would be used in real life.
+                <br><br>
+                Most managers were accessing HourWork on a shared computer in the back of the store, usually between
+                tasks or during short breaks. They weren’t especially tech-savvy, and they weren’t interested in
+                learning a complex system. That context made the priority obvious: the dashboard needed to be fast to
+                read, predictable, and hard to mess up. Visual flair mattered far less than clarity.
+            </p>
+        </div>
+
+
+
+
+
+
+
         <div class="work space-small" data-aos="fade-up">
+            <div class="work">
+                <h2 class="title"><b>Prototype</b></h2>
+            </div>
             <span class="section-eyebrow">Prototype</span>
             <h3 class="section-title">First designs</h3>
             <p>
-                Pick the best wireframes, make a first pass at designing them. Collaborate with the team to figure out
-                what parts we want to keep or change.
+                With the overall layout established, the next step was refining how each section communicated
+                information. We knew what needed to be shown — company-wide statistics, today’s touchpoints, weekly
+                activity, and locations — but the challenge was determining the most readable and useful way to present
+                it.
+                <br><br>
+                At this stage, the focus shifted from structure to clarity. I explored multiple variations for each
+                module, testing different levels of detail, grouping strategies, and visual hierarchy. Many of these
+                options were intentionally ruled out when they introduced unnecessary density or required too much
+                interpretation from the user.
+                <br><br>
+                The goal wasn’t to show more information — it was to make the right information easier to understand at
+                a glance.
             </p>
             <img src="images/portfolio/hourwork/dashboard/First-designs.png">
         </div>
-        <div class="work space-med" data-aos="fade-up">
-            <h3 class="title">Use design kit for elements</h3>
-            <img src="images/portfolio/hourwork/dashboard/Design-kit.png">
-        </div>
-        <div class="work space-med" data-aos="fade-up">
+
+
+
+        <div class="work space-small" data-aos="fade-up">
             <img src="images/portfolio/hourwork/dashboard/iteration.png">
         </div>
-        <div class="work space-med" data-aos="fade-up">
-            <div class="title"><b>Final design, ready for testing</b></div>
+        <div class="work space-small" data-aos="fade-up">
+            <h3 class="title">Assemble the design, move to testing</h3>
             <img src="images/portfolio/hourwork/dashboard/Final-ready-to-test.png">
         </div>
+
+
         <div class="work space-med" data-aos="fade-up">
-            <div class="title"><b>Test with users</b></div>
+            <div class="work">
+                <h2 class="title"><b>Validate</b></h2>
+            </div>
+            <span class="section-eyebrow">Validate</span>
+            <h3 class="section-title">Test with users</h3>
+            <p>
+                With a structured prototype in place, the next step was putting it in front of managers to test the
+                assumptions behind the design. The goal wasn’t aesthetic feedback — it was clarity.
+                <br><br>
+                We focused on questions like:
+                <br>
+            </p>
+            <ul class="bullets">
+                <li>Can they quickly understand what’s happening across their stores?</li>
+                <li>Do they know where to click without instruction?</li>
+                <li>Does the hierarchy match how they think about their day?</li>
+            </ul><br>
+            <p>
+                These sessions surfaced small friction points and confirmed which areas felt intuitive. Addressing this
+                feedback before development ensured the final design reduced uncertainty rather than introducing new
+                complexity.
+            </p>
+            <div class="space-tiny"></div>
             <img src="images/portfolio/hourwork/dashboard/User-testing.png">
         </div>
+
         <div class="work space-small" data-aos="fade-up">
             <img src="images/portfolio/hourwork/dashboard/Iterate-again.png">
         </div>
-        <div class="work space-large" data-aos="fade-up">
+        <div class="work" data-aos="fade-up">
             <img src="images/portfolio/hourwork/dashboard/final.png">
         </div>
-
-
-        <div class="work space-small" data-aos="fade-up">
-            <div class="title"><b>Settings</b></div>
-            <img src="images/portfolio/hourwork/settings/Settings-overview.png">
-        </div>
-        <div class="work space-tiny" data-aos="fade-up">
-            <div class="row">
-                <h3 class="title med">Wireframes</h3>
-                <div class="title small" style="padding-top: 20px">Craft wireframes to find early
-                    designs to share
-                    with the team.</div>
-            </div>
-            <img src="images/portfolio/hourwork/settings/Settings-wireframe.png">
-        </div>
-        <div class="work space-large" data-aos="fade-up">
-            <img src="images/portfolio/hourwork/settings/settings-layout.png">
-        </div>
-
-
-        <div class="work space-tiny" data-aos="fade-up">
-            <div class="title med">Delivering designs</div>
-            <img src="images/portfolio/hourwork/reporting.png">
-        </div>
-        <div class="work space-small" data-aos="fade-up">
-
-            <div class="title small">When handing designs off to developers, make sure
-                all instruction is clear to ensure a great final product</div>
-            <img src="images/portfolio/hourwork/Design-delivery.png">
-        </div>
-
-
-
-
 
     </div>
 

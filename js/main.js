@@ -192,29 +192,29 @@ function bgChange(workPiece) {
     case 0:
       bg = "white";
       break;
-    case "ollieboard":
-      bg = "#444";
-      num = 0;
-      break;
+    // case "ollieboard":
+    //   bg = "#444";
+    //   num = 0;
+    //   break;
     case "hourwork":
       bg = "#C7E5FB";
-      num = 1;
+      num = 0;
       break;
     case "syrg":
       bg = "#CED8EF";
-      num = 2;
+      num = 1;
       break;
     case "simplyMusic":
       bg = "#FFD5D4";
-      num = 3;
+      num = 2;
       break;
     case "inspecticare":
       bg = "#DACCD5";
-      num = 4;
+      num = 3;
       break;
     case "stoneShowcase":
       bg = "#AFBFE0";
-      num = 5;
+      num = 4;
       break;
     default:
       bg = "white";

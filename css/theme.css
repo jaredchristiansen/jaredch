@@ -1,6 +1,7 @@
 :root {
   --bg: #ffffff;
   --main-primary: #1aa6bc;
+  --border: rgba(255, 255, 255, 0.3);
 
   --text-body: #111;
   --text-title: #555;
@@ -47,8 +48,8 @@ body.hourwork {
 body.syrg {
   --bg: #333C47;
 
-  --text-body: #111;
-  --text-title: #555;
+  --text-body: #fff;
+  --text-title: #fff;
   --text-muted: #777;
 
   --surface: rgba(255, 255, 255, 0.4);
@@ -57,9 +58,9 @@ body.syrg {
 body.simplyMusic {
   --bg: #ee7269;
 
-  --text-body: #111;
-  --text-title: #555;
-  --text-muted: #777;
+  --text-body: #FFF;
+  --text-title: #FFF;
+  --text-muted: #bbbbbb;
 
   --surface: rgba(255, 255, 255, 0.4);
 }
