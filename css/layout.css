@@ -1,7 +1,4 @@
 .work {
-    width: 95%;
-    margin: 1% 2.5%;
-    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -107,9 +104,11 @@ li {
 }
 
 .description {
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 
-    margin-top: 15vh;
+    margin-top: 18vh;
     max-width: 800px;
 }
 
@@ -218,6 +217,7 @@ h2.space {
     height: 40vh;
     opacity: 1;
     margin-top: 30vh;
+    margin-bottom: 17vh;
 }
 
 .cover h2 {
@@ -323,12 +323,16 @@ h2.space {
     border-radius: 5px;
 }
 
+.two-col__col img{
+    max-width: 100%;
+}
+
 /* Grid */
 .two-col__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: clamp(20px, 5vw, 40px);
-    row-gap: 28px;
+    row-gap: 20px;
     align-items: start;
 }
 
@@ -451,6 +455,7 @@ h2.space {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     margin-bottom: 12px;
+    color: var(--text-muted);
 }
 
 .section-title {

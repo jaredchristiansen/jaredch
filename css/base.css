@@ -30,6 +30,8 @@ b {
 body {
     min-height: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: column;
     position: relative;
     padding-bottom: 200px;
     overscroll-behavior-y: none;
@@ -100,6 +102,10 @@ p {
     color: var(--text-body);
 }
 
+.workDiv h2 {
+    font-weight: 600;
+}
+
 small {
     font-size: 0.875em;
 }
@@ -163,36 +169,13 @@ a:hover {
 
 
 
-
-
-.all {
-    max-width: 1200px;
-
-    margin: auto;
-    clear: both;
-    overflow: hidden;
-}
-
-.pageContent {
+.page-content {
     display: flex;
-}
+    flex-direction: column;
+    align-self: center;
 
-.main {
-    padding: 3%;
-    margin: 0 auto;
-}
-
-.clear {
-    clear: both;
-}
-
-.float-left {
-    float: left;
-    display: block
-}
-
-.float-right {
-    float: right;
+    margin: 0 clamp(20px, 3vw, 40px);
+    max-width: 1200px;
 }
 
 .marg {
@@ -210,9 +193,6 @@ a:hover {
 /*  ———  Show work section  ———  */
 
 .showWork {
-    float: left;
-    width: 45%;
-    margin: 2.5%;
     padding-bottom: 0px;
     opacity: 1;
     overflow: hidden;
@@ -233,12 +213,18 @@ a:hover {
 
 .showWork:hover {
     cursor: pointer;
-
 }
 
 .showWork img:hover {
     transform: scale(0.90);
     cursor: pointer !important;
+}
+
+.show-work__outter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(25px, 3.5vw, 50px);
+    align-items: start;
 }
 
 
@@ -305,19 +291,14 @@ a:hover {
 
 
 .moreWork {
-    margin-top: 30%;
+    margin-top: 30vh;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 @media (max-width: 768px) {
-    .showWork {
-        width: 95%;
-        margin: 2.5%;
-    }
-
-    .showWork:hover {
-        width: 95%;
-        margin: 2.5%;
+    .show-work__outter {
+        grid-template-columns: 1fr;
     }
 }
 

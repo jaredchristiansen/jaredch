@@ -202,7 +202,7 @@ function bgChange(workPiece) {
       break;
     case "syrg":
       bg = "#CED8EF";
-      num = 1;
+      num = 3;
       break;
     case "simplyMusic":
       bg = "#FFD5D4";
@@ -210,7 +210,7 @@ function bgChange(workPiece) {
       break;
     case "inspecticare":
       bg = "#DACCD5";
-      num = 3;
+      num = 1;
       break;
     case "stoneShowcase":
       bg = "#AFBFE0";
