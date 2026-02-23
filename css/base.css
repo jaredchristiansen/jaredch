@@ -225,6 +225,7 @@ a:hover {
     grid-template-columns: 1fr 1fr;
     gap: clamp(25px, 3.5vw, 50px);
     align-items: start;
+    overflow: hidden;
 }
 
 

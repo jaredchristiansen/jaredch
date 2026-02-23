@@ -18,8 +18,8 @@
     z-index: 10;
 
     transition: padding-top 0.5s ease,
-              padding-bottom 0.5s ease,
-              top 0.5s ease;
+        padding-bottom 0.5s ease,
+        top 0.5s ease;
 }
 
 .nav-bar__content {
@@ -30,7 +30,7 @@
     min-width: 300px;
     width: 100%;
     min-height: 40px;
-    
+
     text-align: center;
 }
 
@@ -221,10 +221,6 @@ header {
         font-size: 19px;
         padding: 0px 10px;
         margin: 5px 5px;
-    }
-
-    .nav-bar {
-        padding: 0px;
     }
 
     .nav-bar__image {
