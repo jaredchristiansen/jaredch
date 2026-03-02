@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ollieboard — Case Study</title>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @import "./fonts.css";
+        :root {
+            --bg: #0d0d0d;
+            --surface: #141414;
+            --border: #222;
+            --muted: #444;
+            --text: #e8e4dc;
+            --text-dim: #888;
+            --accent: #fab515;
+            --accent2: #ff6b35;
+            --white: #f5f0e8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            /* font-family: 'DM Mono', monospace; */
+            font-family: 'avenir', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 14px;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        #progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background: var(--accent);
+            z-index: 100;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(13, 13, 13, 0.95), transparent);
+            z-index: -1;
+        }
+
+        .nav-label {
+            font-family: 'Syne', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+        }
+
+        .nav-chapters {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-chapters a {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            color: var(--text-dim);
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        .nav-chapters a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: 1fr auto;
+            padding: 120px 40px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg-text {
+            position: absolute;
+            bottom: -40px;
+            left: -10px;
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(100px, 20vw, 280px);
+            font-weight: 800;
+            color: transparent;
+            -webkit-text-stroke: 1px #1e1e1e;
+            letter-spacing: -0.04em;
+            white-space: nowrap;
+            pointer-events: none;
+            user-select: none;
+            line-height: 1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            align-self: center;
+        }
+
+        .hero-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .hero-eyebrow span {
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .hero-eyebrow .dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--muted);
+        }
+
+        .hero-eyebrow .dim {
+            color: var(--text-dim);
+        }
+
+        h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(52px, 8vw, 110px);
+            line-height: 1;
+            letter-spacing: -0.02em;
+            color: var(--white);
+            margin-bottom: 32px;
+        }
+
+        h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .hero-sub {
+            font-size: 16px;
+            color: var(--text-dim);
+            max-width: 560px;
+            line-height: 1.8;
+            margin-bottom: 56px;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .meta-item label {
+            display: block;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        .meta-item value {
+            font-size: 13px;
+            color: var(--text);
+        }
+
+        .hero-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .scroll-hint {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-dim);
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .scroll-hint .line {
+            width: 40px;
+            height: 1px;
+            background: var(--muted);
+        }
+
+        .chapter {
+            padding: 120px 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .chapter+.chapter {
+            border-top: 1px solid var(--border);
+        }
+
+        .full-divider {
+            width: 100%;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .chapter-header {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+            align-items: start;
+        }
+
+        .chapter-number {
+            font-family: 'Instrument Serif', serif;
+            font-size: 120px;
+            line-height: 1;
+            color: #1a1a1a;
+            letter-spacing: -0.04em;
+            position: sticky;
+            top: 80px;
+        }
+
+        .chapter-label {
+            font-size: 10px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(36px, 5vw, 60px);
+            line-height: 1.1;
+            color: var(--white);
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+
+        h2 em {
+            font-style: italic;
+            color: var(--text-dim);
+        }
+
+        .chapter-intro {
+            font-size: 16px;
+            line-height: 1.9;
+            color: var(--text-dim);
+            max-width: 600px;
+        }
+
+        .photo-hero {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            display: block;
+            margin: 60px 0 12px;
+            filter: grayscale(20%) contrast(1.05);
+        }
+
+        .photo-caption {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            text-transform: uppercase;
+            margin-bottom: 60px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            margin: 60px 0;
+        }
+
+        .photo-grid-item img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(15%) contrast(1.05);
+            transition: filter 0.3s;
+        }
+
+        .photo-grid-item img:hover {
+            filter: grayscale(0%) contrast(1.1);
+        }
+
+        .photo-grid-item .photo-caption {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        .photo-side {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin: 60px 0;
+            align-items: start;
+        }
+
+        .photo-side img {
+            width: 100%;
+            object-fit: cover;
+            filter: grayscale(15%) contrast(1.05);
+        }
+
+        .photo-side-text {
+            padding-top: 8px;
+        }
+
+        .photo-side-text p {
+            font-size: 14px;
+            color: var(--text-dim);
+            line-height: 1.9;
+        }
+
+        .photo-side-text p+p {
+            margin-top: 16px;
+        }
+
+        .pullquote {
+            border-left: 3px solid var(--accent);
+            padding: 20px 0 20px 32px;
+            margin: 60px 0;
+        }
+
+        .pullquote p {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(22px, 3vw, 34px);
+            line-height: 1.4;
+            color: var(--white);
+            font-style: italic;
+        }
+
+        .pullquote cite {
+            display: block;
+            margin-top: 16px;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            font-style: normal;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1px;
+            background: var(--border);
+            margin: 60px 0;
+        }
+
+        .card {
+            background: var(--surface);
+            padding: 32px;
+            transition: background 0.2s;
+        }
+
+        .card:hover {
+            background: #1a1a1a;
+        }
+
+        .card-icon {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .card h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.8;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 28px;
+            margin: 60px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            bottom: 8px;
+            width: 1px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 48px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 6px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 12px var(--accent);
+        }
+
+        .timeline-item .label {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent2);
+            margin-bottom: 8px;
+        }
+
+        .timeline-item h4 {
+            font-family: 'Syne', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .timeline-item p {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.8;
+            max-width: 560px;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+            margin: 60px 0;
+        }
+
+        .stat {
+            background: var(--surface);
+            padding: 40px 32px;
+            text-align: center;
+        }
+
+        .stat .number {
+            font-family: 'Instrument Serif', serif;
+            font-size: 56px;
+            line-height: 1;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .stat .desc {
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin: 60px 0;
+            align-items: start;
+        }
+
+        .split-label {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .split p {
+            font-size: 14px;
+            color: var(--text-dim);
+            line-height: 1.9;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 24px 0;
+        }
+
+        .pill {
+            padding: 6px 14px;
+            border: 1px solid var(--border);
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+
+        .pill:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .pill.highlight {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(232, 255, 71, 0.05);
+        }
+
+        .lesson-block {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 32px;
+            margin: 16px 0;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 24px;
+            align-items: start;
+            transition: border-color 0.2s;
+        }
+
+        .lesson-block:hover {
+            border-color: var(--muted);
+        }
+
+        .lesson-icon {
+            font-family: 'Instrument Serif', serif;
+            font-size: 32px;
+            color: var(--accent2);
+            line-height: 1;
+            margin-top: -4px;
+        }
+
+        .lesson-block h4 {
+            font-family: 'Syne', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .lesson-block p {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.8;
+        }
+
+        .status-banner {
+            background: rgba(232, 255, 71, 0.06);
+            border: 1px solid rgba(232, 255, 71, 0.2);
+            padding: 40px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .status-banner::before {
+            content: 'LIVE';
+            position: absolute;
+            top: -20px;
+            right: 40px;
+            font-family: 'Syne', sans-serif;
+            font-size: 80px;
+            font-weight: 800;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(232, 255, 71, 0.08);
+            letter-spacing: -0.04em;
+            pointer-events: none;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-right: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                box-shadow: 0 0 0 0 rgba(232, 255, 71, 0.4);
+            }
+
+            50% {
+                opacity: 0.8;
+                box-shadow: 0 0 0 6px rgba(232, 255, 71, 0);
+            }
+        }
+
+        .status-banner h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .status-banner p {
+            font-size: 16px;
+            color: var(--text);
+            line-height: 1.8;
+            max-width: 640px;
+        }
+
+        .cta-section {
+            padding: 160px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(232, 255, 71, 0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-label {
+            font-size: 10px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 32px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(40px, 6vw, 80px);
+            color: var(--white);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: var(--accent);
+            color: #0d0d0d;
+            font-family: 'Syne', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .cta-button:hover {
+            background: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(232, 255, 71, 0.2);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px 24px;
+            }
+
+            .nav-chapters {
+                display: none;
+            }
+
+            .hero,
+            .chapter {
+                padding: 100px 24px 40px;
+            }
+
+            .chapter-header,
+            .split,
+            .photo-side,
+            .photo-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .chapter-number {
+                font-size: 60px;
+                position: static;
+            }
+
+            .stat-row {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-meta {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-content reveal">
+            <div class="hero-eyebrow">
+                <span>Ollieboard</span>
+                <div class="dot"></div>
+                <span class="dim">2024 — Present</span>
+                <div class="dot"></div>
+                <span class="dim">Co-Founder · Designer · Builder</span>
+            </div>
+            <h1>How I help<br><em>start</em> companies.</h1>
+            <p class="hero-sub">After HourWork was acquired, the CEO asked me to build something new with him. This is the story of zero-to-one product — from a blank whiteboard to sensors mounted inside Domino's stores.</p>
+            <div class="hero-meta">
+                <div class="meta-item"><label>Company Stage</label>
+                    <value>Pre-Seed · 2 Person</value>
+                </div>
+                <div class="meta-item"><label>My Role</label>
+                    <value>Design + Engineering</value>
+                </div>
+                <div class="meta-item"><label>Discovery Interviews</label>
+                    <value>30+ Franchise Owners</value>
+                </div>
+                <div class="meta-item"><label>Deliverables</label>
+                    <value>Hardware, Software, UX</value>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bottom reveal">
+            <div class="scroll-hint">
+                <div class="line"></div>Scroll to read
+            </div>
+        </div>
+        <div class="hero-bg-text">OLLIE</div>
+    </section>
+
+    <div class="full-divider"></div>
+
+    <!-- CH 1 -->
+    <section class="chapter" id="origin">
+        <div class="chapter-header">
+            <div class="chapter-number">01</div>
+            <div class="chapter-title-block reveal">
+                <span class="chapter-label">The Origin</span>
+                <h2>An acquisition.<br>A <em>phone call.</em></h2>
+                <p class="chapter-intro">HourWork was acquired in 2024. Most people celebrate and move on. My CEO called me instead — because he'd watched how I worked in the early product phases, and he wanted to do it again. That became OllieBoard.</p>
+            </div>
+        </div>
+
+        <img src="images/portfolio/ollieboard/ollie-team-meeting.jpeg" class="photo-hero reveal" alt="Dinner with OllieBoard team and Domino's partner-investors">
+        <p class="photo-caption reveal">Early dinner with our co-founders and primary Domino's partners — who became both our pilot customers and investors.</p>
+
+        <div class="pullquote reveal">
+            <p>"You don't get asked to co-found something unless someone has seen how you think under pressure — in the zero-to-one phase when nothing is defined and everything matters."</p>
+            <cite>On being invited to start Ollieboard</cite>
+        </div>
+
+        <div class="split reveal">
+            <div>
+                <span class="split-label">The Invitation</span>
+                <p>After watching how I navigated ambiguity, validated ideas quickly, and shipped product at a scrappy startup, the CEO came to me with a simple ask: let's build something new together. When you're two people, "product designer" isn't a title — it's the whole job.</p>
+            </div>
+            <div>
+                <span class="split-label">My Mandate</span>
+                <p>Everything product. Every interface, every algorithm, every sensor mounted in a Domino's store. Design, code, hardware, and the strategic thinking behind all of it — that was mine to figure out.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CH 2 -->
+    <section class="chapter" id="problem">
+        <div class="chapter-header">
+            <div class="chapter-number">02</div>
+            <div class="chapter-title-block reveal">
+                <span class="chapter-label">Problem Definition</span>
+                <h2>Restaurants don't know<br>how many hours <em>they actually need.</em></h2>
+                <p class="chapter-intro">Owners set their schedules based on feel — what they think they'll need. But no one has mapped every task required to run a store properly. The result is either wasted hours or an understaffed shift that underperforms.</p>
+            </div>
+        </div>
+
+        <div class="card-grid reveal">
+            <div class="card">
+                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                </svg>
+                <h3>The Scheduling Gap</h3>
+                <p>Owners schedule by intuition, not data. Without knowing the real work volume, every schedule is a guess — some days overstaffed, others dangerously thin.</p>
+            </div>
+            <div class="card">
+                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5" />
+                    <path d="M2 12l10 5 10-5" />
+                </svg>
+                <h3>The Hidden Task Load</h3>
+                <p>Every store has hundreds of recurring tasks — dough management, sanitation, restocks — that no one has ever catalogued or sequenced. They happen, or they don't.</p>
+            </div>
+            <div class="card">
+                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="12" y1="1" x2="12" y2="23" />
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+                <h3>The Margin Leak</h3>
+                <p>Inefficiency at this level isn't visible on any dashboard. Owners lose margin to problems they can't quantify — which means they can't fix them either.</p>
+            </div>
+        </div>
+
+        <div class="pullquote reveal">
+            <p>"The schedule is a guess. We wanted to make it a science."</p>
+            <cite>OllieBoard core thesis</cite>
+        </div>
+
+        <div class="split reveal">
+            <div>
+                <span class="split-label">The Opportunity</span>
+                <p>Catalogue every task a store needs. Map it, sequence it, time it. Build the real schedule — not what someone thinks the store needs, but what it actually requires to run at its best.</p>
+            </div>
+            <div>
+                <span class="split-label">The Vision</span>
+                <p>An operations layer that works like an intelligent manager: knowing what needs to happen, when, and whether it did. Saving money and increasing store quality without adding headcount.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CH 3 -->
+    <section class="chapter" id="discovery">
+        <div class="chapter-header">
+            <div class="chapter-number">03</div>
+            <div class="chapter-title-block reveal">
+                <span class="chapter-label">Discovery & Validation</span>
+                <h2>In the store<br><em>before</em> the screen.</h2>
+                <p class="chapter-intro">Before designing anything, I spent weeks inside the problem space — stretching dough alongside operators, running workshops with top franchise owners, and conducting 30+ discovery interviews. The goal wasn't to validate a solution. It was to understand what was actually breaking.</p>
+            </div>
+        </div>
+
+        <div class="photo-side reveal">
+            <div>
+                <img src="images/portfolio/ollieboard/d-training.jpg" alt="Learning dough stretching at a Domino's">
+                <p class="photo-caption" style="margin-top: 12px;">Being trained by the owner of a top-10 Domino's franchise — who walked us through every aspect of his operations.</p>
+            </div>
+            <div class="photo-side-text">
+                <span class="split-label">Going Deep</span>
+                <p>Discovery doesn't happen behind a computer. To understand the real task load in a store, I got in the apron. The owner of a top-10 Domino's franchise gave us a full operational breakdown — every station, every cycle, every decision his employees don't even know is being made.</p>
+                <p>That kind of access only happens when you show up. And it surfaced constraints no remote interview would have caught.</p>
+            </div>
+        </div>
+
+        <div class="stat-row reveal">
+            <div class="stat"><span class="number">30+</span><span class="desc">Discovery interviews with franchise owners & operators</span></div>
+            <div class="stat"><span class="number">1</span><span class="desc">Manual in-store test before writing a line of code</span></div>
+            <div class="stat"><span class="number">4</span><span class="desc">Top New England Domino's owners at first Gold Standard workshop</span></div>
+        </div>
+
+        <div class="photo-grid reveal">
+            <div class="photo-grid-item">
+                <img src="images/portfolio/ollieboard/fenway-meeting.png" alt="Gold Standard workshop in a Domino's store">
+                <p class="photo-caption">First Quarterly Gold Standard Workshop — mapping ideal task sequences with four top-performing New England Domino's owners, including a Gold Franny Award winner.</p>
+            </div>
+            <div class="photo-grid-item">
+                <img src="images/portfolio/ollieboard/pg-meeting.jpeg" alt="Papa Gino's prototype review">
+                <p class="photo-caption">Early prototype review at Papa Gino's — pressure-testing the model beyond Domino's to validate across QSR formats.</p>
+            </div>
+        </div>
+
+        <div class="lesson-block reveal">
+            <div class="lesson-icon">→</div>
+            <div>
+                <h4>The Shortcut That Saved a Month</h4>
+                <p>My partner wanted to build the scheduling system and test it in stores. I pushed back. Instead, we went into a store and manually assigned tasks to employees — mimicking what the software would do. Within a day, we uncovered critical flaws in our model that would have taken weeks to debug in code. Testing the hypothesis before building it is almost always the right call.</p>
+            </div>
+        </div>
+
+        <div class="split reveal">
+            <div>
+                <span class="split-label">What We Hypothesized</span>
+                <div class="pill-list">
+                    <span class="pill">Employees need a checklist</span>
+                    <span class="pill">Screen-based guidance works</span>
+                    <span class="pill">Task completion = checkbox</span>
+                    <span class="pill">Managers will supervise</span>
+                </div>
+            </div>
+            <div>
+                <span class="split-label">What We Learned</span>
+                <div class="pill-list">
+                    <span class="pill highlight">Employees pencil-whip tasks</span>
+                    <span class="pill highlight">Phones = distraction + hygiene risk</span>
+                    <span class="pill highlight">Trust must be verified, not assumed</span>
+                    <span class="pill highlight">Motion is the real signal</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CH 4 -->
+    <section class="chapter" id="system">
+        <div class="chapter-header">
+            <div class="chapter-number">04</div>
+            <div class="chapter-title-block reveal">
+                <span class="chapter-label">Building the System</span>
+                <h2>Designing for a<br><em>physical world.</em></h2>
+                <p class="chapter-intro">The interface was only one layer. Below it: a task optimization engine, a sensor network, hardware I sourced and installed myself, and algorithms that turn radar data into employee position. Built by one person, from Figma to a wall-mounted screen in a working Domino's.</p>
+            </div>
+        </div>
+
+        <div class="photo-side reveal">
+            <div class="photo-side-text">
+                <span class="split-label">Live in Store</span>
+                <p>The first OllieBoard screen mounted and running in a real Domino's location. Designed for back-of-house — loud, fast, no time to learn a new interface. Every design decision was made with that wall in mind.</p>
+            </div>
+            <div>
+                <img src="images/portfolio/ollieboard/screen-installed.jpeg" alt="OllieBoard screen installed in Domino's store">
+                <p class="photo-caption" style="margin-top: 12px;">OllieBoard running live at a Domino's pilot location.</p>
+            </div>
+        </div>
+
+        <div class="photo-side reveal" style="margin-top: 0;">
+            <div>
+                <img src="images/portfolio/ollieboard/full-sensor-set.jpg" alt="10 OllieBoard mmWave sensors before installation">
+                <p class="photo-caption" style="margin-top: 12px;">The full sensor set — branded, programmed, and ready for installation across the store.</p>
+            </div>
+            <div class="photo-side-text">
+                <span class="split-label">The Sensor Layer</span>
+                <p>When we realized self-reported task completion couldn't be trusted, I researched, sourced, and programmed a network of mmWave radar sensors. The algorithms I wrote convert raw radar signal into employee position — so the system knows what's actually happening, not what someone tapped.</p>
+            </div>
+        </div>
+
+        <div class="timeline reveal">
+            <div class="timeline-item">
+                <div class="label">Layer 01 — Intelligence</div>
+                <h4>Task Optimization Engine</h4>
+                <p>Built the core algorithm that ingests every store task — dough management, sanitation, restocks — and surfaces the right job to the right person at the right moment. The foundation for real data-driven scheduling.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="label">Layer 02 — Interface</div>
+                <h4>Workstation Displays</h4>
+                <p>Designed for a demanding environment: fast pace, language barriers, aging hardware, employees reading mid-task. Built in Bubble, deployed to mounted screens throughout the store. Legibility and speed were the only metrics that mattered.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="label">Layer 03 — Verification</div>
+                <h4>mmWave Sensor Network</h4>
+                <p>Sourced, programmed, assembled, and physically installed sensors in pilot stores. Wrote position-tracking algorithms that turn radar signal into actionable data — giving the system ground truth on whether work is actually being done.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="label">Layer 04 — Ops</div>
+                <h4>Supporting Infrastructure</h4>
+                <p>Automated schedule scraping, Domino's data parsing, Discord integrations, AI-assisted training workflows, pitch deck, investor materials, intern management, ERDs, and full product specs. One person, full stack.</p>
+            </div>
+        </div>
+
+        <div class="pill-list reveal">
+            <span class="pill highlight">Bubble</span>
+            <span class="pill highlight">mmWave Sensor Hardware</span>
+            <span class="pill highlight">Home Assistant</span>
+            <span class="pill highlight">Python</span>
+            <span class="pill highlight">Discord API</span>
+            <span class="pill highlight">Automated Scrapers</span>
+            <span class="pill highlight">AI Chatbot</span>
+            <span class="pill highlight">Physical Installation</span>
+        </div>
+    </section>
+
+    <!-- CH 5 -->
+    <section class="chapter" id="lessons">
+        <div class="chapter-header">
+            <div class="chapter-number">05</div>
+            <div class="chapter-title-block reveal">
+                <span class="chapter-label">What I Learned</span>
+                <h2>The hard lessons<br>are the <em>real work.</em></h2>
+                <p class="chapter-intro">Zero-to-one is a constant negotiation between building and learning. The moments I was most wrong are the ones I grew from most.</p>
+            </div>
+        </div>
+
+        <div class="lesson-block reveal">
+            <div class="lesson-icon">⊘</div>
+            <div>
+                <h4>Don't trust self-reported completion</h4>
+                <p>Employees checked off tasks they hadn't done — "pencil whipping." Self-reported data is not the same as behavioral data. This single insight reshaped the entire sensor strategy and verification layer of the product.</p>
+            </div>
+        </div>
+        <div class="lesson-block reveal">
+            <div class="lesson-icon">⊘</div>
+            <div>
+                <h4>Phones don't belong on the floor</h4>
+                <p>Personal devices create distraction and hygiene concerns in food prep environments. The form factor needs to match the physical reality — guidance only works if it's already where the work happens.</p>
+            </div>
+        </div>
+        <div class="lesson-block reveal">
+            <div class="lesson-icon">⊘</div>
+            <div>
+                <h4>Resist the "just one more thing" trap</h4>
+                <p>At a two-person startup, scope creep doesn't just slow you down — it fragments your learning. Every feature added before validating the core is debt against clarity. I learned to protect the scope like it was the product itself.</p>
+            </div>
+        </div>
+        <div class="lesson-block reveal">
+            <div class="lesson-icon">✓</div>
+            <div>
+                <h4>Proving value manually beats building first</h4>
+                <p>The manual in-store test was the highest-leverage thing we did. One afternoon in a Domino's saved us a month of development. Testing the hypothesis — not the software — is always the right first move.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CH 6 -->
+    <section class="chapter" id="today">
+        <div class="chapter-header">
+            <div class="chapter-number">06</div>
+            <div class="chapter-title-block reveal">
+                <span class="chapter-label">Where It Stands</span>
+                <h2>Sensors in stores.<br><em>Funding incoming.</em></h2>
+                <p class="chapter-intro">OllieBoard has moved from concept to in-store pilot. The task engine is live, hardware is installed, and we're positioning for a pre-seed round with real pilot data and top-10 franchise owners already in our corner.</p>
+            </div>
+        </div>
+
+        <div class="status-banner reveal">
+            <h3><span class="status-dot"></span>Current Status</h3>
+            <p>Sensors are installed and tracking employee movement in real Domino's locations. The task optimization engine is live and informing real scheduling decisions. We're actively seeking pre-seed funding with pilot data in hand.</p>
+        </div>
+
+        <div class="split reveal">
+            <div>
+                <span class="split-label">What Was Built</span>
+                <p>A full operational platform — workstation displays, a task engine, sensor hardware, and a verification layer — from scratch, by two people. Every design decision, every line of code, every sensor mounted on a wall in a working Domino's store.</p>
+            </div>
+            <div>
+                <span class="split-label">What I'm Taking With Me</span>
+                <p>The judgment to know when to build and when to test. The confidence to push back when the plan is wrong. The range to move between Figma and a hardware enclosure in the same afternoon. And a genuine understanding of what early-stage product work actually requires.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="full-divider"></div>
+    <section class="cta-section">
+        <p class="cta-label reveal">Ready to build something?</p>
+        <h2 class="reveal">This is how I show up<br>on day one.</h2>
+        <a href="mailto:hello@jaredch.com" class="cta-button reveal">
+            Let's Talk
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+        </a>
+    </section>
+
+    <script>
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), 80); io.unobserve(e.target); } });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
+
+
+
+
+</body>
+
+</html>

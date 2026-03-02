@@ -51,9 +51,7 @@
                         </style>
                     </defs>
                     <title>jaredchCrown</title>
-                    <path class="a"
-                        d="M654.05,481.5a2.92,2.92,0,0,1-5.19-1C607.3,331.27,510,258.4,510,258.4s-97.31,72.87-138.87,222.12a2.93,2.93,0,0,1-5.2,1C283.79,369.32,137.49,352.75,137.49,352.75L247.43,675.12A10.27,10.27,0,0,0,257,682H763a10.28,10.28,0,0,0,9.55-6.88L882.49,352.75S736.19,369.32,654.05,481.5Z"
-                        transform="translate(-137.49 -258.4)" />
+                    <path class="a" d="M654.05,481.5a2.92,2.92,0,0,1-5.19-1C607.3,331.27,510,258.4,510,258.4s-97.31,72.87-138.87,222.12a2.93,2.93,0,0,1-5.2,1C283.79,369.32,137.49,352.75,137.49,352.75L247.43,675.12A10.27,10.27,0,0,0,257,682H763a10.28,10.28,0,0,0,9.55-6.88L882.49,352.75S736.19,369.32,654.05,481.5Z" transform="translate(-137.49 -258.4)" />
                 </svg>
             </div>
 
@@ -74,24 +72,68 @@
 
         <div class="cover">
             <div text-align="center" class="text">
-                <h1>Jared Christiansen,</h1>
-                <h2>Helping startups turn ideas into working products.</h2>
+
+                <!-- NEW -->
+                <div class="jc-name-block">
+                <p class="h-greeting">Product Designer & Builder</p>
+                <h1 class="h-name">
+                    Jared Christiansen<span class="h-comma">,</span><span class="h-caret"></span>
+                </h1>
+                
             </div>
 
-            <a href="#projects">
-                <div class="downArrow"></div>
-            </a>
+            <script>
+                setTimeout(() => {
+                    const caret = document.querySelector('.jc-name-block .h-caret');
+                    if (caret) caret.style.opacity = '1';
+                }, 1200);
+            </script>
+
+            <!-- ^^ NEW -->
+
+            <!-- <h1>Jared Christiansen,</h1> -->
+            <h2>I turn startup ideas into working products.</h2>
         </div>
 
+        <a href="#projects">
+            <div class="downArrow"></div>
+        </a>
+    </div>
 
-        <!-- link to projects -->
-        <div id="projects" data-include="/includes/artwork.htm"></div>
 
-        <!-- link to footer -->
-        <div data-include="/includes/footer.htm"></div>
+    <!-- link to projects -->
+    <div id="projects" data-include="/includes/artwork.htm"></div>
+
+    <!-- link to footer -->
+    <div data-include="/includes/footer.htm"></div>
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        // Hover interaction — adds h-hovering to grid, h-active to hovered card
+        const grid = document.getElementById('h-project-grid');
+        if (grid) {
+            const cards = grid.querySelectorAll('.h-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    grid.classList.add('h-hovering');
+                    card.classList.add('h-active');
+                });
+                card.addEventListener('mouseleave', () => {
+                    grid.classList.remove('h-hovering');
+                    card.classList.remove('h-active');
+                });
+            });
+        }
+
+        // Show caret after name animates in
+        setTimeout(() => {
+            const caret = document.querySelector('.jc-hero .h-caret');
+            if (caret) caret.style.opacity = '1';
+        }, 1200);
+    </script>
+
 
 </body>
 

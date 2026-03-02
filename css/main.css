@@ -5,69 +5,15 @@
 
 /* layout */
 @import "./layout.css";
+@import "./intro.css";
+@import "./portfolio-toc.css";
 
 /* components */
 @import "./nav.css";
 @import "./footer.css";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.getInTouch {
-    text-align: center;
-    margin: auto;
-    width: 60%;
-}
-
-.getInTouch h2 {
-    text-align: center;
-}
-
-.contactIcon {
-    width: 50%;
-    float: left;
-
-    text-align: center;
-}
-
-.contactIcon img {
-    width: 100%;
-}
-
-.contactIcon .image {
-    width: 40px;
-    margin: auto;
-    margin-bottom: 10px;
-}
-
-
-
-
-
+/* page specifics */
+@import "./ollie.css";
+@import "./hourwork.css";
+@import "./inspecticare.css";
+@import "./stoneshowcase.css";

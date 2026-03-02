@@ -81,8 +81,8 @@ header {
 
 
 .scroll-line {
-    min-height: 5px;
-    margin-bottom: -5px;
+    min-height: 4px;
+    margin-bottom: -4px;
     background: #1aa6bc;
     width: 0%;
     z-index: 11;

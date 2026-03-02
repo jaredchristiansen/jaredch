@@ -12,147 +12,465 @@
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="mstile-144x144.png" />
 
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/main.css" rel="stylesheet" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="/includes/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="/includes/waypoints/lib/waypoints.debug.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <script src="js/main.js"></script>
-
+    <script src="js/main.js" defer></script>
 </head>
 
-<header>
-    <div class="scroll-line"></div>
-</header>
-
-<body onload="pageRedirectEnd()" ng-app="" class="ollieboard">
+<body class="ollieboard">
+    <header>
+        <div class="scroll-line"></div>
+    </header>
 
     <div class="colorTransition"></div>
     <div class="colorTransitionEnd"></div>
 
     <!-- link to navbar -->
-    <div ng-include="'includes/navBar.htm'"></div>
+    <div data-include="/includes/navBar.htm"></div>
 
 
-    <div class="main all">
-        <div class="description" id="color-start">
-            <div class="marg">
-                <h1>OllieBoard</h1>
-                <h3>2024 – Present &#8729; UX design & bubble.io development</h3>
-                <p>HourWork is a startup that helps hourly employers engage with and retain their workers. Throughout my
-                    time at HourWork, I've made dozens of designs just like the ones seen below. Here are just a few
-                    examples of the more recent projects, along with some insight on how I like to work.
-                </p>
+    <div class="page-content">
+        <div class="description space-tiny" id="color-start">
+            <div class="cs-header-v2">
+                <div class="cv-inner">
+
+                    <!-- LEFT: title + hook -->
+                    <div class="cv-left">
+
+                        <div class="cv-eyebrow">
+                            <span class="cv-company">OllieBoard</span>
+                            <div class="cv-eyebrow-dot"></div>
+                            <span class="cv-year">2025</span>
+                        </div>
+
+                        <h1 class="cv-title">How I start<br>companies.</h1>
+
+                        <p class="cv-hook">
+                            The story of zero-to-one — discovery interviews, hardware installs, and everything nobody tells you happens between the idea and the product.
+                        </p>
+
+                    </div>
+
+                    <!-- RIGHT: meta -->
+                    <div class="cv-right">
+
+                        <div class="cv-meta-block">
+                            <span class="cv-meta-label">My Role</span>
+                            <span class="cv-meta-value">Co-Founder · Designer · Builder</span>
+                        </div>
+
+                        <div class="cv-meta-block">
+                            <span class="cv-meta-label">Company Stage</span>
+                            <span class="cv-meta-value">Pre-Seed · 2 People</span>
+                        </div>
+
+                        <div class="cv-meta-block">
+                            <span class="cv-meta-label">Disciplines</span>
+                            <div class="cv-tags">
+                                <span class="cv-tag">Discovery</span>
+                                <span class="cv-tag">Strategy</span>
+                                <span class="cv-tag">UX</span>
+                                <span class="cv-tag">Front-End</span>
+                                <span class="cv-tag">Hardware</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- BOTTOM BAR -->
+                <div class="cv-bottom">
+                    <p class="cv-note">
+                        <strong>Note:</strong> This is a discovery narrative, not a traditional case study — because that's what this kind of early-stage work actually looks like.
+                    </p>
+                    <div class="cv-scroll">
+                        <div class="cv-scroll-line"></div>
+                        Scroll to read
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
 
 
 
+        <div class="workDiv">
+            <div class="work space-small" data-aos="fade-up">
+                <img src="images/portfolio/ollieboard/hero-img.png">
+            </div>
+            <div class="ollie">
+                <!-- HERO -->
+                <section class="o-hero space-tiny">
+                    
+                    <div class="o-hero-bg-text">OLLIE</div>
+                </section>
 
+                <div class="o-divider"></div>
 
+                <!-- CH 1: ORIGIN -->
+                <section class="o-chapter" id="origin">
+                    <div class="o-chapter-header">
+                        <div class="o-chapter-number">01</div>
+                        <div class="o-reveal">
+                            <span class="o-chapter-label">The Origin</span>
+                            <h2 class="o-h2">An acquisition.<br>A <em>phone call.</em></h2>
+                            <p class="o-chapter-intro">HourWork was acquired in 2024. Most people celebrate and move on. My CEO called me instead — because he'd watched how I worked in the early product phases, and he wanted to do it again. That became OllieBoard.</p>
+                        </div>
+                    </div>
 
+                    <img src="images/portfolio/ollieboard/ollie-team-meeting.jpeg" class="o-photo-hero o-reveal" alt="Dinner with OllieBoard team and Domino's partner-investors">
+                    <p class="o-photo-caption o-reveal">Early dinner with our co-founders and primary Domino's partners — who became both our pilot customers and investors.</p>
 
-    <div class="main all workDiv">
-        <div class="work space-med" data-aos="fade-up">
-            <img src="images/portfolio/hourwork/overview.png">
+                    <div class="o-pullquote o-reveal">
+                        <p>"You don't get asked to co-found something unless someone has seen how you think under pressure — in the zero-to-one phase when nothing is defined and everything matters."</p>
+                        <cite>On being invited to start Ollieboard</cite>
+                    </div>
+
+                    <div class="o-split o-reveal">
+                        <div>
+                            <span class="o-split-label">The Invitation</span>
+                            <p>After watching how I navigated ambiguity, validated ideas quickly, and shipped product at a scrappy startup, the CEO came to me with a simple ask: let's build something new together. When you're two people, "product designer" isn't a title — it's the whole job.</p>
+                        </div>
+                        <div>
+                            <span class="o-split-label">My Mandate</span>
+                            <p>Everything product. Every interface, every algorithm, every sensor mounted in a Domino's store. Design, code, hardware, and the strategic thinking behind all of it — that was mine to figure out.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CH 2: PROBLEM -->
+                <section class="o-chapter" id="problem" style="border-top: 1px solid var(--o-border);">
+                    <div class="o-chapter-header">
+                        <div class="o-chapter-number">02</div>
+                        <div class="o-reveal">
+                            <span class="o-chapter-label">Problem Definition</span>
+                            <h2 class="o-h2">Restaurants don't know<br>how many hours <em>they actually need.</em></h2>
+                            <p class="o-chapter-intro">Owners set their schedules based on feel — what they think they'll need. But no one has mapped every task required to run a store properly. The result is either wasted hours or an understaffed shift that underperforms.</p>
+                        </div>
+                    </div>
+
+                    <div class="o-card-grid o-reveal">
+                        <div class="o-card">
+                            <svg class="o-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg>
+                            <h3>The Scheduling Gap</h3>
+                            <p>Owners schedule by intuition, not data. Without knowing the real work volume, every schedule is a guess — some days overstaffed, others dangerously thin.</p>
+                        </div>
+                        <div class="o-card">
+                            <svg class="o-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5" />
+                                <path d="M2 12l10 5 10-5" />
+                            </svg>
+                            <h3>The Hidden Task Load</h3>
+                            <p>Every store has hundreds of recurring tasks — dough management, sanitation, restocks — that no one has ever catalogued or sequenced. They happen, or they don't.</p>
+                        </div>
+                        <div class="o-card">
+                            <svg class="o-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="12" y1="1" x2="12" y2="23" />
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                            <h3>The Margin Leak</h3>
+                            <p>Inefficiency at this level isn't visible on any dashboard. Owners lose margin to problems they can't quantify — which means they can't fix them either.</p>
+                        </div>
+                    </div>
+
+                    <div class="o-pullquote o-reveal">
+                        <p>"The schedule is a guess. We wanted to make it a science."</p>
+                        <cite>OllieBoard core thesis</cite>
+                    </div>
+
+                    <div class="o-split o-reveal">
+                        <div>
+                            <span class="o-split-label">The Opportunity</span>
+                            <p>Catalogue every task a store needs. Map it, sequence it, time it. Build the real schedule — not what someone thinks the store needs, but what it actually requires to run at its best.</p>
+                        </div>
+                        <div>
+                            <span class="o-split-label">The Vision</span>
+                            <p>An operations layer that works like an intelligent manager: knowing what needs to happen, when, and whether it did. Saving money and increasing store quality without adding headcount.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CH 3: DISCOVERY -->
+                <section class="o-chapter" id="discovery" style="border-top: 1px solid var(--o-border);">
+                    <div class="o-chapter-header">
+                        <div class="o-chapter-number">03</div>
+                        <div class="o-reveal">
+                            <span class="o-chapter-label">Discovery & Validation</span>
+                            <h2 class="o-h2">In the store<br><em>before</em> the screen.</h2>
+                            <p class="o-chapter-intro">Before designing anything, I spent weeks inside the problem space — stretching dough alongside operators, running workshops with top franchise owners, and conducting 30+ discovery interviews. The goal wasn't to validate a solution. It was to understand what was actually breaking.</p>
+                        </div>
+                    </div>
+
+                    <div class="o-photo-side o-reveal">
+                        <div>
+                            <img src="images/portfolio/ollieboard/d-training.jpg" alt="Learning dough stretching at a top-10 Domino's">
+                            <p class="o-photo-caption" style="margin-top: 12px;">Being trained by the owner of a top-10 Domino's franchise — who walked us through every aspect of his operations.</p>
+                        </div>
+                        <div class="o-photo-side-text">
+                            <span class="o-split-label">Going Deep</span>
+                            <p>Discovery doesn't happen behind a computer. To understand the real task load in a store, I got in the apron. The owner of a top-10 Domino's franchise gave us a full operational breakdown — every station, every cycle, every decision his employees don't even know is being made.</p>
+                            <p>That kind of access only happens when you show up. And it surfaced constraints no remote interview would have caught.</p>
+                        </div>
+                    </div>
+
+                    <div class="o-stat-row o-reveal">
+                        <div class="o-stat"><span class="o-number">30+</span><span class="o-desc">Discovery interviews with franchise owners & operators</span></div>
+                        <div class="o-stat"><span class="o-number">1</span><span class="o-desc">Manual in-store test before writing a line of code</span></div>
+                        <div class="o-stat"><span class="o-number">4</span><span class="o-desc">Top New England Domino's owners at first Gold Standard workshop</span></div>
+                    </div>
+
+                    <div class="o-photo-grid o-reveal">
+                        <div class="o-photo-grid-item">
+                            <img src="images/portfolio/ollieboard/fenway-meeting.png" alt="Gold Standard workshop inside a Domino's store">
+                            <p class="o-photo-caption">First Quarterly Gold Standard Workshop — mapping ideal task sequences with four top-performing New England Domino's owners, including a Gold Franny Award winner.</p>
+                        </div>
+                        <div class="o-photo-grid-item">
+                            <img src="images/portfolio/ollieboard/pg-meeting.jpeg" alt="Papa Gino's prototype review">
+                            <p class="o-photo-caption">Early prototype review at Papa Gino's — pressure-testing the model beyond Domino's to validate across QSR formats.</p>
+                        </div>
+                    </div>
+
+                    <div class="o-lesson o-reveal">
+                        <div class="o-lesson-icon">→</div>
+                        <div>
+                            <h4>The Shortcut That Saved a Month</h4>
+                            <p>My partner wanted to build the scheduling system and test it in stores. I pushed back. Instead, we went into a store and manually assigned tasks to employees — mimicking what the software would do. Within a day, we uncovered critical flaws that would have taken weeks to debug in code. Testing the hypothesis before building it is almost always the right call.</p>
+                        </div>
+                    </div>
+
+                    <div class="o-split o-reveal">
+                        <div>
+                            <span class="o-split-label">What We Hypothesized</span>
+                            <div class="o-pill-list">
+                                <span class="o-pill">Employees need a checklist</span>
+                                <span class="o-pill">Screen-based guidance works</span>
+                                <span class="o-pill">Task completion = checkbox</span>
+                                <span class="o-pill">Managers will supervise</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="o-split-label">What We Learned</span>
+                            <div class="o-pill-list">
+                                <span class="o-pill o-highlight">Employees pencil-whip tasks</span>
+                                <span class="o-pill o-highlight">Phones = distraction + hygiene risk</span>
+                                <span class="o-pill o-highlight">Trust must be verified, not assumed</span>
+                                <span class="o-pill o-highlight">Motion is the real signal</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CH 4: SYSTEM -->
+                <section class="o-chapter" id="system" style="border-top: 1px solid var(--o-border);">
+                    <div class="o-chapter-header">
+                        <div class="o-chapter-number">04</div>
+                        <div class="o-reveal">
+                            <span class="o-chapter-label">Building the System</span>
+                            <h2 class="o-h2">Designing for a<br><em>physical world.</em></h2>
+                            <p class="o-chapter-intro">The interface was only one layer. Below it: a task optimization engine, a sensor network, hardware I sourced and installed myself, and algorithms that turn radar data into employee position. Built by one person, from Figma to a wall-mounted screen in a working Domino's.</p>
+                        </div>
+                    </div>
+
+                    <div class="o-photo-side o-reveal">
+                        <div class="o-photo-side-text">
+                            <span class="o-split-label">Live in Store</span>
+                            <p>The first OllieBoard screen mounted and running in a real Domino's location. Designed for back-of-house — loud, fast, no time to learn a new interface. Every design decision was made with that wall in mind.</p>
+                        </div>
+                        <div>
+                            <img src="images/portfolio/ollieboard/screen-installed.jpeg" alt="OllieBoard screen installed in Domino's store">
+                            <p class="o-photo-caption" style="margin-top: 12px;">OllieBoard running live at a Domino's pilot location.</p>
+                        </div>
+                    </div>
+
+                    <div class="o-photo-side o-reveal" style="margin-top: 0;">
+                        <div>
+                            <img src="images/portfolio/ollieboard/full-sensor-set.jpg" alt="10 OllieBoard mmWave sensors before installation">
+                            <p class="o-photo-caption" style="margin-top: 12px;">The full sensor set — branded, programmed, and ready for installation across the store.</p>
+                        </div>
+                        <div class="o-photo-side-text">
+                            <span class="o-split-label">The Sensor Layer</span>
+                            <p>When we realized self-reported task completion couldn't be trusted, I researched, sourced, and programmed a network of mmWave radar sensors. The algorithms I wrote convert raw radar signal into employee position — so the system knows what's actually happening, not what someone tapped.</p>
+                        </div>
+                    </div>
+
+                    <div class="o-timeline o-reveal">
+                        <div class="o-timeline-item">
+                            <div class="o-t-label">Layer 01 — Intelligence</div>
+                            <h4>Task Optimization Engine</h4>
+                            <p>Built the core algorithm that ingests every store task — dough management, sanitation, restocks — and surfaces the right job to the right person at the right moment. The foundation for real data-driven scheduling.</p>
+                        </div>
+                        <div class="o-timeline-item">
+                            <div class="o-t-label">Layer 02 — Interface</div>
+                            <h4>Workstation Displays</h4>
+                            <p>Designed for a demanding environment: fast pace, language barriers, aging hardware, employees reading mid-task. Built in Bubble, deployed to mounted screens. Legibility and speed were the only metrics that mattered.</p>
+                        </div>
+                        <div class="o-timeline-item">
+                            <div class="o-t-label">Layer 03 — Verification</div>
+                            <h4>mmWave Sensor Network</h4>
+                            <p>Sourced, programmed, assembled, and physically installed sensors in pilot stores. Wrote position-tracking algorithms that turn radar signal into actionable data — ground truth on whether work is actually being done.</p>
+                        </div>
+                        <div class="o-timeline-item">
+                            <div class="o-t-label">Layer 04 — Ops</div>
+                            <h4>Supporting Infrastructure</h4>
+                            <p>Automated schedule scraping, Domino's data parsing, Discord integrations, AI-assisted training workflows, pitch deck, investor materials, intern management, ERDs, full product specs. One person, full stack.</p>
+                        </div>
+                    </div>
+
+                    <div class="o-pill-list o-reveal">
+                        <span class="o-pill o-highlight">Bubble</span>
+                        <span class="o-pill o-highlight">mmWave Sensor Hardware</span>
+                        <span class="o-pill o-highlight">Home Assistant</span>
+                        <span class="o-pill o-highlight">Python</span>
+                        <span class="o-pill o-highlight">Discord API</span>
+                        <span class="o-pill o-highlight">Automated Scrapers</span>
+                        <span class="o-pill o-highlight">AI Chatbot</span>
+                        <span class="o-pill o-highlight">Physical Installation</span>
+                    </div>
+                </section>
+
+                <!-- CH 5: LESSONS -->
+                <section class="o-chapter" id="lessons" style="border-top: 1px solid var(--o-border);">
+                    <div class="o-chapter-header">
+                        <div class="o-chapter-number">05</div>
+                        <div class="o-reveal">
+                            <span class="o-chapter-label">What I Learned</span>
+                            <h2 class="o-h2">The hard lessons<br>are the <em>real work.</em></h2>
+                            <p class="o-chapter-intro">Zero-to-one is a constant negotiation between building and learning. The moments I was most wrong are the ones I grew from most.</p>
+                        </div>
+                    </div>
+
+                    <div class="o-lesson o-reveal">
+                        <div class="o-lesson-icon">⊘</div>
+                        <div>
+                            <h4>Don't trust self-reported completion</h4>
+                            <p>Employees checked off tasks they hadn't done — "pencil whipping." This single insight reshaped the entire sensor strategy and verification layer of the product.</p>
+                        </div>
+                    </div>
+                    <div class="o-lesson o-reveal">
+                        <div class="o-lesson-icon">⊘</div>
+                        <div>
+                            <h4>Phones don't belong on the floor</h4>
+                            <p>Personal devices create distraction and hygiene concerns in food prep environments. Guidance only works if it's already where the work happens.</p>
+                        </div>
+                    </div>
+                    <div class="o-lesson o-reveal">
+                        <div class="o-lesson-icon">⊘</div>
+                        <div>
+                            <h4>Resist the "just one more thing" trap</h4>
+                            <p>At a two-person startup, scope creep fragments your learning. Every feature added before validating the core is debt against clarity. I learned to protect the scope like it was the product itself.</p>
+                        </div>
+                    </div>
+                    <div class="o-lesson o-reveal">
+                        <div class="o-lesson-icon">✓</div>
+                        <div>
+                            <h4>Proving value manually beats building first</h4>
+                            <p>The manual in-store test was the highest-leverage thing we did. One afternoon in a Domino's saved us a month of development. Test the hypothesis, not the software.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CH 6: TODAY -->
+                <section class="o-chapter" id="today" style="border-top: 1px solid var(--o-border);">
+                    <div class="o-chapter-header">
+                        <div class="o-chapter-number">06</div>
+                        <div class="o-reveal">
+                            <span class="o-chapter-label">Where It Stands</span>
+                            <h2 class="o-h2">Sensors in stores.<br><em>Funding incoming.</em></h2>
+                            <p class="o-chapter-intro">OllieBoard has moved from concept to in-store pilot. The task engine is live, hardware is installed, and we're positioning for a pre-seed round with real pilot data and top-10 franchise owners already in our corner.</p>
+                        </div>
+                    </div>
+
+                    <div class="o-status o-reveal">
+                        <h3><span class="o-status-dot"></span>Current Status</h3>
+                        <p>Sensors are installed and tracking employee movement in real Domino's locations. The task optimization engine is live and informing real scheduling decisions. We're actively seeking pre-seed funding with pilot data in hand.</p>
+                    </div>
+
+                    <div class="o-split o-reveal">
+                        <div>
+                            <span class="o-split-label">What Was Built</span>
+                            <p>A full operational platform — workstation displays, a task engine, sensor hardware, and a verification layer — from scratch, by two people. Every design decision, every line of code, every sensor mounted on a wall in a working Domino's store.</p>
+                        </div>
+                        <div>
+                            <span class="o-split-label">What I'm Taking With Me</span>
+                            <p>The judgment to know when to build and when to test. The confidence to push back when the plan is wrong. The range to move between Figma and a hardware enclosure in the same afternoon. And a genuine understanding of what early-stage product work actually requires.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="o-divider"></div>
+
+                <section class="o-cta space-small">
+                    <p class="o-cta-label o-reveal">Ready to build something?</p>
+                    <h2 class="o-h2 o-reveal">This is how I show up<br>on day one.</h2>
+                    <a href="mailto:hello@jaredch.com" class="o-cta-btn o-reveal">
+                        Let's Talk
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </section>
+
+                <!-- Ollie chapters -->
+                <nav class="ptoc">
+                    <span class="ptoc-label">On this page</span>
+                    <ul class="ptoc-list">
+                        <li><a class="ptoc-link active" href="#origin" data-target="origin"><span class="ptoc-num">01</span>Origin</a></li>
+                        <li><a class="ptoc-link" href="#problem" data-target="problem"><span class="ptoc-num">02</span>Problem</a></li>
+                        <li><a class="ptoc-link" href="#discovery" data-target="discovery"><span class="ptoc-num">03</span>Discovery</a></li>
+                        <li><a class="ptoc-link" href="#system" data-target="system"><span class="ptoc-num">04</span>System</a></li>
+                        <li><a class="ptoc-link" href="#lessons" data-target="lessons"><span class="ptoc-num">05</span>Lessons</a></li>
+                        <li><a class="ptoc-link" href="#today" data-target="today"><span class="ptoc-num">06</span>Today</a></li>
+                    </ul>
+                </nav>
+
+            </div><!-- /.ollie -->
+
+            <script>
+                // Scroll reveal — only targets .ollie children
+                const ollieIO = new IntersectionObserver(entries => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) {
+                            setTimeout(() => e.target.classList.add('visible'), 80);
+                            ollieIO.unobserve(e.target);
+                        }
+                    });
+                }, { threshold: 0.08 });
+
+                document.querySelectorAll('.ollie .o-reveal').forEach(el => ollieIO.observe(el));
+            </script>
+        </div>
+
+        <div class="moreWork" id="color-end">
+            <h1>More Work</h1>
         </div>
 
 
+        <div id="projects">
 
-        <div class="work space-med" data-aos="fade-up">
-            <div class="title hw-text-color"><b>Dashboard</b></div>
-            <img src="images/portfolio/hourwork/dashboard/intro.png">
+            <!--link to projects-->
+            <div data-include="/includes/artwork.htm"></div>
+
         </div>
-        <!-- <div class="work space-med" data-aos="fade-up">
-            <div class="title med left wrap hw-text-color">Ideation / wireframing</div>
-            <div class="title small beside hw-text-color" style="padding-top: 20px">After getting the project
-                description from the product team, and helping with any pre-design user research, we can start the first
-                step!</div>
-            <img src="images/portfolio/hourwork/dashboard/wireframe.png">
-        </div> -->
-        <div class="work space-med" data-aos="fade-up">
-            <div class="title med left wrap hw-text-color">First Designs</div>
-            <div class="title small beside hw-text-color" style="padding-top: 20px">Pick the best wireframes, make a
-                first pass at
-                designing them. Collaborate with the team to figure out what parts we want to keep or change. </div>
-            <img src="images/portfolio/hourwork/dashboard/First-designs.png">
-        </div>
-        <div class="work space-med" data-aos="fade-up">
-            <div class="title hw-text-color"><b>Use design kit for elements</b></div>
-            <img src="images/portfolio/hourwork/dashboard/Design-kit.png">
-        </div>
-        <div class="work space-med" data-aos="fade-up">
-            <img src="images/portfolio/hourwork/dashboard/iteration.png">
-        </div>
-        <div class="work space-med" data-aos="fade-up">
-            <div class="title hw-text-color"><b>Final design, ready for testing</b></div>
-            <img src="images/portfolio/hourwork/dashboard/Final-ready-to-test.png">
-        </div>
-        <div class="work space-med" data-aos="fade-up">
-            <div class="title hw-text-color"><b>Test with users</b></div>
-            <img src="images/portfolio/hourwork/dashboard/User-testing.png">
-        </div>
-        <div class="work space-small" data-aos="fade-up">
-            <img src="images/portfolio/hourwork/dashboard/Iterate-again.png">
-        </div>
-        <div class="work space-large" data-aos="fade-up">
-            <img src="images/portfolio/hourwork/dashboard/final.png">
-        </div>
-
-
-        <div class="work space-small" data-aos="fade-up">
-            <div class="title hw-text-color"><b>Settings</b></div>
-            <img src="images/portfolio/hourwork/settings/Settings-overview.png">
-        </div>
-        <div class="work space-tiny" data-aos="fade-up">
-            <div class="title med left wrap hw-text-color">Wireframes</div>
-            <div class="title small beside hw-text-color" style="padding-top: 20px">Craft wireframes to find early
-                designs to share
-                with the team.</div>
-            <img src="images/portfolio/hourwork/settings/Settings-wireframe.png">
-        </div>
-        <div class="work space-large" data-aos="fade-up">
-            <img src="images/portfolio/hourwork/settings/settings-layout.png">
-        </div>
-
-
-        <div class="work space-tiny" data-aos="fade-up">
-            <div class="title med left wrap hw-text-color">Delivering designs</div>
-            <img src="images/portfolio/hourwork/reporting.png">
-        </div>
-        <div class="work space-small" data-aos="fade-up">
-
-            <div class="title small hw-text-color">When handing designs off to developers, make sure
-                all instruction is clear to ensure a great final product</div>
-            <img src="images/portfolio/hourwork/Design-delivery.png">
-        </div>
-
-
-
-
-
-    </div>
-
-    <div class="main all moreWork" id="color-end">
-        <h1>More Work</h1>
-    </div>
-
-
-    <div class="main all" id="projects">
-
-        <!--link to projects-->
-        <div ng-include="'includes/artwork.htm'"></div>
-
     </div>
 
 
     <!--link to footer-->
-    <div ng-include="'includes/footer.htm'"></div>
+    <div data-include="/includes/footer.htm"></div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -161,6 +479,12 @@
         })
     </script>
     <script src="js/waypoints.js"></script>
+    <script>
+        const frame = document.getElementById('case-study-frame');
+        frame.onload = () => {
+            frame.style.height = frame.contentDocument.body.scrollHeight + 'px';
+        };
+    </script>
 </body>
 
 </html>

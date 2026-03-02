@@ -1,7 +1,8 @@
 :root {
-  --bg: #ffffff;
+  --bg: #fff;
   --main-primary: #1aa6bc;
   --border: rgba(255, 255, 255, 0.3);
+  --scroll-line: #fff;
 
   --text-body: #111;
   --text-title: #555;
@@ -25,46 +26,164 @@
   --fs-h4: clamp(16px, 3vw, 18px);
 }
 
-body.ollieboard {
-  --bg: #000;
 
-  --text-body: #111;
-  --text-title: #555;
-  --text-muted: #777;
+/*
+  THEME VARIABLE KEY
+  ──────────────────────────────────────
+  --bg                  page background
+  --surface             cards, panels, slightly lifted bg
+  --surface-active      active / highlighted surface
+  --surface-hover       hover state on surfaces
+  --border              dividers, grid gaps
+  --border-light        lighter borders, tag outlines
 
-  --surface: rgba(255, 255, 255, 0.4);
-}
+  --text                primary body text
+  --text-secondary      secondary text, descriptions
+  --text-muted          muted text, labels, captions
+
+  --accent              primary accent, active states, links
+  --accent-warn         warnings, friction, error states
+  --scroll-line         scroll line on top of page
+
+  --card                white card background
+  --card-alt            slightly tinted card background - NOT USED
+  --card-glass          frosted / glass surface - NOT USED
+
+  --ptoc-accent         active chapter highlight
+  --ptoc-dim            inactive chapter text
+  --ptoc-mid            hovered chapter text
+  --ptoc-border         active chapter left border
+  ──────────────────────────────────────
+*/
 
 body.hourwork {
-  --bg: #B2C3EA;
+  /* ── BACKGROUNDS ── */
+  --bg: #080e1e;
+  --surface: #0d1428;
+  --surface-active: #131c35;
+  --muted: #1e2e4a;
+  --border: #131c35;
+  --border-light: #1c2a48;
 
-  --text-body: #000;
-  --text-title: #0D2357;
-  --text-muted: #3E5384;
+  /* ── TEXT ── */
+  --text: #dde4f0;
+  --text-secondary: #8fa4c4;
+  --text-muted: #5f6d8f;
 
-  --surface: rgba(255, 255, 255, 0.3);
+  /* ── ACCENT COLORS ── */
+  --accent: #5b9bd5;
+  --accent-warn: #ef4136;
+  --scroll-line: var(--accent);
+
+  /* ── SURFACES (special) ── */
+  --card: #ffffff;
+  --card-alt: #f5f7ff;
+  --card-glass: rgba(255, 255, 255, 0.3);
+
+  /* ── CHAPTER TRACKER ── */
+  --ptoc-accent: var(--accent);
+  --ptoc-dim: var(--text-muted);
+  --ptoc-mid: var(--text-secondary);
+  --ptoc-border: var(--text-muted);
 }
 
-body.syrg {
-  --bg: #333C47;
+body.ollieboard {
+  /* ── BACKGROUNDS ── */
+  --bg: #000000;
+  --surface: #141414;
+  --surface-active: #1a1a1a;
+  --muted: #222222;
+  --border: #333333;
+  --border-light: #444444;
 
-  --text-body: #fff;
-  --text-title: #fff;
-  --text-muted: #777;
+  /* ── TEXT ── */
+  --text: #e8e4dc;
+  --text-secondary: #aaaaaa;
+  --text-muted: #777777;
 
-  --surface: rgba(255, 255, 255, 0.4);
+  /* ── ACCENT COLORS ── */
+  --accent: #fab515;
+  --accent-warn: #ff6b35;
+  --scroll-line: var(--accent);
+
+  /* ── SURFACES (special) ── */
+  --card: #f5f0e8;
+  --card-alt: #ede8e0;
+  --card-glass: rgba(255, 255, 255, 0.05);
+
+  /* ── CHAPTER TRACKER ── */
+  --ptoc-accent: var(--accent);
+  --ptoc-dim: var(--text-muted);
+  --ptoc-mid: var(--text-secondary);
+  --ptoc-border: var(--text-muted);
 }
 
-body.simplyMusic {
-  --bg: #ee7269;
+body.inspecticare {
+  /* ── BACKGROUNDS ── */
+  --bg: #6D4C65;
+  --surface: #5f4258;
+  --surface-active: #79566f;
+  --muted: #4a3350;
+  --border: #7d5874;
+  --border-light: #8f6884;
 
-  --text-body: #FFF;
-  --text-title: #FFF;
-  --text-muted: #bbbbbb;
+  /* ── TEXT ── */
+  --text: #ece0e8;
+  --text-secondary: #d4bece;
+  --text-muted: #AE94A7;
+  --text-on-white: #3a2835;
 
-  --surface: rgba(255, 255, 255, 0.4);
+  /* ── ACCENT COLORS ── */
+  --accent: #5ecfcf;
+  --accent-warn: #e06b7a;
+  --scroll-line: #5ecfcf;
+
+  /* ── SURFACES (special) ── */
+  --card: #ffffff;
+  --card-alt: #f7f0f5;
+  --card-glass: rgba(255, 255, 255, 0.15);
+
+  /* ── CHAPTER TRACKER ── */
+  --ptoc-accent: var(--accent);
+  --ptoc-dim: var(--text-muted);
+  --ptoc-mid: var(--text-secondary);
+  --ptoc-border: var(--text-muted);
 }
 
+body.stoneshowcase {
+  /* ── BACKGROUNDS ── */
+  --bg: #596174;
+  --surface: #4e5568;
+  --surface-active: #636b7e;
+  --muted: #3e4455;
+  --border: #677082;
+  --border-light: #748090;
+
+  /* ── TEXT ── */
+  --text: #f0ece4;
+  --text-secondary: #d4cec5;
+  --text-muted: #a09a93;
+  --text-on-white: #2a2520;
+
+  /* ── ACCENT COLORS ── */
+  --accent: #b5654a;
+  --accent-warn: #c97a5e;
+  --scroll-line: #b5654a;
+
+  /* ── SURFACES (special) ── */
+  --card: #ffffff;
+  --card-alt: #f5efe8;
+  --card-glass: rgba(255, 255, 255, 0.15);
+
+  /* ── CHAPTER TRACKER ── */
+  --ptoc-accent: var(--accent);
+  --ptoc-dim: var(--text-muted);
+  --ptoc-mid: var(--text-secondary);
+  --ptoc-border: var(--text-muted);
+}
+
+
+/* 
 body.inspecticare {
   --bg: #6D4C65;
 
@@ -83,4 +202,4 @@ body.stoneShowcase {
   --text-muted: #777;
 
   --surface: rgba(255, 255, 255, 0.4);
-}
+} */

@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="/includes/waypoints/lib/jquery.waypoints.min.js"></script>
 
+    <!-- Font import > delete later -->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
     <script src="js/main.js" defer></script>
 </head>
 
@@ -37,11 +40,69 @@
 
     <div class="page-content">
         <div class="description space-tiny" id="color-start">
-            <h1>HourWork Dashboard</h1>
-            <p class="description__subheader">2023 · Product Strategy · UX Design · Front-End Implementation</p>
-            <p>
-                HourWork helps restaurant owners and operators (e.g., McDonald’s, Domino’s) engage their hourly workforce through automated messaging and surveys. Managers can trigger milestone messages, collect employee feedback, and re-engage past applicants to support hiring. The platform is designed for franchise owners managing multiple stores and teams at scale.
-            </p>
+            <div class="cs-header-v2">
+                <div class="cv-inner">
+
+                    <!-- LEFT: title + hook -->
+                    <div class="cv-left">
+
+                        <div class="cv-eyebrow">
+                            <span class="cv-company">HourWork</span>
+                            <div class="cv-eyebrow-dot"></div>
+                            <span class="cv-year">2023</span>
+                        </div>
+
+                        <h1 class="cv-title">Designing for clarity<br>in a noisy system.
+                        </h1>
+
+                        <p class="cv-hook">
+                            How I led the UX process for a manager dashboard that had to be fast, trustworthy, and hard to mess up — collaborating with a design partner and handing off to a dev team.
+                        </p>
+
+                    </div>
+
+                    <!-- RIGHT: meta -->
+                    <div class="cv-right">
+
+                        <div class="cv-meta-block">
+                            <span class="cv-meta-label">My Role</span>
+                            <span class="cv-meta-value">Lead UX Designer</span>
+                        </div>
+
+                        <div class="cv-meta-block">
+                            <span class="cv-meta-label">Company Stage</span>
+                            <span class="cv-meta-value">Series A</span>
+                        </div>
+
+                        <div class="cv-meta-block">
+                            <span class="cv-meta-label">Team</span>
+                            <span class="cv-meta-value">2 Designers · Dev Handoff</span>
+                        </div>
+
+                        <div class="cv-meta-block">
+                            <span class="cv-meta-label">Disciplines</span>
+                            <div class="cv-tags">
+                                <span class="cv-tag">Product Strategy</span>
+                                <span class="cv-tag">UX Design</span>
+                                <span class="cv-tag">Front-End</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOTTOM BAR -->
+                <div class="cv-bottom">
+                    <p class="cv-note">
+                    </p>
+                    <div class="cv-scroll">
+                        <div class="cv-scroll-line"></div>
+                        Scroll to read
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -50,276 +111,441 @@
 
 
 
-        <div class="workDiv">
-            <div class="work space-small" data-aos="fade-up">
-                <img src="images/portfolio/hourwork/dashboard/hero-img.png">
+        <div class="workDiv hw2">
+
+            <!-- HERO IMAGE -->
+            <div class="h-hero-img">
+                <img src="images/portfolio/hourwork/dashboard/hero-img.png" alt="HourWork dashboard overview">
             </div>
 
-            <section class="two-col work space-tiny" data-aos="fade-up">
-                <div class="work">
-                    <h2 class="title">Context</h2>
-                </div>
-                <div class="two-col__card">
-                    <div class="two-col__grid">
-                        <div class="two-col__col">
-                            <h2 class="two-col__title">Problem</h2>
-                            <p>
-                                As HourWork’s automated messaging and surveys scaled across more locations and use cases, managers lacked visibility into what was happening across their teams.
-                            </p>
-                            <p>
-                                Store owners needed a way to quickly understand employee engagement across locations.
-                            </p>
+            <!-- BODY -->
+            <div class="hw2-body">
+
+                <!-- MAIN CONTENT -->
+                <div class="hw2-main">
+
+                    <!-- ── 01 CONTEXT ── -->
+                    <section class="hw2-section hw2-reveal" id="hw2-context">
+                        <span class="ch-num">01</span>
+                        <span class="ch-label">Context</span>
+                        <h2 class="hw2-h2">The problem<br><em>worth solving.</em></h2>
+                        <p class="hw2-intro">HourWork helps restaurant franchise owners manage their hourly workforce — automated messaging, milestone touchpoints, re-engagement campaigns. It's powerful. But as the platform scaled, managers had a growing problem: they had no visibility into what it was actually doing on their behalf.</p>
+
+                        <!-- White card: problem / solution split -->
+                        <div class="white-card hw2-reveal">
+                            <span class="wc-label">Context — Problem & Solution</span>
+                            <div class="wc-split">
+                                <div>
+                                    <span class="wc-col-label">The Problem</span>
+                                    <p>As HourWork's automated messaging scaled across more locations, managers lacked visibility into what was happening across their teams.</p>
+                                    <p>Store owners needed a way to quickly understand employee engagement — not a report, not an export. <strong>An answer at a glance.</strong></p>
+                                </div>
+                                <div>
+                                    <span class="wc-col-label">Solution & Impact</span>
+                                    <p>A single dashboard that helps managers understand what messages are being sent, what's coming up, and how employees are responding across locations.</p>
+                                    <p>The goal wasn't to surface more information. It was to surface the <strong>right information</strong> — clearly and fast.</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="two-col__col">
-                            <h2 class="two-col__title">Solution &amp; impact</h2>
-                            <p>
-                                A single dashboard that helps managers understand what messages are being sent, what’s coming up, and how employees are responding across locations.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-            <section class="workDiv space-small" data-aos="fade-up">
-                <div class="work">
-                    <h2 class="title">Process</h2>
-                </div>
-                <div class="process-steps">
-                    <div class="process-step">
-                        <div class="process-step__circle">1</div>
-                        <p class="process-step__title">Understand</p>
-                        <ul class="process-step__list">
-                            <li>Stakeholder alignment</li>
-                            <li>Scope definition</li>
-                            <li>Constraints identified</li>
-                        </ul>
-                    </div>
-
-                    <div class="process-step">
-                        <div class="process-step__circle">2</div>
-                        <p class="process-step__title">Research</p>
-                        <ul class="process-step__list">
-                            <li>User context</li>
-                            <li>Usage environment</li>
-                            <li>Existing solutions</li>
-                            <li>Patterns worth borrowing</li>
-                        </ul>
-                    </div>
-
-                    <div class="process-step">
-                        <div class="process-step__circle">3</div>
-                        <p class="process-step__title">Explore</p>
-                        <ul class="process-step__list">
-                            <li>Low-fidelity wireframes</li>
-                            <li>Layout directions</li>
-                            <li>Rejected ideas</li>
-                            <li>Tradeoffs</li>
-                        </ul>
-                    </div>
-
-                    <div class="process-step">
-                        <div class="process-step__circle">4</div>
-                        <p class="process-step__title">Prototype</p>
-                        <ul class="process-step__list">
-                            <li>Higher-fidelity prototypes</li>
-                            <li>Interaction models</li>
-                            <li>Structural decisions</li>
-                        </ul>
-                    </div>
-
-                    <div class="process-step">
-                        <div class="process-step__circle">5</div>
-                        <p class="process-step__title">Validate</p>
-                        <ul class="process-step__list">
-                            <li>Feedback</li>
-                            <li>Usability insights</li>
-                            <li>Early signals of success</li>
-                            <li>What needs changing?</li>
-                            <li>What didn’t change?</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-
-            <div class="work space-med" data-aos="fade-up">
-                <div class="work">
-                    <h2 class="title">Understand</h2>
-                </div>
-
-                <span class="section-eyebrow">Understand</span>
-                <h3 class="section-title">Initial problem discovery</h3>
-                <p>
-                    Before designing anything, I needed to understand how the system was actually being used, and where it was falling short for managers.
-                    <br><br>
-                    I started by talking with the team and reviewing the questions coming in from customers. A clear pattern showed up quickly: Managers weren’t confused about how to send messages, <strong>they were confused about what the platform was doing on their behalf.</strong>
-                    <br><br>
-                </p>
-                <img src="images/portfolio/hourwork/dashboard/manager-notes.png">
-                <h4>The challenge was made clearer</h4>
-                <p class="space-sm">
-                    This wasn’t just a missing dashboard — it was a visibility gap that limited trust and made the product hard to use. My focus at this stage was defining what managers needed to understand at a glance in order to feel confident using the platform on their own, and what information mattered most to support that change.
-                </p>
-            </div>
-
-
-            <div class="work space-med" data-aos="fade-up">
-                <div class="work">
-                    <h2 class="title">Research</h2>
-                </div>
-                <span class="section-eyebrow">Research</span>
-                <h3 class="section-title">What we found about our users</h3>
-                <p>
-                    Once the problem space was clearer, the next step was pressure-testing our assumptions. <strong>Who was this dashboard actually for? How would it be used in real life?</strong>
-                    <br><br>
-                    Most managers were accessing HourWork on a shared computer in the back of the store, usually between tasks or during short breaks. They weren’t tech-savvy, and they weren’t interested in learning a complex system. That context made the priority obvious: the dashboard needed to be fast to read, predictable, and hard to mess up. <strong>Visual flair mattered far less than clarity.</strong>
-                    <br><br>
-                    Alongside this, I looked at how other products approached similar problems. Rather than reinventing the wheel, I reviewed dashboards and management tools that successfully surfaced activity, status, and history at a glance. This helped identify familiar patterns managers would already recognize, as well as common pitfalls to avoid, such as overly dense layouts or excessive configuration.
-                    <br><br>
-                    That work reinforced a key constraint: this dashboard wasn’t a place to show off. It needed to stay out of the way and let managers get what they needed quickly. Those insights directly shaped both the structure and tone of the designs that followed.
-                </p>
-            </div>
-
-
-
-            <div class="work space-med" data-aos="fade-up">
-                <div class="work">
-                    <h2 class="title">Explore</h2>
-                </div>
-                <span class="section-eyebrow">Explore</span>
-                <h3 class="section-title">Wireframing</h3>
-                <p>
-                    Wireframes are where ideas get pressure-tested. I use them to explore multiple directions quickly, challenge assumptions, and understand the tradeoffs between clarity, flexibility, and complexity before committing to a solution.
-                </p>
-
-                <section class="concept-grid">
-                    <article class="concept">
-                        <img src="images/portfolio/hourwork/dashboard/wireframe-fail-2.png" alt="Concept 1">
-                        <h4>The Complex / Power-User Dashboard</h4>
-                        <div class="concept-block">
-                            <h5>Why we thought it might work</h5>
-                            <p>
-                                This concept leaned into completeness: advanced filters, detailed charts, and full activity logs. It promised total visibility across stores and seemed scalable long term.
-                            </p>
+                        <!-- Constraints -->
+                        <div class="white-card hw2-reveal" style="margin-top:0;">
+                            <span class="wc-label">Working Constraints</span>
+                            <div class="wc-split">
+                                <div>
+                                    <span class="wc-col-label">Timeline</span>
+                                    <p>A few months to design the dashboard and its supporting pages — fast enough that decisions had to be made with confidence, not comfort. There was no time to explore every direction thoroughly.</p>
+                                </div>
+                                <div>
+                                    <span class="wc-col-label">No Design System</span>
+                                    <p>HourWork didn't have a formalized design system. We built components, patterns, and visual language as we went — making foundational decisions under production pressure while keeping the output consistent.</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="concept-block">
-                            <h5>Why it failed</h5>
-                            <p>
-                                This approach assumed managers had the time and technical comfort to explore a complex dashboard. In reality, they didn’t. It required setup before it became useful and added friction instead of clarity. <strong>Research showed that managers needed quick reassurance, not a reporting tool.</strong>
-                            </p>
+                        <!-- Contribution clarity -->
+                        <div class="lesson-block hw2-reveal">
+                            <div class="lesson-icon good">→</div>
+                            <div>
+                                <h4>My contribution on this project</h4>
+                                <p>I worked alongside another UX designer. The research, design direction, and ongoing critique were collaborative. The design work itself — every screen, every iteration, every decision about what to show and how to show it — was mine to execute and own.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ── 02 PROCESS ── -->
+                    <section class="hw2-section hw2-reveal" id="hw2-process">
+                        <span class="ch-num">02</span>
+                        <span class="ch-label">Process</span>
+                        <h2 class="hw2-h2">How I approach<br><em>a design problem.</em></h2>
+                        <p class="hw2-intro">With the problem understood, I follow a structured process — not rigidly, but as a framework to make sure I'm building from the right foundation before committing to solutions.</p>
+                    
+                        <div class="process-strip hw2-reveal">
+                            <div class="process-item current">
+                                <div class="process-num">1</div>
+                                <span class="process-name">Understand</span>
+                                <p class="process-sub">Stakeholder alignment · Scope · Constraints</p>
+                            </div>
+                            <div class="process-item">
+                                <div class="process-num">2</div>
+                                <span class="process-name">Research</span>
+                                <p class="process-sub">User context · Environment · Competitive</p>
+                            </div>
+                            <div class="process-item">
+                                <div class="process-num">3</div>
+                                <span class="process-name">Explore</span>
+                                <p class="process-sub">Wireframes · Directions · Rejected ideas</p>
+                            </div>
+                            <div class="process-item">
+                                <div class="process-num">4</div>
+                                <span class="process-name">Prototype</span>
+                                <p class="process-sub">Hi-fi · Interaction · Structural decisions</p>
+                            </div>
+                            <div class="process-item">
+                                <div class="process-num">5</div>
+                                <span class="process-name">Validate</span>
+                                <p class="process-sub">User testing · Insights · Iteration</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ── 03 UNDERSTAND ── -->
+                    <section class="hw2-section hw2-reveal" id="hw2-understand">
+                        <span class="ch-num">03</span>
+                        <span class="ch-label">Understand</span>
+                        <h2 class="hw2-h2">Initial problem<br><em>discovery.</em></h2>
+                        <p class="hw2-intro">Before designing anything, I needed to understand how the system was actually being used — and where it was falling short for managers.</p>
+                        <p class="hw2-p">I started by talking with the team and reviewing questions coming in from customers. A clear pattern showed up quickly: managers weren't confused about how to send messages. <span class="hw2-strong">They were confused about what the platform was doing on their behalf.</span></p>
+
+                        <div class="img-block hw2-reveal">
+                            <img src="images/portfolio/hourwork/dashboard/manager-notes.png" alt="Initial problem discovery">
+                            <p class="img-caption">Discovery synthesis — mapping confusion patterns from support tickets and stakeholder interviews.</p>
                         </div>
 
-                        <div class="concept-block">
-                            <strong>Takeaway:</strong> Optimized for depth over speed.
-                        </div>
-                    </article>
-
-
-                    <article class="concept">
-                        <img src="images/portfolio/hourwork/dashboard/wireframe-fail-1.png" alt="Concept 2">
-
-                        <h4>The Notification-Heavy / Activity Feed</h4>
-
-                        <div class="concept-block">
-                            <h5>Why we thought it might work</h5>
-                            <p>
-                                This direction focused on a real-time activity feed that surfaced every message, survey, and response in chronological order. It created a sense of transparency, giving managers clear visibility into what the system was doing.
-                            </p>
+                        <div class="hw2-pullquote hw2-reveal">
+                            <p>"This wasn't just a missing dashboard — it was a visibility gap that limited trust and made the product hard to use confidently."</p>
+                            <cite>Problem reframe, post-discovery</cite>
                         </div>
 
-                        <div class="concept-block">
-                            <h5>Why it failed</h5>
-                            <p>
-                                While transparent, this approach leaned too heavily on recency. The activity feed quickly became noisy, making it hard to spot meaningful patterns or upcoming milestones. Instead of reducing uncertainty, it added distraction. Managers needed clarity, not a live stream of events.
-                            </p>
+                        <p class="hw2-p">My focus at this stage was defining what managers needed to understand at a glance in order to feel confident using the platform — and what information mattered most to get there.</p>
+                    </section>
+
+                    
+
+                    <!-- ── 04 RESEARCH ── -->
+                    <section class="hw2-section hw2-reveal" id="hw2-research">
+                        <span class="ch-num">04</span>
+                        <span class="ch-label">Research</span>
+                        <h2 class="hw2-h2">What we found<br><em>about our users.</em></h2>
+                        <p class="hw2-intro">Once the problem space was clearer, the next step was pressure-testing our assumptions. Who was this dashboard actually for? How would it be used in real life?</p>
+
+                        <div class="stat-row hw2-reveal">
+                            <div class="stat-cell"><span class="stat-num">Back</span><span class="stat-desc">of store, shared computer</span></div>
+                            <div class="stat-cell"><span class="stat-num">3s</span><span class="stat-desc">Target glance time for any module</span></div>
+                            <div class="stat-cell"><span class="stat-num">Zero</span><span class="stat-desc">Setup required before it's useful</span></div>
                         </div>
 
-                        <div class="concept-block">
-                            <strong>Takeaway:</strong> Too noisy for fast decision-making.
+                        <p class="hw2-p">Most managers were accessing HourWork on a shared computer during short breaks. They weren't tech-savvy — they were not interested in learning a complex system.</p>
+                        <p class="hw2-p">That context made the priority obvious: the dashboard needed to be fast to read, predictable, and hard to mess up. <span class="hw2-strong">Visual flair mattered far less than clarity.</span></p>
+
+                        <div class="img-block hw2-reveal">
+                            <img src="hw-research.png" alt="Research synthesis">
+                            <p class="img-caption">Research synthesis — usage environment, mental models, and patterns from competitive review.</p>
                         </div>
-                    </article>
-                </section>
 
-                <h4 class="space-xl">The final structure</h4>
-                <p class="space-sm">
-                    This layout separated short-term and longer-term information, making it easier to scan and reducing mental overhead. Now that the structure is in place, the focus shifts to refining how the dashboard should look and behave.
-                </p>
-                <img src="images/portfolio/hourwork/dashboard/wireframe-success.png">
+                        <div class="hw2-pullquote hw2-reveal">
+                            <p>"This dashboard wasn't a place to show off. It needed to stay out of the way and let managers get what they needed quickly."</p>
+                            <cite>Research conclusion — shaped everything that followed</cite>
+                        </div>
+                    </section>
 
-            </div>
+                    <!-- ── 05 EXPLORE ── -->
+                    <section class="hw2-section hw2-reveal" id="hw2-explore">
+                        <span class="ch-num">05</span>
+                        <span class="ch-label">Explore</span>
+                        <h2 class="hw2-h2">Wireframing —<br><em>testing the wrong ideas first.</em></h2>
+                        <p class="hw2-intro">Wireframes are where ideas get pressure-tested. I use them to explore multiple directions quickly, challenge assumptions, and understand tradeoffs before committing to a solution.</p>
 
-
-
-
-
-
-
-
-
-
-            <div class="work space-small" data-aos="fade-up">
-                <div class="work">
-                    <h2 class="title">Prototype</h2>
-                </div>
-                <span class="section-eyebrow">Prototype</span>
-                <h3 class="section-title">First designs</h3>
-                <p>
-                    With the layout in place, the focus shifted to how each section actually communicated information. We knew what needed to be shown — the question was how to present it so it was fast and intuitive to read.
-                    <br><br>
-                    At this stage, I explored different treatments for each module, adjusting levels of detail and visual hierarchy. Many options were cut when they added density or forced too much interpretation.
-                    <br><br>
-                    The goal wasn’t to surface more information. It was to make the right information clear at a glance.
-                </p>
-                <img src="images/portfolio/hourwork/dashboard/First-designs.png">
-            </div>
+                        <!-- Wireframes: rejected + chosen (white cards) -->
+                        <div class="wireframe-grid hw2-reveal">
+                            <!-- Replace the entire wireframe-grid block with this -->
 
 
+                            <div class="wf-item failed">
+                                <div class="wf-verdict-bar">
+                                    <span class="wf-verdict-mark">✕</span>
+                                    <div>
+                                        <span class="wf-verdict-label">Rejected</span>
+                                        <span class="wf-verdict-title">The Complex / Power-User Dashboard</span>
+                                    </div>
+                                </div>
+                                <div class="wf-img-wrap">
+                                    <img src="images/portfolio/hourwork/dashboard/wireframe-fail-1-clear.png" alt="Complex dashboard wireframe">
+                                </div>
+                                <div class="wf-reasoning">
+                                    <div class="wf-reason">
+                                        <span class="wf-reason-label">Why we thought it'd work</span>
+                                        <p>Advanced filters, detailed charts, full activity logs. Promised total visibility and seemed scalable long term.</p>
+                                    </div>
+                                    <div class="wf-reason">
+                                        <span class="wf-reason-label">Why it failed</span>
+                                        <p>Required setup before it became useful. Managers needed quick reassurance, not a reporting tool.</p>
+                                    </div>
+                                    <div class="wf-takeaway">
+                                        <span>Takeaway —</span> Optimized for depth over speed.
+                                    </div>
+                                </div>
+                            </div>
 
-            <div class="work space-small" data-aos="fade-up">
-                <img src="images/portfolio/hourwork/dashboard/iteration.png">
-            </div>
-            <div class="work space-small" data-aos="fade-up">
-                <h3 class="title">Assemble the design, move to testing</h3>
-                <img src="images/portfolio/hourwork/dashboard/Final-ready-to-test.png">
-            </div>
+                            <div class="wf-item failed">
+                                <div class="wf-verdict-bar">
+                                    <span class="wf-verdict-mark">✕</span>
+                                    <div>
+                                        <span class="wf-verdict-label">Rejected</span>
+                                        <span class="wf-verdict-title">The Notification-Heavy Activity Feed</span>
+                                    </div>
+                                </div>
+                                <div class="wf-img-wrap">
+                                    <img src="images/portfolio/hourwork/dashboard/wireframe-fail-2-clear.png" alt="Notification-heavy wireframe">
+                                </div>
+                                <div class="wf-reasoning">
+                                    <div class="wf-reason">
+                                        <span class="wf-reason-label">Why we thought it'd work</span>
+                                        <p>Real-time feed surfacing every message and response chronologically. Created a sense of transparency.</p>
+                                    </div>
+                                    <div class="wf-reason">
+                                        <span class="wf-reason-label">Why it failed</span>
+                                        <p>Became noisy quickly. Hard to spot meaningful patterns or upcoming milestones. Added distraction instead of clarity.</p>
+                                    </div>
+                                    <div class="wf-takeaway">
+                                        <span>Takeaway —</span> Too noisy for fast decision-making.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="img-block hw2-reveal">
+                            <img src="images/portfolio/hourwork/dashboard/wireframe-success.png" alt="Final wireframe chosen">
+                            <p class="img-caption">The chosen structure — separating short-term and longer-term information to reduce mental overhead.</p>
+                        </div>
+
+                        <div class="lesson-block hw2-reveal">
+                            <div class="lesson-icon good">→</div>
+                            <div>
+                                <h4>The structure that won</h4>
+                                <p>This layout separated short-term and longer-term information, making it easier to scan and reducing mental overhead. With the structure confirmed, the focus shifted to refining how the dashboard should look and behave.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ── 06 PROTOTYPE ── -->
+                    <section class="hw2-section hw2-reveal" id="hw2-prototype">
+                        <span class="ch-num">06</span>
+                        <span class="ch-label">Prototype</span>
+                        <h2 class="hw2-h2">First designs —<br><em>making the structure come alive.</em></h2>
+                        <p class="hw2-intro">With the layout in place, the focus shifted to how each section actually communicated information. We knew what needed to be shown — the question was how to present it so it was fast and intuitive to read.</p>
+
+                        <p class="hw2-p">I explored different treatments for each module, adjusting levels of detail and visual hierarchy. Many options were cut when they added density or forced too much interpretation.</p>
+
+                        <div class="img-block hw2-reveal">
+                            <img src="images/portfolio/hourwork/dashboard/first-designs.png" alt="Prototype review">
+                            <p class="img-caption">Prototype review — each module annotated with pass/fail. X marks flagged anything adding density or requiring interpretation.</p>
+                        </div>
+
+                        <p class="hw2-p">Working with my design partner, we evaluated each module against one criterion: <span class="hw2-strong">can a manager understand this in under three seconds?</span> If uncertain — cut or simplify.</p>
+
+                        <div class="img-block hw2-reveal">
+                            <img src="images/portfolio/hourwork/dashboard/iteration.png" alt="Iterating specific pieces">
+                            <p class="img-caption">Iterating individual modules — approved layout as the framework, pieces placed and tested one section at a time.</p>
+                        </div>
+
+                        <div class="outcome hw2-reveal">
+                            <span class="outcome-label">Design principle established</span>
+                            <p>Find the best design for each module independently. Make as many iterations as needed. Work with the team to pick the best one — then move on. Don't optimize the whole when you can optimize each part.</p>
+                        </div>
+                    </section>
+
+                    <!-- ── 07 VALIDATE ── -->
+                    <section class="hw2-section hw2-reveal" id="hw2-validate">
+                        <span class="ch-num">07</span>
+                        <span class="ch-label">Validate</span>
+                        <h2 class="hw2-h2">Testing — where the<br><em>design gets honest.</em></h2>
+                        <p class="hw2-intro">With a prototype in place, the next step was putting it in front of managers to test the assumptions behind the design. The goal wasn't aesthetic feedback — it was clarity.</p>
+
+                        <p class="hw2-p">We focused on three questions. Can they quickly understand what's happening across their stores? Do they know where to click without instruction? Does the hierarchy match how they think about their day?</p>
+
+                        <div class="img-block hw2-reveal">
+                            <img src="images/portfolio/hourwork/dashboard/user-testing.png" alt="User testing and friction point">
+                            <p class="img-caption">Testing session — annotated with specific friction points caught before dev handoff.</p>
+                        </div>
+
+                        <div class="friction hw2-reveal">
+                            <div class="friction-icon">⚠️</div>
+                            <div>
+                                <h4>Friction Point Caught</h4>
+                                <p>Through testing, we found it was hard to recognize a key element as clickable. Users were missing a primary action pathway — not because the design was broken, but because the visual treatment didn't signal interactivity. Iterated and fixed before handoff.</p>
+                            </div>
+                        </div>
+
+                        <div class="hw2-pullquote hw2-reveal">
+                            <p>"Testing doesn't invalidate the design. It makes the handoff cleaner — you ship with confidence instead of hope."</p>
+                            <cite>On the value of validate before dev handoff</cite>
+                        </div>
+
+                        <div class="img-block hw2-reveal">
+                            <img src="images/portfolio/hourwork/dashboard/final-design.png" alt="Final production dashboard">
+                            <p class="img-caption">Final production dashboard — handed off with annotated specs, component notes, and interaction documentation.</p>
+                        </div>
+
+                    </section>
+
+                    <!-- ── 08 OUTCOMES ── -->
+                    <section class="hw2-section hw2-reveal" id="hw2-outcomes">
+                        <span class="ch-num">08</span>
+                        <span class="ch-label">Outcomes</span>
+                        <h2 class="hw2-h2">Early signals —<br><em>before the acquisition.</em></h2>
+                        <p class="hw2-intro">HourWork was acquired shortly after the dashboard launched, which cut short our ability to gather long-term data. But the early signals — in the weeks between launch and acquisition — pointed clearly in the right direction.</p>
+
+                        <div class="stat-row hw2-reveal">
+                            <div class="stat-cell">
+                                <span class="stat-num">↑</span>
+                                <span class="stat-desc">Platform engagement increased after dashboard launch — more managers actively using the product week over week</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="stat-num">✓</span>
+                                <span class="stat-desc">Managers reported feeling in control of their messaging for the first time — without needing to contact support</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="stat-num">0→1</span>
+                                <span class="stat-desc">Before this project, no centralized visibility existed. This was the first time the product gave managers a clear picture of their own data</span>
+                            </div>
+                        </div>
+
+                        <div class="white-card hw2-reveal">
+                            <span class="wc-label">What changed for users</span>
+                            <div class="wc-split">
+                                <div>
+                                    <span class="wc-col-label">Before</span>
+                                    <p>Managers had no consolidated view of what the platform was doing. Questions like "what messages went out this week?" required contacting support or manually piecing together information from different parts of the product.</p>
+                                    <p style="margin-top:12px;">The platform was powerful but opaque. Users who weren't fully onboarded often didn't trust it — or didn't use it.</p>
+                                </div>
+                                <div>
+                                    <span class="wc-col-label">After</span>
+                                    <p>Managers could answer their own questions at a glance. The dashboard gave them the confidence to operate the platform independently — seeing activity, upcoming events, and engagement across locations without friction.</p>
+                                    <p style="margin-top:12px;">Early feedback pointed to a meaningful shift: managers felt like they owned the platform, not just used it.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hw2-pullquote hw2-reveal">
+                            <p>"The most valuable thing a dashboard can do isn't show more data — it's remove the need to ask someone else for it."</p>
+                            <cite>The design insight this project reinforced</cite>
+                        </div>
+                    </section>
+
+                    <!-- ── 09 REFLECTION ── -->
+                    <section class="hw2-section hw2-reveal" id="hw2-reflection">
+                        <span class="ch-num">09</span>
+                        <span class="ch-label">Reflection</span>
+                        <h2 class="hw2-h2">What I'd push<br><em>further next time.</em></h2>
+                        <p class="hw2-intro">Looking back, the design solved the right problem well. But the more I understood how different franchise owners operated, the more clearly I saw an opportunity we didn't have time to pursue.</p>
+
+                        <div class="lesson-block hw2-reveal">
+                            <div class="lesson-icon good">→</div>
+                            <div>
+                                <h4>The product deserved more configurability</h4>
+                                <p>Franchise owners vary enormously — a single-location owner has completely different priorities than someone managing 20 stores. The dashboard we built gave everyone the same view. Given more runway, I'd push toward a more configurable system: letting owners choose what they see, weighted to how they actually run their business. The data was there. The architecture just didn't surface it that way yet.</p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-block hw2-reveal">
+                            <div class="lesson-icon">⊘</div>
+                            <div>
+                                <h4>Clarity beats delight when users are time-pressured</h4>
+                                <p>The most impactful decisions on this project were subtractive. Removing things — a chart, a filter, a widget — consistently outperformed adding them. That became a working principle I've carried forward: if you're unsure whether something helps, it probably doesn't.</p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-block hw2-reveal">
+                            <div class="lesson-icon">⊘</div>
+                            <div>
+                                <h4>Building a design system under pressure is a different skill</h4>
+                                <p>Designing without a system forced me to make decisions that would have to scale. Some of them held up well; others became technical debt the team had to manage. I learned that the cost of inconsistency compounds — and that investing in shared patterns early, even imperfect ones, pays off faster than most teams expect.</p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-block hw2-reveal">
+                            <div class="lesson-icon good">✓</div>
+                            <div>
+                                <h4>Process gives you something to defend</h4>
+                                <p>Working through a structured process — even quickly — meant every decision had a reason behind it. When the team pushed back on a direction, I could explain the tradeoff clearly. That made collaboration faster and handoffs cleaner. It's a skill I'll take into every project.</p>
+                            </div>
+                        </div>
+
+                        <div class="outcome hw2-reveal" style="margin-top:48px;">
+                            <span class="outcome-label">What this project showed</span>
+                            <p>I can move through a full design process with rigor — from discovery to dev handoff — while making the reasoning visible at every step. That combination of process discipline, clear communication, and the judgment to know when to stop adding things is what makes work shippable.</p>
+                        </div>
+                    </section>
+
+                </div><!-- /.hw2-main -->
+
+                <!-- HourWork chapters -->
+                <nav class="ptoc">
+                    <span class="ptoc-label">On this page</span>
+                    <ul class="ptoc-list">
+                        <li><a class="ptoc-link active" href="#hw2-context" data-target="hw2-context"><span class="ptoc-num">01</span>Context</a></li>
+                        <li><a class="ptoc-link" href="#hw2-process" data-target="hw2-process"><span class="ptoc-num">02</span>Process</a></li>
+                        <li><a class="ptoc-link" href="#hw2-understand" data-target="hw2-understand"><span class="ptoc-num">03</span>Understand</a></li>
+                        <li><a class="ptoc-link" href="#hw2-research" data-target="hw2-research"><span class="ptoc-num">04</span>Research</a></li>
+                        <li><a class="ptoc-link" href="#hw2-explore" data-target="hw2-explore"><span class="ptoc-num">05</span>Explore</a></li>
+                        <li><a class="ptoc-link" href="#hw2-prototype" data-target="hw2-prototype"><span class="ptoc-num">06</span>Prototype</a></li>
+                        <li><a class="ptoc-link" href="#hw2-validate" data-target="hw2-validate"><span class="ptoc-num">07</span>Validate</a></li>
+                        <li><a class="ptoc-link" href="#hw2-outcomes" data-target="hw2-outcomes"><span class="ptoc-num">08</span>Outcomes</a></li>
+                        <li><a class="ptoc-link" href="#hw2-reflection" data-target="hw2-reflection"><span class="ptoc-num">09</span>Reflection</a></li>
+                    </ul>
+                </nav>
+
+            </div><!-- /.hw2-body -->
+
+        </div><!-- /.hw2 -->
+
+        <script>
+            // Scroll reveal
+            const r2 = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), 60); r2.unobserve(e.target); }
+                });
+            }, { threshold: 0.07 });
+            document.querySelectorAll('.hw2 .hw2-reveal').forEach(el => r2.observe(el));
+
+            // Active TOC
+            const secs = document.querySelectorAll('.hw2 .hw2-section');
+            const links = document.querySelectorAll('.hw2 .toc-link');
+
+            const tocObs = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        links.forEach(l => l.classList.toggle('active', l.dataset.t === id));
+                    }
+                });
+            }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+
+            secs.forEach(s => tocObs.observe(s));
+
+            // Smooth scroll
+            links.forEach(l => {
+                l.addEventListener('click', e => {
+                    e.preventDefault();
+                    const t = document.getElementById(l.dataset.t);
+                    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+        </script>
 
 
-            <div class="work space-med" data-aos="fade-up">
-                <div class="work">
-                    <h2 class="title">Validate</h2>
-                </div>
-                <span class="section-eyebrow">Validate</span>
-                <h3 class="section-title">Test with users</h3>
-                <p>
-                    With a prototype in place, the next step was putting it in front of managers to test the assumptions behind the design. <strong>The goal wasn’t aesthetic feedback — it was clarity.</strong>
-                    <br><br>
-                    We focused on questions like:
-                    <br>
-                </p>
-                <ul class="bullets">
-                    <li>Can they quickly understand what’s happening across their stores?</li>
-                    <li>Do they know where to click without instruction?</li>
-                    <li>Does the hierarchy match how they think about their day?</li>
-                </ul><br>
-                <p>
-                    These sessions surfaced small friction points and confirmed which areas felt intuitive. Addressing this feedback before development ensured the final design reduced uncertainty rather than introducing new complexity.
-                </p>
-                <div class="space-tiny"></div>
-                <img src="images/portfolio/hourwork/dashboard/User-testing.png">
-            </div>
-
-            <div class="work space-small" data-aos="fade-up">
-                <img src="images/portfolio/hourwork/dashboard/Iterate-again.png">
-            </div>
-            <div class="work" data-aos="fade-up">
-                <img src="images/portfolio/hourwork/dashboard/final.png">
-            </div>
-
-        </div>
 
         <div class="moreWork" id="color-end">
             <h1>More Work</h1>

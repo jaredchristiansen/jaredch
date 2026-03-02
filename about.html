@@ -38,45 +38,420 @@
 
 
     <div class="page-content">
-        <div class="description">
-            <h1 class="space">About Jared</h1>
-        </div>
-        <div class="two-col__grid space-tiny" style="grid-template-columns: 1fr 2fr" >
-            <div class="two-col__col">
-                <img src="images/businessProfileFront.jpg">
-            </div>
-            <div class="two-col__col">
-                <p>Hey there! I'm Jared Christiansen, a startup generalist disguised as a UX designer. I’ve built
-                    MVPs from scratch, coded production-ready apps, and turned napkin sketches into real,
-                    revenue-generating products. UX is my foundation—I think deeply about users, flows, and
-                    clarity—but I also build.</p>
-                <br>
-                <p>I thrive in early-stage chaos where the team is small, the stakes are high, and you need someone
-                    who can design, build, and launch without waiting on handoffs.
-                </p>
-                <br>
-                <p>When I’m not building products, you’ll probably find me rock climbing. North Conway and Bar
-                    Harbor are two of my favorite spots.</p>
-                </p>
-            </div>
-        </div>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+        <style>
+            .about-jared {
+                --a-bg: #ffffff;
+                --a-text: #1a1a1a;
+                --a-mid: #555555;
+                --a-dim: #999999;
+                --a-border: #e8e8e8;
+                --a-teal: #1aafb8;
+                --a-light-bg: #f8f8f8;
+
+                background: var(--a-bg);
+                color: var(--a-text);
+                font-family: 'Avenir', 'Avenir Next', -apple-system, sans-serif;
+                font-size: 15px;
+                line-height: 1.7;
+                overflow-x: hidden;
+                box-sizing: border-box;
+            }
+
+            /* ── INTRO ── */
+            .about-jared .a-intro {
+                padding-top: 140px;
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 60px;
+                align-items: start;
+            }
+
+            .about-jared .a-intro-text {}
+
+            .about-jared .a-eyebrow {
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: var(--a-teal);
+                margin-bottom: 20px;
+                display: block;
+            }
+
+            .about-jared .a-name {
+                font-family: 'Avenir', 'Avenir Next', sans-serif;
+                font-size: clamp(48px, 7vw, 72px);
+                font-weight: 800;
+                line-height: 1.05;
+                letter-spacing: -0.02em;
+                color: var(--a-text);
+                margin-bottom: 8px;
+            }
+
+            .about-jared .a-title {
+                font-size: 17px;
+                font-weight: 400;
+                color: var(--a-mid);
+                margin-bottom: 36px;
+            }
+
+            .about-jared .a-bio {
+                font-size: 17px;
+                line-height: 1.85;
+                color: var(--a-mid);
+                max-width: 520px;
+            }
+
+            .about-jared .a-bio p+p {
+                margin-top: 20px;
+            }
+
+            .about-jared .a-photo-wrap {
+                position: sticky;
+                top: 100px;
+            }
+
+            .about-jared .a-photo-wrap img {
+                width: 100%;
+                display: block;
+                border-radius: 4px;
+                filter: contrast(1.03);
+            }
+
+            .about-jared .a-photo-location {
+                margin-top: 12px;
+                font-size: 11px;
+                font-weight: 600;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--a-dim);
+            }
+
+            /* ── DIVIDER ── */
+            .about-jared .a-divider {
+                margin: 72px auto 0;
+            }
+
+            .about-jared .a-divider hr {
+                border: none;
+                border-top: 1px solid var(--a-border);
+            }
+
+            /* ── HOW I WORK ── */
+            .about-jared .a-work {
+                margin: 0 auto;
+                padding: 72px 0;
+            }
+
+            .about-jared .a-section-label {
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: var(--a-teal);
+                margin-bottom: 40px;
+                display: block;
+            }
+
+            .about-jared .a-work-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1px;
+                background: var(--a-border);
+            }
+
+            .about-jared .a-work-item {
+                background: var(--a-bg);
+                padding: 36px 32px;
+                transition: background 0.2s;
+            }
+
+            .about-jared .a-work-item:hover {
+                background: var(--a-light-bg);
+            }
+
+            .about-jared .a-work-item h3 {
+                font-family: 'Instrument Serif', serif;
+                font-size: 22px;
+                font-style: italic;
+                line-height: 1.2;
+                color: var(--a-text);
+                margin-bottom: 14px;
+            }
+
+            .about-jared .a-work-item p {
+                font-size: 13px;
+                color: var(--a-mid);
+                line-height: 1.8;
+            }
+
+            /* ── CLIMBING HERO ── */
+            .about-jared .a-climb-hero {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .about-jared .a-climb-hero img {
+                width: 100%;
+                max-height: 600px;
+                object-fit: cover;
+                object-position: center 50%;
+                display: block;
+                border-radius: 4px;
+                filter: brightness(104%) contrast(104%) grayscale(0%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(120%) sepia(0%);
+
+            }
+
+            /* ── OUTSIDE SECTION ── */
+            .about-jared .a-outside {
+                margin: 0 auto;
+                padding: 72px 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 80px;
+                align-items: center;
+            }
+
+            .about-jared .a-outside img {
+                width: 100%;
+                border-radius: 4px;
+                display: block;
+                filter: brightness(104%) contrast(104%) grayscale(0%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(120%) sepia(0%);
+            }
+
+            .about-jared .a-outside-text {}
+
+            .about-jared .a-outside-text p {
+                font-size: 16px;
+                line-height: 1.9;
+                color: var(--a-mid);
+            }
+
+            .about-jared .a-outside-text p+p {
+                margin-top: 18px;
+            }
+
+            .about-jared .a-outside-text .a-aside {
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: var(--a-dim);
+                margin-top: 28px;
+            }
+
+            /* ── CONTACT ── */
+            .about-jared .a-contact {
+                margin: 0 auto;
+                padding: 0 0 100px;
+                border-top: 1px solid var(--a-border);
+                padding-top: 72px;
+            }
+
+            .about-jared .a-contact-inner {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                gap: 40px;
+            }
+
+            .about-jared .a-contact h2 {
+                font-family: 'Instrument Serif', serif;
+                font-size: clamp(32px, 4vw, 52px);
+                line-height: 1.1;
+                color: var(--a-text);
+                font-style: italic;
+                max-width: 480px;
+            }
+
+            .about-jared .a-contact-links {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-end;
+                flex-shrink: 0;
+            }
+
+            .about-jared .a-contact-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: var(--a-text);
+                padding: 12px 24px;
+                border: 1px solid var(--a-border);
+                border-radius: 2px;
+                transition: all 0.2s;
+                min-width: 180px;
+                justify-content: center;
+            }
+
+            .about-jared .a-contact-link:hover {
+                border-color: var(--a-teal);
+                color: var(--a-teal);
+                background: rgba(26, 175, 184, 0.03);
+            }
+
+            .about-jared .a-contact-link svg {
+                flex-shrink: 0;
+            }
+
+            /* ── REVEAL ── */
+            .about-jared .a-reveal {
+                opacity: 0;
+                transform: translateY(18px);
+                transition: opacity 0.65s ease, transform 0.65s ease;
+            }
+
+            .about-jared .a-reveal.visible {
+                opacity: 1;
+                transform: none;
+            }
+
+            /* ── RESPONSIVE ── */
+            @media (max-width: 768px) {
+
+                .about-jared .a-intro,
+                .about-jared .a-outside {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                }
+
+                .about-jared .a-photo-wrap {
+                    position: static;
+                }
 
 
-        <div class="getInTouch">
-            <h2 class="space-tiny">Get in Touch</h2>
+                .about-jared .a-work-grid {
+                    grid-template-columns: 1fr;
+                }
 
-            <div class="contactIcon">
-                <div class=image><img src="images/icons/mail.png"></div>
-                <p><b>Email</b></p>
-                <p><a href="mailto:jared.ch@comcast.net">jared.ch@comcast.net</a></p>
+     
+
+                .about-jared .a-contact-inner {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .about-jared .a-contact-links {
+                    align-items: flex-start;
+                }
+            }
+        </style>
+
+
+
+        <div class="about-jared">
+
+            <!-- INTRO -->
+            <div class="a-intro">
+                <div class="a-intro-text">
+                    <span class="a-eyebrow a-reveal">About</span>
+                    <h1 class="a-name a-reveal">Jared<br>Christiansen</h1>
+                    <p class="a-title a-reveal">Boston, MA</p>
+                    <div class="a-bio a-reveal">
+                        <p>I'm a startup generalist disguised as a UX designer. I've built MVPs from scratch, coded production-ready apps, and turned napkin sketches into real, revenue-generating products.</p>
+                        <p>UX is my foundation — I think deeply about users, flows, and clarity — but I also build. I thrive in early-stage chaos where the team is small, the stakes are high, and you need someone who can design, build, and launch without waiting on handoffs.</p>
+                    </div>
+                </div>
+
+                <div class="a-photo-wrap a-reveal">
+                    <img src="images/about/casual-profile.jpg" alt="Jared Christiansen">
+                    <p class="a-photo-location">📍 Boston, MA</p>
+                </div>
             </div>
 
-            <div class="contactIcon">
-                <div class=image><img src="images/icons/linkedin.png"></div>
-                <p><b>LinkedIn</b></p>
-                <p><a href="https://www.linkedin.com/in/jared-christiansen/">Follow me on LinkedIn</a></p>
+            <div class="a-divider a-reveal">
+                <hr>
             </div>
-        </div>
+
+            <!-- HOW I WORK -->
+            <div class="a-work">
+                <span class="a-section-label a-reveal">How I work</span>
+                <div class="a-work-grid a-reveal">
+                    <div class="a-work-item">
+                        <h3>I build, not just design.</h3>
+                        <p>Most designers hand off to engineers. I write the code. That means faster iteration, fewer translation errors, and a product that ships looking like it was designed.</p>
+                    </div>
+                    <div class="a-work-item">
+                        <h3>I validate before I build.</h3>
+                        <p>The best way to save a month of development is one afternoon talking to real users — or standing in a Domino's manually testing the thing you were about to build. I've done both.</p>
+                    </div>
+                    <div class="a-work-item">
+                        <h3>I work best at zero-to-one.</h3>
+                        <p>Give me ambiguity, a small team, and a problem worth solving. I know how to navigate the phase where nothing is defined — and get to something real without burning time on the wrong thing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CLIMBING HERO IMAGE -->
+            <div class="a-climb-hero a-reveal">
+                <img src="images/about/black-canyon-climb.jpeg" alt="Jared at the Black Canyon of the Gunnison">
+            </div>
+
+            <div class="a-divider a-reveal" style="margin-top: 0; padding-top: 0;">
+                <hr style="margin-top: 48px;">
+            </div>
+
+            <!-- OUTSIDE SECTION -->
+            <div class="a-outside">
+                <div class="a-reveal">
+                    <img src="images/about/indian-creek-climb.jpeg" alt="Jared climbing at Indian Creek, Utah">
+                </div>
+                <div class="a-outside-text a-reveal">
+                    <span class="a-section-label">Outside the work</span>
+I climb a lot. Mostly cracks. Mostly in places that feel a little remote.</p>
+                    <p>When there’s snow, I ski. When there isn’t, I’m usually hiking or planning the next trip.</p>
+                    <p class="a-aside">Indian Creek, Utah &nbsp;·&nbsp; Black Canyon of the Gunnison, CO</p>
+                </div>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="a-contact">
+                <div class="a-contact-inner a-reveal">
+                    <h2>Want to build<br>something together?</h2>
+                    <div class="a-contact-links">
+                        <a href="mailto:jared.ch@comcast.net" class="a-contact-link">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            Send an email
+                        </a>
+                        <a href="https://linkedin.com/in/jared-christiansen" target="_blank" class="a-contact-link">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.about-jared -->
+
+        <script>
+            const aboutIO = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        setTimeout(() => e.target.classList.add('visible'), 60);
+                        aboutIO.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            document.querySelectorAll('.about-jared .a-reveal').forEach(el => aboutIO.observe(el));
+        </script>
+
+
     </div>
 
 

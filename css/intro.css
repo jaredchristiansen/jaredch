@@ -1,0 +1,238 @@
+.cs-header-v2 {
+    --cs-text: #111111;
+    --cs-mid: #555555;
+    --cs-dim: #aaaaaa;
+    --cs-border: #e8e8e8;
+    --cs-teal: #1aafb8;
+    --cs-bg: #ffffff;
+    --cs-light: #f7f7f7;
+
+    font-family: 'Avenir', 'Avenir Next', -apple-system, sans-serif;
+    color: var(--cs-text);
+    box-sizing: border-box;
+}
+
+/* ── MAIN BLOCK ── */
+.cs-header-v2 .cv-inner {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    gap: 80px;
+    align-items: start;
+}
+
+/* Eyebrow: company name + year */
+.cs-header-v2 .cv-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+
+    opacity: 0;
+    transform: translateY(8px);
+    animation: cv-fadein 0.45s ease forwards;
+    animation-delay: 0.05s;
+}
+
+.cs-header-v2 .cv-company {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cs-teal);
+}
+
+.cs-header-v2 .cv-eyebrow-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--cs-border);
+    flex-shrink: 0;
+}
+
+.cs-header-v2 .cv-year {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--cs-dim);
+}
+
+/* Title — the actual project framing, not just company name */
+.cs-header-v2 .cv-title {
+    font-family: 'Avenir', 'Avenir Next', sans-serif;
+    font-size: clamp(38px, 5.5vw, 66px);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -0.025em;
+    color: var(--cs-text);
+    margin-bottom: 24px;
+
+    opacity: 0;
+    transform: translateY(16px);
+    animation: cv-fadein 0.65s ease forwards;
+    animation-delay: 0.18s;
+}
+
+/* Italic serif — the one sharp sentence */
+.cs-header-v2 .cv-hook {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(17px, 2vw, 22px);
+    font-style: italic;
+    color: var(--cs-mid);
+    line-height: 1.55;
+    max-width: 520px;
+    padding-left: 16px;
+    border-left: 2px solid var(--cs-teal);
+
+    opacity: 0;
+    transform: translateY(12px);
+    animation: cv-fadein 0.6s ease forwards;
+    animation-delay: 0.34s;
+}
+
+/* RIGHT COLUMN — meta details */
+.cs-header-v2 .cv-right {
+    padding-top: 6px;
+
+    opacity: 0;
+    transform: translateY(10px);
+    animation: cv-fadein 0.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.cs-header-v2 .cv-meta-block {
+    margin-bottom: 28px;
+}
+
+.cs-header-v2 .cv-meta-block:last-child {
+    margin-bottom: 0;
+}
+
+.cs-header-v2 .cv-meta-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cs-dim);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.cs-header-v2 .cv-meta-value {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--cs-mid);
+    line-height: 1.5;
+}
+
+/* Tags inside meta */
+.cs-header-v2 .cv-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.cs-header-v2 .cv-tag {
+    padding: 4px 10px;
+    border: 1px solid var(--cs-border);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cs-mid);
+    border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.cs-header-v2 .cv-tag:hover {
+    border-color: var(--cs-teal);
+    color: var(--cs-teal);
+}
+
+/* ── BOTTOM BAR ── */
+.cs-header-v2 .cv-bottom {
+    margin: 52px auto 0;
+    padding: 24px 48px 56px;
+    border-top: 1px solid var(--cs-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    opacity: 0;
+    animation: cv-fadein 0.5s ease forwards;
+    animation-delay: 0.65s;
+}
+
+.cs-header-v2 .cv-note {
+    font-size: 12px;
+    color: var(--cs-dim);
+    font-style: italic;
+    line-height: 1.6;
+    max-width: 480px;
+}
+
+.cs-header-v2 .cv-note strong {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--cs-mid);
+}
+
+.cs-header-v2 .cv-scroll {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cs-dim);
+    flex-shrink: 0;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.cs-header-v2 .cv-scroll-line {
+    width: 32px;
+    height: 1px;
+    background: var(--cs-border);
+}
+
+.cs-header-v2 .cv-scroll svg {
+    animation: cv-bob 2s ease-in-out infinite;
+    animation-delay: 1.2s;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes cv-fadein {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cv-bob {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .cs-header-v2 .cv-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 56px 24px 0;
+    }
+
+    .cs-header-v2 .cv-bottom {
+        padding: 24px 24px 48px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

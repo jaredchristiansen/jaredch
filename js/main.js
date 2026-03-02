@@ -1,12 +1,11 @@
 //   ———   Run Function on Scroll    ———
 
-
-
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
   window.location.hash = hash;
 
 }
+
 // Make the home page fade when scroll
 $(document).ready(function () {
 
@@ -25,16 +24,11 @@ $(document).ready(function () {
     $(".cover").css("scale", 1 - $(window).scrollTop() / 100);
     //$(".cover").css("max-height", 430 - $(window).scrollTop());
 
-
-
-
     // Shrinks nav-bar if page is lower than 100 pixels
     if ($(this).scrollTop() > 100) {
       document.getElementsByClassName('nav-bar')[0].style.paddingTop = "20px";
-      //AOS.refresh();
     } else if ($(this).scrollTop() < 100) {
       document.getElementsByClassName('nav-bar')[0].style.paddingTop = "40px";
-
     }
 
     if (window.location.pathname != '/index.html' && window.location.pathname != '/about.html') {
@@ -44,8 +38,6 @@ $(document).ready(function () {
         document.getElementsByClassName('nav-bar')[0].style.top = "0px";
       }
     }
-
-
   });
 });
 
@@ -55,7 +47,6 @@ $(document).ready(function () {
 
 
 //   ———   Click Arrow to Move Page    ———
-
 
 $(document).ready(function () {
   // Add smooth scrolling to all links
@@ -145,7 +136,6 @@ $(window).scroll(function () {
 
 //  ———  Scroll to Top  ——— 
 
-
 (function ($) {
   'use strict';
 
@@ -192,29 +182,21 @@ function bgChange(workPiece) {
     case 0:
       bg = "white";
       break;
-    // case "ollieboard":
-    //   bg = "#444";
-    //   num = 0;
-    //   break;
+    case "ollieboard":
+      bg = "#444";
+      num = 0;
+      break;
     case "hourwork":
       bg = "#C7E5FB";
-      num = 0;
+      num = 1;
       break;
     case "inspecticare":
       bg = "#DACCD5";
-      num = 1;
-      break;
-    case "simplyMusic":
-      bg = "#FFD5D4";
       num = 2;
-      break;
-    case "syrg":
-      bg = "#CED8EF";
-      num = 3;
       break;
     case "stoneShowcase":
       bg = "#AFBFE0";
-      num = 4;
+      num = 3;
       break;
     default:
       bg = "white";
@@ -260,17 +242,11 @@ function bgChange(workPiece) {
 
 //   ———   Times Redirect Page ———
 
-
-
 function pageRedirect(pageURL) {
   var delay = 600; // time in milliseconds
 
   // Display message
-
-
-
   document.getElementsByClassName('colorTransition')[0].style.display = "block";
-
 
   var i;
   for (i = 0; i < 101; i++) {
@@ -291,7 +267,6 @@ function pageRedirectEnd() {
     document.getElementsByClassName('colorTransitionEnd')[0].style.transitionDuration = "1.2s";
   }
 
-
   var i;
   setTimeout(function () {
     for (i = 100; i > 0; i--) {
@@ -303,8 +278,6 @@ function pageRedirectEnd() {
     document.getElementsByClassName('colorTransitionEnd')[0].style.display = "none";
     document.getElementById("loader").style.display = "none";
   }, delay);
-
-
 
   AOS.init({
     duration: 1200,
@@ -345,3 +318,46 @@ if (document.readyState === "loading") {
 window.addEventListener("load", () => {
   if (typeof pageRedirectEnd === "function") pageRedirectEnd();
 });
+
+
+
+
+// ── UNIVERSAL CHAPTER TRACKER ──
+// Call initToc() once per page after DOM is ready
+
+function initToc() {
+  const toc = document.querySelector('.ptoc');
+
+  // hide toc initially, show if
+  window.addEventListener('scroll', () => {
+    if (!toc) return;
+    toc.classList.toggle('visible', window.scrollY > 660);
+  });
+
+  const links = document.querySelectorAll('.ptoc-link');
+  const sectionIds = Array.from(links).map(l => l.dataset.target);
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+  if (!sections.length) return;
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        links.forEach(l => l.classList.toggle('active', l.dataset.target === id));
+      }
+    });
+  }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+
+  sections.forEach(s => obs.observe(s));
+
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.getElementById(link.dataset.target);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initToc);
