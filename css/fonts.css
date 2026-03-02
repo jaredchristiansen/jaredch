@@ -1,0 +1,84 @@
+/* Light */
+@font-face {
+    font-family: 'avenir';
+    src: url('/font/Avenir-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'avenir';
+    src: url('/font/Avenir-LightOblique-08.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Regular (Roman) */
+@font-face {
+    font-family: 'avenir';
+    src: url('/font/Avenir-Book.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'avenir';
+    src: url('/font/Avenir-BookOblique.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'avenir';
+    src: url('/font/Avenir-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'avenir';
+    src: url('/font/Avenir-MediumOblique-10.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Heavy */
+@font-face {
+    font-family: 'avenir';
+    src: url('/font/Avenir-Heavy.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'avenir';
+    src: url('/font/Avenir-HeavyOblique.woff2') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Black */
+@font-face {
+    font-family: 'avenir';
+    src: url('/font/Avenir-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'avenir';
+    src: url('/font/Avenir-BlackOblique.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
