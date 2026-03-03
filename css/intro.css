@@ -9,7 +9,6 @@
 
     font-family: 'Avenir', 'Avenir Next', -apple-system, sans-serif;
     color: var(--cs-text);
-    box-sizing: border-box;
 }
 
 /* ── MAIN BLOCK ── */
@@ -34,7 +33,7 @@
 }
 
 .cs-header-v2 .cv-company {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -50,7 +49,7 @@
 }
 
 .cs-header-v2 .cv-year {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.15em;
     color: var(--cs-dim);
@@ -59,7 +58,7 @@
 /* Title — the actual project framing, not just company name */
 .cs-header-v2 .cv-title {
     font-family: 'Avenir', 'Avenir Next', sans-serif;
-    font-size: clamp(38px, 5.5vw, 66px);
+    font-size: clamp(42px, 6.5vw, 66px);
     font-weight: 800;
     line-height: 1.0;
     letter-spacing: -0.025em;
@@ -108,7 +107,7 @@
 }
 
 .cs-header-v2 .cv-meta-label {
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
@@ -227,7 +226,6 @@
     .cs-header-v2 .cv-inner {
         grid-template-columns: 1fr;
         gap: 40px;
-        padding: 56px 24px 0;
     }
 
     .cs-header-v2 .cv-bottom {

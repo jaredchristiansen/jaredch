@@ -1,14 +1,4 @@
 .ollie {
-    --bg: #000;
-    --surface: #141414;
-    --border: #333;
-    --text-muted: #777;
-    --text: #e8e4dc;
-    --text-secondary: #aaa;
-    --accent: #fab515;
-    --accent-warn: #ff6b35;
-    --card: #f5f0e8;
-
     background: var(--bg);
     color: var(--text);
     /* font-family: 'DM Mono', monospace; */
@@ -251,8 +241,8 @@
 
 .ollie .o-photo-side {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 3fr 2fr;
+    gap: 40px;
     margin: 60px 0;
     align-items: start;
 }
@@ -422,8 +412,7 @@
 
 .ollie .o-stat .o-number {
     font-family: 'Instrument Serif', serif;
-    font-size: 56px;
-    font-weight: 600;
+    font-size: 46px;
     line-height: 1;
     color: var(--accent);
     display: block;
@@ -666,13 +655,6 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-    .ollie .o-hero {
-        padding: 60px 24px 40px;
-    }
-
-    .ollie .o-chapter {
-        padding: 80px 24px;
-    }
 
     .ollie .o-chapter-header,
     .ollie .o-split,
@@ -695,4 +677,39 @@
         flex-direction: column;
         gap: 24px;
     }
+}
+
+
+
+
+
+
+
+
+.o-img-fade {
+    width: clamp(300px, 60vw, 800px);
+    max-width: 100% !important;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.o-img-fade img {
+    width: 100%;
+    display: block;
+    height: clamp(160px, 20vw, 260px);
+    /* adjust to taste — this controls the crop height */
+    object-fit: cover;
+    object-position: center;
+    -webkit-mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%);
+    mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%);
 }

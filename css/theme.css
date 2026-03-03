@@ -67,8 +67,8 @@ body.hourwork {
 
   /* ── TEXT ── */
   --text: #dde4f0;
-  --text-secondary: #8fa4c4;
-  --text-muted: #5f6d8f;
+  --text-secondary: #a0b4d1;
+  --text-muted: #6c7b9e;
 
   /* ── ACCENT COLORS ── */
   --accent: #5b9bd5;
@@ -136,6 +136,7 @@ body.inspecticare {
   /* ── ACCENT COLORS ── */
   --accent: #5ecfcf;
   --accent-warn: #e06b7a;
+  --accent-rgb: 94 207 207;
   --scroll-line: #5ecfcf;
 
   /* ── SURFACES (special) ── */
@@ -168,7 +169,10 @@ body.stoneshowcase {
   /* ── ACCENT COLORS ── */
   --accent: #b5654a;
   --accent-warn: #c97a5e;
-  --scroll-line: #b5654a;
+  --accent-secondary: #7ab8b8;
+  --accent-secondary-rgb: 122 184 184;
+  --accent-rgb: 181 101 74;
+  --scroll-line: var(--accent-secondary);
 
   /* ── SURFACES (special) ── */
   --card: #ffffff;
@@ -176,7 +180,7 @@ body.stoneshowcase {
   --card-glass: rgba(255, 255, 255, 0.15);
 
   /* ── CHAPTER TRACKER ── */
-  --ptoc-accent: var(--accent);
+  --ptoc-accent: var(--accent-secondary);
   --ptoc-dim: var(--text-muted);
   --ptoc-mid: var(--text-secondary);
   --ptoc-border: var(--text-muted);

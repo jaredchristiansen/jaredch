@@ -175,7 +175,8 @@ a:hover {
     align-self: center;
 
     margin: 0 clamp(20px, 3vw, 40px);
-    max-width: 1200px;
+    max-width: 1100px;
+    overflow-x: hidden;
 }
 
 .marg {
@@ -223,7 +224,7 @@ a:hover {
 .show-work__outter {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(25px, 3.5vw, 50px);
+    gap: clamp(25px, 3.5vw, 45px);
     align-items: start;
 }
 
@@ -238,7 +239,7 @@ a:hover {
 }
 
 .showWork.ollieboard:hover {
-    background-color: #333;
+    background-color: #222;
 }
 
 .showWork.hourwork {
@@ -281,11 +282,11 @@ a:hover {
     background-color: rgb(243, 137, 129);
 }
 
-.showWork.stoneShowcase {
+.showWork.stoneshowcase {
     background-color: rgb(78, 85, 102);
 }
 
-.showWork.stoneShowcase:hover {
+.showWork.stoneshowcase:hover {
     background-color: rgb(122, 132, 158);
 }
 

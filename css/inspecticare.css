@@ -1,19 +1,4 @@
 .ic {
-    --bg: #6D4C65;
-    --surface: #5f4258;
-    --surface-lt: #79566f;
-    --card: #ffffff;
-    --border: #7d5874;
-    --border-lt: #8f6884;
-    --text: #ece0e8;
-    --text-mid: #d4bece;
-    --text-dim: #AE94A7;
-    --text-dark: #3a2835;
-    --cream: #f7f0f5;
-    --teal: #5ecfcf;
-    --gold: #f5c97a;
-    --red: #e06b7a;
-
     background: var(--bg);
     color: var(--text);
     font-family: 'Avenir', 'Avenir Next', -apple-system, sans-serif;
@@ -37,7 +22,7 @@
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: var(--accent);
 }
 
 .ic .ic-dot {
@@ -51,7 +36,7 @@
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.15em;
-    color: var(--text-dim);
+    color: var(--text-muted);
 }
 
 .ic .ic-h1 {
@@ -72,11 +57,11 @@
     font-family: 'Instrument Serif', serif;
     font-size: clamp(17px, 2.1vw, 22px);
     font-style: italic;
-    color: var(--text-mid);
+    color: var(--text-secondary);
     line-height: 1.6;
     max-width: 520px;
     padding-left: 18px;
-    border-left: 2px solid var(--teal);
+    border-left: 2px solid var(--accent);
     opacity: 0;
     transform: translateY(12px);
     animation: ic-in 0.6s ease forwards 0.36s;
@@ -103,7 +88,7 @@
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--text-dim);
+    color: var(--text-muted);
     margin-bottom: 6px;
     display: block;
 }
@@ -111,7 +96,7 @@
 .ic .ic-meta-value {
     font-size: 13px;
     font-weight: 500;
-    color: var(--text-mid);
+    color: var(--text-secondary);
     line-height: 1.4;
 }
 
@@ -124,12 +109,12 @@
 
 .ic .ic-tag {
     padding: 3px 9px;
-    border: 1px solid var(--border-lt);
+    border: 1px solid var(--border-light);
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--text-dim);
+    color: var(--text-muted);
     border-radius: 2px;
 }
 
@@ -162,9 +147,9 @@
 
 .ic .ic-stat-num {
     font-family: 'Instrument Serif', serif;
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 600;
-    color: var(--teal);
+    color: var(--accent);
     display: block;
     line-height: 1;
     margin-bottom: 10px;
@@ -175,10 +160,9 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--text-dim);
+    color: var(--text-muted);
     line-height: 1.5;
 }
-
 
 /* ── SECTION ── */
 .ic .ic-section {
@@ -194,7 +178,7 @@
     font-family: 'Instrument Serif', serif;
     font-size: 120px;
     line-height: 1;
-    color: var(--surface-lt);
+    color: var(--surface-active);
     letter-spacing: -0.04em;
     margin-bottom: -16px;
     display: block;
@@ -206,7 +190,7 @@
     font-weight: 700;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: var(--accent);
     margin-bottom: 14px;
     display: block;
 }
@@ -224,14 +208,14 @@
 .ic .ic-h2 em {
     font-style: italic;
     font-family: 'Instrument Serif', serif;
-    color: var(--text-dim);
+    color: var(--text-muted);
     font-weight: 400;
 }
 
 .ic .ic-intro {
     font-size: 16px;
     line-height: 1.85;
-    color: var(--text-mid);
+    color: var(--text-secondary);
     max-width: 580px;
     margin-bottom: 44px;
 }
@@ -239,7 +223,7 @@
 .ic .ic-p {
     font-size: 14px;
     line-height: 1.9;
-    color: var(--text-mid);
+    color: var(--text-secondary);
     max-width: 580px;
     margin-bottom: 16px;
 }
@@ -251,7 +235,7 @@
 
 /* ── PULLQUOTE ── */
 .ic .ic-pullquote {
-    border-left: 3px solid var(--teal);
+    border-left: 3px solid var(--accent);
     padding: 18px 0 18px 32px;
     margin: 52px 0;
 }
@@ -271,7 +255,7 @@
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--text-dim);
+    color: var(--text-muted);
     font-style: normal;
 }
 
@@ -282,7 +266,7 @@
     padding: 40px;
     margin: 44px 0;
     box-shadow: 0 16px 56px rgba(0, 0, 0, 0.25);
-    color: var(--text-dark);
+    color: var(--text-on-white);
 }
 
 .ic .white-card .wc-label {
@@ -357,7 +341,7 @@
 
 .ic .ic-owned-desc {
     font-size: 13px;
-    color: var(--text-dim);
+    color: var(--text-muted);
     line-height: 1.8;
 }
 
@@ -378,7 +362,7 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--text-dim);
+    color: var(--text-muted);
 }
 
 /* ── TWO COL IMAGE ── */
@@ -399,7 +383,7 @@
 /* ── LESSON BLOCK ── */
 .ic .ic-lesson {
     background: var(--surface);
-    border: 1px solid var(--border-lt);
+    border: 1px solid var(--border-light);
     padding: 26px 28px;
     margin: 14px 0;
     display: grid;
@@ -411,13 +395,13 @@
 .ic .ic-lesson-icon {
     font-size: 18px;
     line-height: 1;
-    color: var(--teal);
+    color: var(--accent);
     margin-top: 2px;
     font-family: 'Instrument Serif', serif;
 }
 
 .ic .ic-lesson-icon.warn {
-    color: var(--red);
+    color: var(--accent-warn);
 }
 
 .ic .ic-lesson h4 {
@@ -431,14 +415,14 @@
 
 .ic .ic-lesson p {
     font-size: 13px;
-    color: var(--text-dim);
+    color: var(--text-muted);
     line-height: 1.8;
 }
 
 /* ── OUTCOME BANNER ── */
 .ic .ic-outcome {
-    background: rgba(94, 207, 207, 0.07);
-    border: 1px solid rgba(94, 207, 207, 0.2);
+    background: rgb(var(--accent-rgb) / 0.07);
+    border: 1px solid rgb(var(--accent-rgb) / 0.2);
     padding: 36px;
     margin: 44px 0;
     position: relative;
@@ -452,7 +436,7 @@
     right: 24px;
     font-family: 'Instrument Serif', serif;
     font-size: 90px;
-    color: rgba(94, 207, 207, 0.05);
+    color: rgb(var(--accent-rgb) / 0.05);
     pointer-events: none;
 }
 
@@ -461,21 +445,21 @@
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: var(--accent);
     margin-bottom: 12px;
     display: block;
 }
 
 .ic .ic-outcome p {
     font-size: 15px;
-    color: var(--text-mid);
+    color: var(--text-secondary);
     line-height: 1.85;
     max-width: 520px;
     position: relative;
     z-index: 1;
 }
 
-/* ── DEV BLOCK (bubble + code) ── */
+/* ── DEV BLOCK ── */
 .ic .ic-dev-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -494,7 +478,7 @@
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--text-dim);
+    color: var(--text-muted);
     margin-bottom: 16px;
     display: block;
 }
@@ -509,7 +493,7 @@
 
 .ic .ic-dev-cell p {
     font-size: 13px;
-    color: var(--text-dim);
+    color: var(--text-muted);
     line-height: 1.8;
 }
 
@@ -534,13 +518,6 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-
-    .ic .ic-header,
-    .ic .ic-hero-img,
-    .ic .ic-body {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
 
     .ic .ic-meta,
     .ic .ic-owned-grid,

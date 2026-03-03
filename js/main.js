@@ -194,7 +194,7 @@ function bgChange(workPiece) {
       bg = "#DACCD5";
       num = 2;
       break;
-    case "stoneShowcase":
+    case "stoneshowcase":
       bg = "#AFBFE0";
       num = 3;
       break;

@@ -1,26 +1,10 @@
 .ss {
-    --bg: #596174;
-    --surface: #4e5568;
-    --surface-lt: #636b7e;
-    --card: #ffffff;
-    --border: #677082;
-    --border-lt: #748090;
-    --text: #f0ece4;
-    --text-mid: #d4cec5;
-    --text-dim: #a09a93;
-    --text-dark: #2a2520;
-    --copper: #b5654a;
-    --copper-lt: #c97a5e;
-    --cream: #f5efe8;
-    --teal: #7ab8b8;
-
     background: var(--bg);
     color: var(--text);
     font-family: 'Avenir', 'Avenir Next', -apple-system, sans-serif;
     font-size: 15px;
     line-height: 1.7;
 }
-
 
 .ss .ss-eyebrow {
     display: flex;
@@ -37,7 +21,7 @@
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--copper-lt);
+    color: var(--accent-warn);
 }
 
 .ss .ss-eyebrow-dot {
@@ -51,7 +35,7 @@
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.15em;
-    color: var(--text-dim);
+    color: var(--text-muted);
 }
 
 .ss .ss-h1 {
@@ -72,11 +56,11 @@
     font-family: 'Instrument Serif', serif;
     font-size: clamp(17px, 2.1vw, 22px);
     font-style: italic;
-    color: var(--text-mid);
+    color: var(--text-secondary);
     line-height: 1.6;
     max-width: 520px;
     padding-left: 18px;
-    border-left: 2px solid var(--copper);
+    border-left: 2px solid var(--accent);
     opacity: 0;
     transform: translateY(12px);
     animation: ss-in 0.6s ease forwards 0.36s;
@@ -103,7 +87,7 @@
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--text-dim);
+    color: var(--text-muted);
     margin-bottom: 6px;
     display: block;
 }
@@ -111,7 +95,7 @@
 .ss .ss-meta-value {
     font-size: 13px;
     font-weight: 500;
-    color: var(--text-mid);
+    color: var(--text-secondary);
     line-height: 1.4;
 }
 
@@ -124,12 +108,12 @@
 
 .ss .ss-tag {
     padding: 3px 9px;
-    border: 1px solid var(--border-lt);
+    border: 1px solid var(--border-light);
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--text-dim);
+    color: var(--text-muted);
     border-radius: 2px;
 }
 
@@ -183,7 +167,7 @@
 
 .ss .ss-scope-desc {
     font-size: 11px;
-    color: var(--text-dim);
+    color: var(--text-muted);
     line-height: 1.6;
 }
 
@@ -201,7 +185,7 @@
     font-family: 'Instrument Serif', serif;
     font-size: 120px;
     line-height: 1;
-    color: var(--surface-lt);
+    color: var(--surface-active);
     letter-spacing: -0.04em;
     margin-bottom: -16px;
     display: block;
@@ -213,7 +197,7 @@
     font-weight: 700;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--copper-lt);
+    color: var(--accent-warn);
     margin-bottom: 14px;
     display: block;
 }
@@ -231,14 +215,14 @@
 .ss .ss-h2 em {
     font-style: italic;
     font-family: 'Instrument Serif', serif;
-    color: var(--text-dim);
+    color: var(--text-muted);
     font-weight: 400;
 }
 
 .ss .ss-intro {
     font-size: 16px;
     line-height: 1.85;
-    color: var(--text-mid);
+    color: var(--text-secondary);
     max-width: 580px;
     margin-bottom: 44px;
 }
@@ -246,7 +230,7 @@
 .ss .ss-p {
     font-size: 14px;
     line-height: 1.9;
-    color: var(--text-mid);
+    color: var(--text-secondary);
     max-width: 580px;
     margin-bottom: 16px;
 }
@@ -258,7 +242,7 @@
 
 /* ── PULLQUOTE ── */
 .ss .ss-pullquote {
-    border-left: 3px solid var(--copper);
+    border-left: 3px solid var(--accent);
     padding: 18px 0 18px 32px;
     margin: 52px 0;
 }
@@ -278,7 +262,7 @@
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--text-dim);
+    color: var(--text-muted);
     font-style: normal;
 }
 
@@ -289,7 +273,7 @@
     padding: 40px;
     margin: 44px 0;
     box-shadow: 0 16px 56px rgba(0, 0, 0, 0.2);
-    color: var(--text-dark);
+    color: var(--text-on-white);
 }
 
 .ss .white-card .wc-label {
@@ -350,7 +334,7 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--text-dim);
+    color: var(--text-muted);
 }
 
 /* two-col image grid */
@@ -369,27 +353,12 @@
 }
 
 /* three-col image grid for booth */
-/* .ss .ss-img-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    margin: 44px 0;
-    align-items: center;
-    justify-items: center;
-} */
 .ss .ss-img-grid-3 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
     margin: 44px auto;
-    /* auto left/right margins centers the block */
 }
-
-/* .ss .ss-img-grid-3 img {
-    width: 100%;
-    display: block;
-    border-radius: 3px;
-} */
 
 .ss .ss-img-grid-3 img {
     width: 100%;
@@ -400,7 +369,7 @@
 /* ── LESSON BLOCK ── */
 .ss .ss-lesson {
     background: var(--surface);
-    border: 1px solid var(--border-lt);
+    border: 1px solid var(--border-light);
     padding: 26px 28px;
     margin: 14px 0;
     display: grid;
@@ -412,17 +381,17 @@
 .ss .ss-lesson-icon {
     font-family: 'Instrument Serif', serif;
     font-size: 18px;
-    color: var(--copper-lt);
+    color: var(--accent-warn);
     line-height: 1;
     margin-top: 2px;
 }
 
 .ss .ss-lesson-icon.dim {
-    color: var(--text-dim);
+    color: var(--text-muted);
 }
 
 .ss .ss-lesson-icon.teal {
-    color: var(--teal);
+    color: var(--accent-secondary);
 }
 
 .ss .ss-lesson h4 {
@@ -436,15 +405,15 @@
 
 .ss .ss-lesson p {
     font-size: 13px;
-    color: var(--text-dim);
+    color: var(--text-muted);
     line-height: 1.8;
 }
 
 /* ── UNSHIPPED BANNER ── */
 .ss .ss-unshipped {
-    background: rgba(181, 101, 74, 0.1);
-    border: 1px solid rgba(181, 101, 74, 0.25);
-    border-left: 3px solid var(--copper);
+    background: rgb(var(--accent-rgb) / 0.1);
+    border: 1px solid rgb(var(--accent-rgb) / 0.25);
+    border-left: 3px solid var(--accent);
     padding: 28px 32px;
     margin: 44px 0;
     display: grid;
@@ -464,20 +433,20 @@
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--copper-lt);
+    color: var(--accent-warn);
     margin-bottom: 6px;
 }
 
 .ss .ss-unshipped p {
     font-size: 13px;
-    color: var(--text-mid);
+    color: var(--text-secondary);
     line-height: 1.8;
 }
 
 /* ── OUTCOME ── */
 .ss .ss-outcome {
-    background: rgba(122, 184, 184, 0.07);
-    border: 1px solid rgba(122, 184, 184, 0.2);
+    background: rgb(var(--accent-secondary-rgb) / 0.07);
+    border: 1px solid rgb(var(--accent-secondary-rgb) / 0.2);
     padding: 36px;
     margin: 44px 0;
     position: relative;
@@ -490,7 +459,7 @@
     top: -8px;
     right: 20px;
     font-size: 90px;
-    color: rgba(122, 184, 184, 0.05);
+    color: rgb(var(--accent-secondary-rgb) / 0.05);
     pointer-events: none;
 }
 
@@ -499,14 +468,14 @@
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: var(--accent-secondary);
     margin-bottom: 12px;
     display: block;
 }
 
 .ss .ss-outcome p {
     font-size: 15px;
-    color: var(--text-mid);
+    color: var(--text-secondary);
     line-height: 1.85;
     max-width: 540px;
     position: relative;
@@ -535,13 +504,6 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
 
-    .ss .ss-header,
-    .ss .ss-hero-img,
-    .ss .ss-body {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-
     .ss .ss-meta,
     .ss .ss-scope {
         grid-template-columns: 1fr 1fr;
@@ -566,6 +528,69 @@
 
     .ss .ss-meta,
     .ss .ss-scope {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+.ss .ss-browser-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 80px;
+    margin-bottom: 200px;
+}
+
+.ss .ss-browser {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.ss .ss-browser-bar {
+    background: #2a2e3a;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ss .ss-browser-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.ss .ss-browser-dot:nth-child(1) {
+    background: #ff5f57;
+}
+
+.ss .ss-browser-dot:nth-child(2) {
+    background: #febc2e;
+}
+
+.ss .ss-browser-dot:nth-child(3) {
+    background: #28c840;
+}
+
+.ss .ss-browser-url {
+    font-size: 10px;
+    color: #666;
+    margin-left: 10px;
+    font-family: monospace;
+}
+
+.ss .ss-browser img {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .ss .ss-browser-grid {
         grid-template-columns: 1fr;
     }
 }

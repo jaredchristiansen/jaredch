@@ -27,48 +27,6 @@
     text-align: left !important;
 }
 
-/* .title.tiny {
-    font-size: 16px;
-}
-
-.title.small {
-    font-size: 20px;
-}
-
-.title.med {
-    font-size: 40px;
-}
-
-.title.big {
-    font-size: 72px;
-} */
-
-.title.left {
-    text-align: left;
-}
-
-.title.narrow {
-    max-width: 60%;
-}
-
-.title.indent {
-    margin-left: 10%;
-}
-
-.title.beside {
-    float: left;
-    width: 65%;
-    text-align: left;
-    clear: right;
-}
-
-.title.wrap {
-    float: left;
-    width: 30%;
-    margin-right: 5%;
-    clear: left;
-}
-
 .work .row {
     display: flex;
     flex-direction: row;
@@ -112,10 +70,6 @@ li {
     /* max-width: 800px; */
 }
 
-.description.wide {
-    max-width: 1000px;
-}
-
 .description h1 {
     margin-bottom: 10px;
     /* text-align: center; */
@@ -127,42 +81,6 @@ li {
     color: var(--main-primary);
     font-size: clamp(16px, 3vw, 18px);
     letter-spacing: 2px;
-}
-
-.description .left {
-    width: 48%;
-    float: left;
-    margin-right: 2%;
-    clear: left;
-}
-
-.description .right {
-    width: 48%;
-    float: left;
-    margin-left: 2%;
-    clear: right;
-}
-
-.description .left.narrow {
-    width: 36%;
-}
-
-.description .right.wide {
-    width: 60%;
-}
-
-.description img {
-    width: 100%;
-}
-
-h1.space {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-}
-
-h2.space {
-    margin-top: 10vh;
-    margin-bottom: 2vh;
 }
 
 .space-large {
